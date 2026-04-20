@@ -6,41 +6,77 @@
   <title>CineRecensioni</title>
 
   <style>
+    :root {
+      --gold: #ffbf00;
+      --blue: #1b465b;
+      --dark: #0f1720;
+      --card: #16202a;
+      --text: #e6edf3;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: var(--text);
     }
 
     header {
-      background-color: #222;
-      color: white;
-      padding: 20px;
+      background: linear-gradient(90deg, var(--blue), #0d2c3a);
+      padding: 30px;
       text-align: center;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    header h1 {
+      margin: 0;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 8px;
+      opacity: 0.8;
     }
 
     main {
-      padding: 20px;
+      padding: 25px;
+      max-width: 800px;
+      margin: auto;
     }
 
     .recensione {
-      background: white;
-      padding: 15px;
+      background: var(--card);
+      padding: 20px;
       margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      border-left: 4px solid var(--gold);
+      transition: 0.2s;
+    }
+
+    .recensione:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    .recensione h2 {
+      margin: 0 0 10px 0;
+      color: white;
     }
 
     .stelle {
-      color: gold;
-      font-size: 20px;
+      color: var(--gold);
+      font-size: 18px;
+      letter-spacing: 3px;
     }
 
     footer {
-      background-color: #222;
-      color: white;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
+      border-top: 1px solid #222;
+      margin-top: 30px;
+      font-size: 14px;
+      opacity: 0.7;
     }
   </style>
 </head>
@@ -49,7 +85,7 @@
 
 <header>
   <h1>CineRecensioni</h1>
-  <p>Voti ai film</p>
+  <p>Dark. Pulito. Diretto.</p>
 </header>
 
 <main>
@@ -61,23 +97,23 @@
 
   <div class="recensione">
     <h2>Wonka</h2>
-    <div class="stelle">⭐ ⭐ ⭐ ⭐ ⭐</div>
+    <div class="stelle">★★★★☆</div>
   </div>
 
   <div class="recensione">
     <h2>Dune: Parte Due</h2>
-    <div class="stelle">⭐ ⭐ ⭐ ⭐ ⭐</div>
+    <div class="stelle">★★★★★</div>
   </div>
 
   <div class="recensione">
     <h2>Barbie</h2>
-    <div class="stelle">⭐ ⭐ ⭐ ⭐ ⭐</div>
+    <div class="stelle">★★★☆☆</div>
   </div>
 
 </main>
 
 <footer>
-  <p>&copy; 2025 CineRecensioni</p>
+  <p>&copy; 2026 CineRecensioni</p>
 </footer>
 
 </body>
