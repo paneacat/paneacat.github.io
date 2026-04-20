@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<div class="article">
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -7,18 +6,30 @@
   <title>Il grande Dittatore</title>
 
   <style>
+    :root {
+      --gold: #ffbf00;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #0f1720;
       color: #e6edf3;
+    }
+
+    .article {
       max-width: 800px;
       margin: auto;
       padding: 20px;
     }
 
     h1 {
-      color: #ffbf00;
+      color: var(--gold);
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      margin-top: 0;
     }
 
     .meta {
@@ -27,105 +38,134 @@
     }
 
     .stelle {
-      color: #ffbf00;
+      color: var(--gold);
       margin-bottom: 20px;
     }
 
     img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 20px;
     }
 
     p {
-      line-height: 1.6;
+      line-height: 1.7;
+      margin-bottom: 16px;
     }
 
+    /* link testo (NO viola) */
+    a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* bottone back */
     .back {
       display: inline-block;
       margin-top: 20px;
-      color: #ffbf00;
-      text-decoration: none;
     }
+
+    /* navigazione articoli */
     .nav-articoli {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 40px;
-}
+      display: flex;
+      gap: 10px;
+      margin-top: 40px;
+    }
 
-.nav-card {
-  flex: 1;
-  padding: 15px;
-  border-radius: 10px;
-  background: #16202a;
-  border: 1px solid rgba(255,255,255,0.05);
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  transition: 0.2s;
-}
+    .nav-card {
+      flex: 1;
+      padding: 15px;
+      border-radius: 10px;
+      background: #16202a;
+      border: 1px solid rgba(255,255,255,0.05);
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      transition: 0.2s;
+      text-align: center;
+    }
 
-.nav-card:hover {
-  border-color: rgba(255,191,0,0.4);
-  transform: translateY(-2px);
-}
+    .nav-card:hover {
+      border-color: rgba(255,191,0,0.4);
+      transform: translateY(-2px);
+    }
 
-.disabled {
-  opacity: 0.3;
-  pointer-events: none;
-}
-    .article a {
-  color: var(--gold);
-  text-decoration: none;
-}
+    .disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
 
-.article a:hover {
-  text-decoration: underline;
-}
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.6;
+    }
   </style>
 </head>
 
 <body>
-<a href="dittatore.html" class="link-card resta">
+
+<div class="article">
+
   <img src="img/Grandedittatore2.jpg">
 
-  <h1>Cinema che resta </h1>
+  <h1>Cinema che resta</h1>
   <h2>#1 Il grande Dittatore</h2>
   <p class="meta">Charlie Chaplin (1940)</p>
 
   <div class="stelle">★★★★★</div>
 
   <p>
-    Questo mi è sembrato il punto di partenza naturale per la rubrica “Cinema che resta". Alcuni film rimangono nella storia per sempre. È il caso del settimo lungometraggio del grande Charlie Chaplin: sceneggiatore, regista, musicista, produttore e interprete principale di questa pellicola.  
+    Questo mi è sembrato il punto di partenza naturale per la rubrica “Cinema che resta”. 
+    Alcuni film rimangono nella storia per sempre. È il caso del settimo lungometraggio 
+    del grande Charlie Chaplin: sceneggiatore, regista, musicista, produttore e interprete 
+    principale di questa pellicola.
   </p>
 
   <p>
-    Protagonista delle vicende è un barbiere ebreo (Charlie Chaplin) di una cittadina tedesca. La sua peculiarità? Somiglia in modo impressionante ad Adenoid Hynkel (aka Adolf Hitler, interpretato dallo stesso Chaplin), dittatore sanguinario salito al potere e promotore di una feroce campagna razzista. Tra situazioni comiche, cospirazioni, equivoci, e uno scambio rocambolesco, il barbiere si troverà a impersonare proprio il malvagio dittatore, raggiungendo l’apice con il famoso "Discorso all’umanità", incentrato su valori quali libertà e uguaglianza.   
+    Protagonista delle vicende è un barbiere ebreo di una cittadina tedesca. 
+    La sua peculiarità? Somiglia in modo impressionante ad Adenoid Hynkel, 
+    dittatore sanguinario promotore di una feroce campagna razzista. 
+    Tra equivoci e scambi di identità, il barbiere si troverà a impersonarlo.
   </p>
 
   <p>
-    Un film che, attraverso la satira, mostra il lato più ridicolo del nazismo, senza dimenticare di educare, prendendo in giro usi e personalità del tempo (come Benito Mussolini), e creando un’opera coraggiosa e senza pari. 
+    Il culmine arriva con il celebre “Discorso all’umanità”, 
+    incentrato su libertà e uguaglianza.
   </p>
 
   <p>
-  Menzione d’onore per la "scena del mappamondo", con Wagner in sottofondo, potente come poche altre. 
+    Un film che, attraverso la satira, mostra il lato più ridicolo del nazismo 
+    senza smettere di educare. Un’opera coraggiosa e senza pari.
   </p>
-<p> Un film imperdibile, unico, ingombrante, divertente, riflessivo, simbolico, che tenta di mettere in guardia sul marcio del mondo e sul potere distruttivo dell’intolleranza. 
-  Non ci sono altre parole per una pellicola che riesce ancora a essere, a distanza di 86 anni, attuale ed emozionante.
+
+  <p>
+    Menzione d’onore per la scena del mappamondo, con Wagner in sottofondo.
+  </p>
+
+  <p>
+    Un film imperdibile, ancora oggi attuale ed emozionante.
+  </p>
+
   <p><strong>— Patrizia Catania · paneacult</strong></p>
-<a href="index.html" class="back">← Torna alla home</a>
 
-  <a href="#" class="nav-card disabled">
-    ← Articolo precedente
-  </a>
-<a href="uncut.html" class="nav-card">
-  → Uncut Gems
-</a>
-</a>
- </div>
-  <footer>
+  <!-- NAV -->
+  <a href="index.html" class="back">← Torna alla home</a>
+
+  <div class="nav-articoli">
+    <a href="#" class="nav-card disabled">← Articolo precedente</a>
+    <a href="uncut.html" class="nav-card">Uncut Gems →</a>
+  </div>
+
+</div>
+
+<footer>
   <p>&copy; 2026 paneacult</p>
-  </footer>
+</footer>
+
 </body>
 </html>
