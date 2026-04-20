@@ -6,315 +6,142 @@
   <title>paneacult</title>
 
   <style>
-    /* ====== VARIABILI ====== */
-:root {
-  --gold: #ffbf00;
-  --blue: #1b465b;
-  --dark: #0f1720;
-  --card: #16202a;
-  --text: #e6edf3;
-}
+    :root {
+      --gold: #ffbf00;
+      --blue: #1b465b;
+      --dark: #0f1720;
+      --card: #16202a;
+      --text: #e6edf3;
+    }
 
-/* ====== BASE ====== */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  background: var(--dark);
-  color: var(--text);
-}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+    }
 
-/* ====== HEADER ====== */
-header {
-  background: linear-gradient(90deg, var(--blue), #0d2c3a);
-  padding: 30px;
-  text-align: center;
-  border-bottom: 2px solid var(--gold);
-}
+    header {
+      background: linear-gradient(90deg, var(--blue), #0d2c3a);
+      padding: 30px;
+      text-align: center;
+      border-bottom: 2px solid var(--gold);
+    }
 
-header h1 {
-  margin: 0;
-  color: var(--gold);
-  letter-spacing: 1px;
-}
+    header h1 {
+      margin: 0;
+      color: var(--gold);
+    }
 
-header p {
-  margin-top: 8px;
-  opacity: 0.8;
-}
+    main {
+      padding: 25px;
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+    }
 
-/* ====== LAYOUT ====== */
-main {
-  padding: 25px;
-  max-width: 1100px;
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
     @media (min-width: 600px) {
-  main {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 900px) {
-  main {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-   .recensione {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-   }
-    .contenuto {
-  padding: 20px;
-  flex-grow: 1;
+      main { grid-template-columns: 1fr 1fr; }
     }
-    
 
-/* ====== CARD LINK ====== */
-.link-card {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-/* ====== CARD ====== */
-.recensione {
-  background: var(--card);
-  margin-bottom: 30px;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: all 0.25s ease;
-  position: relative;
-}
-
-.recensione:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  border-color: rgba(255,191,0,0.3);
-}
-
-/* ====== IMMAGINE ====== */
-.cover {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  display: block;
-  filter: brightness(0.75);
-  transition: 0.3s;
-}
-
-.recensione:hover .cover {
-  filter: brightness(0.9);
-  transform: scale(1.02);
-}
-
-/* ====== CONTENUTO ====== */
-.contenuto {
-  padding: 20px;
-}
-
-.titolo {
-  font-size: 22px;
-  margin-bottom: 5px;
-  color: white;
-}
-
-.meta {
-  font-size: 13px;
-  opacity: 0.5;
-  margin-bottom: 12px;
-}
-
-/* ====== STELLE ====== */
-.stelle {
-  color: var(--gold);
-  font-size: 16px;
-  letter-spacing: 4px;
-  margin-bottom: 12px;
-}
-
-/* ====== TESTO ====== */
-.mini {
-  opacity: 0.75;
-  line-height: 1.5;
-  font-size: 14px;
-}
-
-/* ====== CTA ====== */
-.leggi {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 13px;
-  color: var(--gold);
-  transition: 0.2s;
-}
-
-.recensione:hover .leggi {
-  letter-spacing: 1px;
-}
-
-/* ====== PAGINA ARTICOLO ====== */
-.article {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
-
-.article img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
-
-.article h1 {
-  color: var(--gold);
-}
-
-.article p {
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-/* ====== BACK LINK ====== */
-.back {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: var(--gold);
-  text-decoration: none;
-  opacity: 0.8;
-}
-
-.back:hover {
-  opacity: 1;
-}
-
-/* ====== FOOTER ====== */
-footer {
-  text-align: center;
-  padding: 15px;
-  border-top: 1px solid #222;
-  margin-top: 40px;
-  font-size: 14px;
-  opacity: 0.6;
-}
-    /* forza il testo bianco ovunque */
-body, p, h1, h2, h3, span {
-  color: var(--text);
-}
-
-/* link bianchi (non blu browser) */
-a {
-  color: var(--text);
-}
-    .rubrica {
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 6px;
+    @media (min-width: 900px) {
+      main { grid-template-columns: 1fr 1fr 1fr; }
     }
-    .cover {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  display: block;
-  filter: brightness(0.7) contrast(1.1);
-    }
-    h2 {
-  margin: 0 0 5px 0;
-    }
-    .recensione:hover .titolo {
-  color: var(--gold);
-    }
-    .rubrica {
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
 
-/* categoria 1 */
-.resta {
-  color: var(--gold);
-}
-
-/* categoria 2 */
-.contemporanei {
-  color: #5cc8ff;
-}
-    .rubrica {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 11px;
-}
-
-.resta {
-  background: rgba(255,191,0,0.15);
-  color: var(--gold);
-}
-
-.contemporanei {
-  background: rgba(92,200,255,0.15);
-  color: #5cc8ff;
-}
     .filtri {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
 
-.filtri button {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: white;
-  padding: 8px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 0.2s;
-}
+    .filtri button {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
 
-.filtri button:hover {
-  border-color: var(--gold);
-}
+    .filtri .attivo {
+      background: var(--gold);
+      color: black;
+    }
 
-.filtri .attivo {
-  background: var(--gold);
-  color: black;
-  border-color: var(--gold);
-}
+    .link-card {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .recensione {
+      background: var(--card);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: 0.2s;
+    }
+
+    .recensione:hover {
+      transform: translateY(-4px);
+    }
+
+    .cover {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      filter: brightness(0.75);
+    }
+
+    .contenuto {
+      padding: 20px;
+    }
+
+    .rubrica {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-bottom: 5px;
+    }
+
+    .titolo {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .meta {
+      opacity: 0.6;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .stelle {
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .mini {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .leggi {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--gold);
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.6;
+    }
   </style>
 </head>
-<script>
-function filtra(categoria) {
-  const cards = document.querySelectorAll('.link-card');
-  const bottoni = document.querySelectorAll('.filtri button');
 
-  // reset bottoni
-  bottoni.forEach(btn => btn.classList.remove('attivo'));
-
-  // attiva quello cliccato
-  event.target.classList.add('attivo');
-
-  cards.forEach(card => {
-    if (categoria === 'tutti') {
-      card.style.display = 'block';
-    } else {
-      if (card.classList.contains(categoria)) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
-    }
-  });
-}
-</script>
 <body>
 
 <header>
@@ -323,66 +150,67 @@ function filtra(categoria) {
 </header>
 
 <main>
+
+  <!-- FILTRI -->
   <div class="filtri">
-  <button onclick="filtra('tutti')" class="attivo">Tutti</button>
-  <button onclick="filtra('resta')">Cinema che resta</button>
-  <button onclick="filtra('contemporanei')">Sguardi contemporanei</button>
+    <button onclick="filtra('tutti', this)" class="attivo">Tutti</button>
+    <button onclick="filtra('resta', this)">Cinema che resta</button>
+    <button onclick="filtra('contemporanei', this)">Sguardi contemporanei</button>
   </div>
-<a href="dittatore.html" class="link-card resta">
-  <div class="recensione">
-  </div>
-</a>
 
-<a href="uncut.html" class="link-card contemporanei">
-  <div class="recensione">
-    ...
-  </div>
-</a>
-
-    <img class="cover" src="img/Grandedittatore2.jpg">
-
-    <div class="contenuto">
-      <p class="rubrica">Cinema che resta</p>
-<h2 class="titolo">#1 Il grande Dittatore</h2>
-      <p class="meta">Charlie Chaplin (1940)</p>
-
-      <div class="stelle">★★★★★</div>
-
-      <p class="mini">
-        Una satira potentissima che ridicolizza il nazismo e culmina in uno dei discorsi più iconici del cinema.
-      </p>
-
-      <span class="leggi">Leggi recensione→</span>
-    </div>
-<a href="uncut.html" class="link-card contemporanei">
+  <!-- CARD 1 -->
   <a href="dittatore.html" class="link-card resta">
-  <div class="recensione">
-
-    <img class="cover" src="img/uncut.jpg">
-
-    <div class="contenuto">
-      <p class="rubrica">Sguardi contemporanei</p>
-      <h2 class="titolo">#1 Uncut Gems</h2>
-      <p class="meta">Safdie Brothers (2019)</p>
-
-      <div class="stelle">★★★★☆</div>
-
-      <p class="mini">
-        Un’esperienza ansiogena e magnetica che vi terrà incollati fino all’ultimo secondo.
-      </p>
-
-      <span class="leggi">Leggi recensione →</span>
+    <div class="recensione">
+      <img class="cover" src="img/Grandedittatore2.jpg">
+      <div class="contenuto">
+        <p class="rubrica">Cinema che resta</p>
+        <h2 class="titolo">#1 Il grande Dittatore</h2>
+        <p class="meta">Charlie Chaplin (1940)</p>
+        <div class="stelle">★★★★★</div>
+        <p class="mini">Una satira potentissima che ridicolizza il nazismo.</p>
+        <span class="leggi">Leggi recensione →</span>
+      </div>
     </div>
+  </a>
 
-  </div>
-</a>
-  </div>
-</a>
+  <!-- CARD 2 -->
+  <a href="uncut.html" class="link-card contemporanei">
+    <div class="recensione">
+      <img class="cover" src="img/uncut.jpg">
+      <div class="contenuto">
+        <p class="rubrica">Sguardi contemporanei</p>
+        <h2 class="titolo">#1 Uncut Gems</h2>
+        <p class="meta">Safdie Brothers (2019)</p>
+        <div class="stelle">★★★★☆</div>
+        <p class="mini">Un’esperienza ansiogena e magnetica.</p>
+        <span class="leggi">Leggi recensione →</span>
+      </div>
+    </div>
+  </a>
+
 </main>
 
 <footer>
   <p>&copy; 2026 paneacult</p>
 </footer>
+
+<script>
+function filtra(categoria, btn) {
+  const cards = document.querySelectorAll('.link-card');
+  const bottoni = document.querySelectorAll('.filtri button');
+
+  bottoni.forEach(b => b.classList.remove('attivo'));
+  btn.classList.add('attivo');
+
+  cards.forEach(card => {
+    if (categoria === 'tutti') {
+      card.style.display = 'block';
+    } else {
+      card.style.display = card.classList.contains(categoria) ? 'block' : 'none';
+    }
+  });
+}
+</script>
 
 </body>
 </html>
