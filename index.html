@@ -1,234 +1,143 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>paneacult</title>
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
   <style>
-
-    :root {
-      --gold: #ffbf00;
-      --bg: #1b465b;
-      --card: #0f2f3d;
-      --text: #e6edf3;
-    }
-
     body {
+      background-color: #1b465b;
+      color: white;
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      padding: 20px;
     }
 
-    /* HEADER */
-
-    header {
+    h1 {
       text-align: center;
-      padding: 60px 20px 20px;
-    }
-
-    .topline {
-      font-size: 12px;
-      letter-spacing: 2px;
-      opacity: 0.5;
-      margin-bottom: 10px;
-    }
-
-    .brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 64px;
-      color: var(--gold);
-      margin: 0;
-    }
-
-    .subtitle {
-      font-size: 16px;
-      opacity: 0.7;
-      margin-top: 10px;
+      color: #ffbf00;
+      margin-bottom: 30px;
     }
 
     /* FILTRI */
-
     .filtri {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      max-width: 400px;
-      margin: 20px auto;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
-    .filtri button {
-      padding: 6px;
-      border-radius: 20px;
-      border: none;
-      background: #2a4f60;
+    .filtro {
+      background: transparent;
       color: white;
-      font-size: 12px;
+      border: 1px solid transparent;
+      padding: 8px 14px;
+      margin: 5px;
       cursor: pointer;
+      transition: all 0.25s ease;
+      font-size: 14px;
     }
 
-    /* GRID */
+    .filtro:hover {
+      color: #ffbf00;
+      text-shadow: 0 0 6px rgba(255,191,0,0.6);
+    }
 
-    .grid {
-      max-width: 900px;
+    .filtro.attivo {
+      color: #ffbf00;
+      border-color: #ffbf00;
+      box-shadow: 0 0 8px rgba(255,191,0,0.7);
+    }
+
+    /* RECENSIONI */
+    .container {
+      max-width: 800px;
       margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      padding: 20px;
     }
 
-    .card {
-      background: var(--card);
-      border-radius: 14px;
-      overflow: hidden;
-      transition: 0.3s;
+    .recensione {
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
     }
 
-    .card:hover {
+    .recensione:hover {
       transform: scale(1.02);
     }
 
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+    .recensione.nascosta {
+      display: none;
     }
 
-    .card-content {
-      padding: 15px;
+    .tag {
+      color: #ffbf00;
+      font-size: 12px;
+      margin-top: 8px;
     }
-
-    .categoria {
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: var(--gold);
-    }
-
-    .card h3 {
-      margin: 10px 0 5px;
-    }
-
-    .card a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      opacity: 0.5;
-    }
-
-    /* MOBILE */
-
-    @media(max-width:700px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-.filtro {
-  background: transparent;
-  color: white;
-  border: 1px solid transparent;
-  padding: 6px 12px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-/* effetto hover */
-.filtro:hover {
-  color: #ffbf00;
-  text-shadow: 0 0 6px rgba(255,191,0,0.6);
-}
-
-/* stato attivo */
-.filtro.attivo {
-  color: #ffbf00;
-  border-color: #ffbf00;
-  box-shadow: 0 0 8px rgba(255,191,0,0.7);
-}
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="topline">notes on cinema by Patrizia Catania</div>
-    <h1 class="brand">paneacult</h1>
-    <div class="subtitle">my therapist says cinema</div>
-  </header>
+  <h1>paneacult</h1>
 
   <!-- FILTRI -->
   <div class="filtri">
-    <button onclick="filtra('tutti')">Tutti</button>
-    <button onclick="filtra('resta')">Cinema che resta</button>
-    <button onclick="filtra('contemporanei')">Contemporanei</button>
-  </div>
-  <div class="filtri">
-  <button class="filtro attivo">Tutti</button>
-  <button class="filtro">Drama</button>
-  <button class="filtro">Horror</button>
-  <button class="filtro">Comedy</button>
+    <button class="filtro attivo" data-filtro="tutti">Tutti</button>
+    <button class="filtro" data-filtro="drama">Drama</button>
+    <button class="filtro" data-filtro="horror">Horror</button>
+    <button class="filtro" data-filtro="comedy">Comedy</button>
   </div>
 
-  <!-- ARTICOLI -->
-  <div class="grid">
+  <!-- RECENSIONI -->
+  <div class="container">
 
-    <div class="card" data-tags="resta">
-      <a href="dittatore.html">
-        <img src="img/Grandedittatore2.jpg">
-        <div class="card-content">
-          <div class="categoria">Cinema che resta</div>
-          <h3>Il grande Dittatore</h3>
-          <p>Charlie Chaplin (1940)</p>
-        </div>
-      </a>
+    <div class="recensione" data-tag="drama">
+      <h3>Film drammatico</h3>
+      <p>Intenso e pieno di ritmo.</p>
+      <div class="tag">#drammatico</div>
     </div>
 
-    <div class="card" data-tags="contemporanei">
-      <a href="uncut.html">
-        <img src="img/uncut.jpg">
-        <div class="card-content">
-          <div class="categoria">Sguardi contemporanei</div>
-          <h3>Uncut Gems</h3>
-          <p>Safdie Brothers (2019)</p>
-        </div>
-      </a>
+    <div class="recensione" data-tag="horror">
+      <h3>Film thriller</h3>
+      <p>Ansia pura dall’inizio alla fine.</p>
+      <div class="tag">#thriller</div>
     </div>
 
-    <div class="card" data-tags="resta">
-      <a href="tramonto.html">
-        <img src="img/viale-del-tramonto.jpg">
-        <div class="card-content">
-          <div class="categoria">Cinema che resta</div>
-          <h3>Sunset Boulevard</h3>
-          <p>Billy Wilder (1950)</p>
-        </div>
-      </a>
+    <div class="recensione" data-tag="comedy">
+      <h3>Film commedia</h3>
+      <p>Leggero e divertente.</p>
+      <div class="tag">#commedia</div>
     </div>
-
   </div>
 
-  <footer>
-    © 2026 paneacult
-  </footer>
-
+  <!-- SCRIPT -->
   <script>
-const filtri = document.querySelectorAll('.filtro');
+    const filtri = document.querySelectorAll('.filtro');
+    const recensioni = document.querySelectorAll('.recensione');
 
-filtri.forEach(filtro => {
-  filtro.addEventListener('click', () => {
-    filtri.forEach(f => f.classList.remove('attivo'));
-    filtro.classList.add('attivo');
-  });
-});
+    filtri.forEach(filtro => {
+      filtro.addEventListener('click', () => {
+
+        // attivo
+        filtri.forEach(f => f.classList.remove('attivo'));
+        filtro.classList.add('attivo');
+
+        const categoria = filtro.getAttribute('data-filtro');
+
+        recensioni.forEach(rec => {
+          const tags = rec.getAttribute('data-tag');
+
+          if (categoria === "tutti" || tags.includes(categoria)) {
+            rec.classList.remove('nascosta');
+          } else {
+            rec.classList.add('nascosta');
+          }
+        });
+
+      });
+    });
   </script>
+
 </body>
 </html>
