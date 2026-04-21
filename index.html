@@ -27,7 +27,10 @@ h1 {
   margin: 20px 0;
   letter-spacing: 2px;
 }
-
+<div class="social">
+  <a href="https://instagram.com/paneacult_" target="_blank">Instagram</a>
+  <a href="https://paneacult.substack.com" target="_blank">Newsletter</a>
+</div>
 /* FILTRI */
 .filtri {
   text-align: center;
@@ -111,6 +114,37 @@ h1 {
 .nascosta {
   display: none;
 }
+  .social {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: #ffbf00;
+  border-color: #ffbf00;
+}
+  .newsletter {
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.newsletter h2 {
+  color: #ffbf00;
+}
+
+.newsletter p {
+  font-size: 14px;
+  opacity: 0.8;
+}
 </style>
 </head>
 
@@ -128,22 +162,32 @@ h1 {
     <img src="img/Grandedittatore2.jpg">
     <div class="overlay">
       <h3>Il grande dittatore</h3>
-      <p>#cinema che resta</p>
+      <p>#cinemacheresta</p>
     </div>
   </div>
   <div class="card" data-tag="sguardi">
     <img src="img/uncut.jpg">
     <div class="overlay">
     <h3>Uncut Gems</h3>
-      <p>#sguardi contemporanei</p>
+      <p>#sguardicontemporanei</p>
     </div>
   </div>
   <div class="card" data-tag="resta">
     <img src="img/viale-del-tramonto.jpg">
     <div class="overlay">
       <h3>Sunset Boulevard</h3>
-      <p>#cinema che resta</p>
+      <p>#cinemacheresta</p>
     </div>
+  </div>
+  <div class="newsletter">
+  <h2>Iscriviti alla newsletter</h2>
+  <p>Ricevi le recensioni direttamente via email.</p>
+
+  <iframe src="https://paneacult.substack.com/embed"
+          width="100%"
+          height="150"
+          style="border:1px solid #eee; background:white;">
+  </iframe>
   </div>
 </div>
 <!-- SCRIPT -->
