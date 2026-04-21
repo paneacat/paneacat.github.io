@@ -7,116 +7,45 @@
 
 <style>
 :root { --gold:#ffbf00; }
-
-body {
-  margin:0;
-  font-family:'Georgia', serif;
-  background:#0f1720;
-  color:#e6edf3;
-}
-
-.article {
-  max-width:800px;
-  margin:auto;
-  padding:20px;
-}
-
-h1,h2,.meta {
-  font-family:'Segoe UI', sans-serif;
-}
-
+body { margin:0; font-family:'Georgia', serif; background:#0f1720; color:#e6edf3; }
+.container { max-width:800px; margin:auto; padding:20px; }
 h1 { color:var(--gold); }
-
-.cover {
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:12px;
-  margin-bottom:20px;
-  filter:brightness(0.75);
-}
-
+.meta { opacity:0.6; margin-bottom:20px; }
+img { width:100%; border-radius:12px; margin-bottom:20px; }
 p { line-height:1.8; margin-bottom:18px; font-size:17px; }
-
-.stelle { color:var(--gold); }
-
-.nav-articoli {
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-  margin-top:40px;
-}
-
-.nav-card {
-  display:flex;
-  justify-content:center;
-  padding:18px;
-  border-radius:14px;
-  background:#16202a;
-  color:white;
-  text-decoration:none;
-}
-
-.nav-card:last-child {
-  color:var(--gold);
-  border:1px solid rgba(255,191,0,0.6);
-}
-
-footer {
-  text-align:center;
-  padding:20px;
-  opacity:0.6;
-}
+.nav { margin-top:40px; display:flex; flex-direction:column; gap:15px; }
+.btn { text-align:center; padding:16px; border-radius:12px; background:#16202a; color:white; text-decoration:none; }
+.btn.gold { border:1px solid var(--gold); color:var(--gold); }
+footer { text-align:center; padding:20px; opacity:0.6; }
 </style>
 </head>
 
 <body>
 
-<div class="article">
+<div class="container">
 
-<img class="cover" src="img/viale-del-tramonto.jpg">
+<img src="img/viale-del-tramonto.jpg">
 
-<h1>Cinema che resta</h1>
-<h2>#2 Sunset Boulevard</h2>
+<h1>Sunset Boulevard</h1>
 <p class="meta">Billy Wilder (1950)</p>
 
-<div class="stelle">★★★★★</div>
-<p>
-Secondo appuntamento della rubrica con Viale del Tramonto, uno dei ritratti più
-spietati e sinceri mai realizzati su Hollywood.
-</p>
+<p>Secondo appuntamento della rubrica con Viale del Tramonto, uno dei ritratti più spietati e sinceri mai realizzati su Hollywood.</p>
 
-<p>
-<strong>Joe Gillis</strong> (<em>William Holden</em>), uno sceneggiatore sull’orlo della bancarotta,
-si rifugia in una vecchia villa di <strong>Sunset Boulevard</strong> per sfuggire ai suoi creditori.
-La casa, immersa in un silenzio sospeso, appartiene in realtà a
-<strong>Norma Desmond</strong> (<em>Gloria Swanson</em>), ex diva del cinema muto che vive
-prigioniera del proprio passato, aggrappata all’illusione di un ritorno impossibile.
-</p>
+<p><strong>Joe Gillis</strong> (William Holden), uno sceneggiatore sull’orlo della bancarotta, si rifugia in una vecchia villa di Sunset Boulevard per sfuggire ai creditori.</p>
 
-<p>
-Il loro incontro segna l’inizio di una relazione ambigua, fatta di dipendenza reciproca
-e illusioni condivise. Ma Viale del tramonto è molto più di una storia individuale:
-è il ritratto crudele di un’industria che crea miti e poi li abbandona,
-e di un cambiamento — l’avvento del sonoro — che ha lasciato indietro chi
-non ha saputo sopravvivere alla trasformazione.
-</p>
+<p>La casa appartiene a <strong>Norma Desmond</strong> (Gloria Swanson), ex diva del cinema muto, prigioniera del proprio passato.</p>
 
-<p>
-Billy Wilder costruisce un film che si apre come un noir e si trasforma
-progressivamente in una tragedia. Norma Desmond diventa il simbolo di Hollywood stessa:
-incapace di accettare il tempo che passa, condannata a vivere nel riflesso della propria grandezza.
-</p>
+<p>Il loro incontro segna l’inizio di una relazione ambigua fatta di dipendenza e illusioni.</p>
 
-<p>
-Un’opera lucida e spietata, che racconta non solo la fine di un’attrice,
-ma la fine di un’illusione.
-</p>
-<a href="index.html">← Torna alla home</a>
+<p>Un ritratto crudele di Hollywood e della sua capacità di creare e distruggere miti.</p>
 
-<div class="nav-articoli">
-  <a href="uncut.html" class="nav-card">← Uncut Gems</a>
-  <a href="#" class="nav-card">Prossimo →</a>
+<p><strong>Patrizia Catania</strong><br><em>paneacult</em></p>
+
+<a href="index.html" class="btn gold">← Torna alla home</a>
+
+<div class="nav">
+  <a href="uncut.html" class="btn">← Uncut Gems</a>
+  <a class="btn" style="opacity:0.3;pointer-events:none;">Articolo successivo →</a>
 </div>
 
 </div>
