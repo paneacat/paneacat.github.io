@@ -1,92 +1,118 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>paneacult</title>
+<meta charset="UTF-8">
+<title>paneacult</title>
 
-  <style>
-    body {
-      background-color: #1b465b;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
+<style>
+body {
+  background: #0f1f2a;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
 
-    h1 {
-      text-align: center;
-      color: #ffbf00;
-      margin-bottom: 30px;
-    }
+/* HEADER */
+h1 {
+  text-align: center;
+  color: #ffbf00;
+  margin: 20px 0;
+}
 
-    /* FILTRI */
-    .filtri {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+/* FILTRI */
+.filtri {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .filtro {
-      background: transparent;
-      color: white;
-      border: 1px solid transparent;
-      padding: 8px 14px;
-      margin: 5px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      font-size: 14px;
-    }
+.filtro {
+  background: transparent;
+  color: white;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
 
-    .filtro:hover {
-      color: #ffbf00;
-      text-shadow: 0 0 6px rgba(255,191,0,0.6);
-    }
+.filtro:hover {
+  color: #ffbf00;
+}
 
-    .filtro.attivo {
-      color: #ffbf00;
-      border-color: #ffbf00;
-      box-shadow: 0 0 8px rgba(255,191,0,0.7);
-    }
+.filtro.attivo {
+  color: #ffbf00;
+  border-color: #ffbf00;
+  box-shadow: 0 0 8px rgba(255,191,0,0.7);
+}
 
-    /* RECENSIONI */
-    .container {
-      max-width: 800px;
-      margin: auto;
-    }
+/* GRID */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
 
-    .recensione {
-      background: rgba(255,255,255,0.05);
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-    }
+/* CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
 
-    .recensione:hover {
-      transform: scale(1.02);
-    }
+.card img {
+  width: 100%;
+  display: block;
+}
 
-    .recensione.nascosta {
-      display: none;
-    }
+/* HOVER */
+.card:hover {
+  transform: scale(1.08);
+  z-index: 2;
+}
 
-    .tag {
-      color: #ffbf00;
-      font-size: 12px;
-      margin-top: 8px;
-    }
-  </style>
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.overlay p {
+  font-size: 12px;
+  color: #ffbf00;
+}
+
+/* HIDE */
+.nascosta {
+  display: none;
+}
+</style>
 </head>
 
 <body>
 
-  <h1>paneacult</h1>
-
+<h1>paneacult</h1>
   <!-- FILTRI -->
   <div class="filtri">
     <button class="filtro attivo" data-filtro="tutti">Tutti</button>
-    <button class="filtro" data-filtro="drama">Drama</button>
-    <button class="filtro" data-filtro="horror">Horror</button>
-    <button class="filtro" data-filtro="comedy">Comedy</button>
+    <button class="filtro" data-filtro="drama">Dramma</button>
+    <button class="filtro" data-filtro="horror">Thriller</button>
+    <button class="filtro" data-filtro="comedy">Commedia</button>
   </div>
 
   <!-- RECENSIONI -->
@@ -113,31 +139,29 @@
 
   <!-- SCRIPT -->
   <script>
-    const filtri = document.querySelectorAll('.filtro');
-    const recensioni = document.querySelectorAll('.recensione');
+const filtri = document.querySelectorAll('.filtro');
+const cards = document.querySelectorAll('.card');
 
-    filtri.forEach(filtro => {
-      filtro.addEventListener('click', () => {
+filtri.forEach(filtro => {
+  filtro.addEventListener('click', () => {
 
-        // attivo
-        filtri.forEach(f => f.classList.remove('attivo'));
-        filtro.classList.add('attivo');
+    filtri.forEach(f => f.classList.remove('attivo'));
+    filtro.classList.add('attivo');
 
-        const categoria = filtro.getAttribute('data-filtro');
+    const categoria = filtro.dataset.filtro;
 
-        recensioni.forEach(rec => {
-          const tags = rec.getAttribute('data-tag');
+    cards.forEach(card => {
+      const tags = card.dataset.tag;
 
-          if (categoria === "tutti" || tags.includes(categoria)) {
-            rec.classList.remove('nascosta');
-          } else {
-            rec.classList.add('nascosta');
-          }
-        });
-
-      });
+      if (categoria === "tutti" || tags.includes(categoria)) {
+        card.classList.remove('nascosta');
+      } else {
+        card.classList.add('nascosta');
+      }
     });
-  </script>
 
+  });
+});
+  </script>
 </body>
 </html>
