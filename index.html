@@ -20,20 +20,56 @@ body {
   color:var(--text);
 }
 
+/* HEADER */
 header {
   text-align:center;
   padding:30px 20px;
   border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-header h1 { color:var(--gold); margin:0; }
+header h1 {
+  margin:0;
+  color:var(--gold);
+}
 
+/* MAIN */
 main {
   max-width:1100px;
   margin:auto;
   padding:25px;
 }
 
+/* FEATURED */
+.featured {
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  margin-bottom:30px;
+}
+
+.featured img {
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  filter:brightness(0.6);
+}
+
+.featured-content {
+  position:absolute;
+  bottom:20px;
+  left:20px;
+}
+
+.featured h2 {
+  margin:0;
+  font-size:28px;
+}
+
+.featured p {
+  opacity:0.8;
+}
+
+/* FILTRI */
 .filtri {
   display:flex;
   gap:10px;
@@ -55,6 +91,7 @@ main {
   color:black;
 }
 
+/* GRID */
 .grid {
   display:grid;
   gap:20px;
@@ -68,6 +105,7 @@ main {
   .grid { grid-template-columns:1fr 1fr 1fr; }
 }
 
+/* CARD */
 .link-card, .link-card * {
   text-decoration:none;
   color:inherit;
@@ -86,12 +124,14 @@ main {
 
 .cover {
   width:100%;
-  height:230px;
+  height:220px;
   object-fit:cover;
   filter:brightness(0.75);
 }
 
-.contenuto { padding:20px; }
+.contenuto {
+  padding:20px;
+}
 
 .rubrica {
   font-size:11px;
@@ -100,14 +140,17 @@ main {
   color:var(--gold);
 }
 
-.titolo { margin:6px 0; }
+.meta {
+  font-size:13px;
+  opacity:0.5;
+}
 
-.meta { font-size:13px; opacity:0.5; }
+.stelle {
+  color:var(--gold);
+  margin:10px 0;
+}
 
-.stelle { color:var(--gold); margin:10px 0; }
-
-.mini { font-size:14px; opacity:0.8; }
-
+/* FOOTER */
 footer {
   text-align:center;
   padding:30px;
@@ -125,12 +168,26 @@ footer {
 
 <main>
 
+<!-- ARTICOLO IN EVIDENZA -->
+<a href="tramonto.html" class="link-card">
+  <div class="featured">
+    <img src="img/viale-del-tramonto.jpg">
+    <div class="featured-content">
+      <p class="rubrica">Cinema che resta</p>
+      <h2>Sunset Boulevard</h2>
+      <p>Quando Hollywood dimentica le sue star.</p>
+    </div>
+  </div>
+</a>
+
+<!-- FILTRI -->
 <div class="filtri">
   <button onclick="filtra('tutti', this)" class="attivo">Tutti</button>
   <button onclick="filtra('resta', this)">Cinema che resta</button>
   <button onclick="filtra('contemporanei', this)">Sguardi contemporanei</button>
 </div>
 
+<!-- GRID -->
 <div class="grid">
 
 <a href="dittatore.html" class="link-card resta">
@@ -138,10 +195,9 @@ footer {
     <img class="cover" src="img/Grandedittatore2.jpg">
     <div class="contenuto">
       <p class="rubrica">Cinema che resta</p>
-      <h2 class="titolo">#1 Il grande Dittatore</h2>
-      <p class="meta">Charlie Chaplin (1940)</p>
+      <h3>Il grande Dittatore</h3>
+      <p class="meta">1940</p>
       <div class="stelle">★★★★★</div>
-      <p class="mini">Satira potente e ancora attuale.</p>
     </div>
   </div>
 </a>
@@ -151,28 +207,15 @@ footer {
     <img class="cover" src="img/uncut.jpg">
     <div class="contenuto">
       <p class="rubrica">Sguardi contemporanei</p>
-      <h2 class="titolo">#1 Uncut Gems</h2>
-      <p class="meta">Safdie Brothers (2019)</p>
+      <h3>Uncut Gems</h3>
+      <p class="meta">2019</p>
       <div class="stelle">★★★★☆</div>
-      <p class="mini">Ansia pura e magnetica.</p>
-    </div>
-  </div>
-</a>
-
-<a href="tramonto.html" class="link-card resta">
-  <div class="recensione">
-    <img class="cover" src="img/viale-del-tramonto.jpg">
-    <div class="contenuto">
-      <p class="rubrica">Cinema che resta</p>
-      <h2 class="titolo">#2 Sunset Boulevard</h2>
-      <p class="meta">Billy Wilder (1950)</p>
-      <div class="stelle">★★★★★</div>
-      <p class="mini">Quando Hollywood dimentica le sue stelle.</p>
     </div>
   </div>
 </a>
 
 </div>
+
 </main>
 
 <footer>© 2026 paneacult</footer>
