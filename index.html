@@ -116,14 +116,12 @@ h1 {
 
 <body>
 <h1>paneacult</h1>
-
 <!-- FILTRI RUBRICHE -->
 <div class="filtri">
   <button class="filtro attivo" data-filtro="tutti">Tutti</button>
   <button class="filtro" data-filtro="resta">Cinema che resta</button>
   <button class="filtro" data-filtro="sguardi">Sguardi contemporanei</button>
 </div>
-
 <!-- GRID -->
 <div class="container">
   <div class="card" data-tag="resta">
@@ -133,7 +131,6 @@ h1 {
       <p>#cinema che resta</p>
     </div>
   </div>
-
   <div class="card" data-tag="sguardi">
     <img src="img/uncut.jpg">
     <div class="overlay">
@@ -141,7 +138,6 @@ h1 {
       <p>#sguardi contemporanei</p>
     </div>
   </div>
-
   <div class="card" data-tag="resta">
     <img src="img/viale-del-tramonto.jpg">
     <div class="overlay">
@@ -150,7 +146,6 @@ h1 {
     </div>
   </div>
 </div>
-
 <!-- SCRIPT -->
 <script>
 const filtri = document.querySelectorAll('.filtro');
@@ -173,7 +168,6 @@ filtri.forEach(filtro => {
         card.classList.add('nascosta');
       }
     });
-
   });
 });
 </script>
