@@ -41,13 +41,17 @@ h1 {
 }
 
 .nav a {
-  flex:1;
-  text-align:center;
-  padding:14px;
-  border:1px solid #ffbf00;
-  border-radius:10px;
-  color:#ffbf00;
-  text-decoration:none;
+  display: flex;
+  justify-content: center;  /* centra orizzontalmente */
+  align-items: center;      /* centra verticalmente */
+  text-align: center;
+
+  padding: 15px 20px;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+
+  color: var(--gold);
+  text-decoration: none;
 }
 
 .nav a:hover {
