@@ -27,43 +27,50 @@
     }
 
     /* HEADER */
-    .main-header {
+   .main-header {
+  padding: 70px 20px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.header-inner {
   text-align: center;
-  padding: 60px 20px 30px;
-  position: relative;
+  max-width: 500px;
 }
 
-/* Titolo */
-.main-header h1 {
-  font-size: 42px;
+/* Titolo principale */
+.brand {
+  font-size: 44px;
   color: var(--gold);
-  letter-spacing: 6px;
-  margin: 0;
-  font-weight: 600;
+  letter-spacing: 8px;
+  font-weight: 500;
+  text-transform: lowercase;
 }
 
-/* Sottotitolo */
+/* Linea elegante */
+.divider {
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  margin: 20px auto;
+  opacity: 0.5;
+}
+
+/* Testo sotto */
 .tagline {
-  margin-top: 10px;
   font-size: 14px;
   opacity: 0.6;
   letter-spacing: 2px;
   font-style: italic;
 }
 
-/* Linea elegante sotto */
-.main-header::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: var(--gold);
-  margin: 20px auto 0;
-  opacity: 0.6;
-}
-    .main-header h1 {
-  text-shadow: 0 0 10px rgba(255,191,0,0.2);
-}
+/* Firma */
+.author {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.4;
+  letter-spacing: 1px;
+}    
     /* FILTRI */
    .filtri {
   display: grid;
@@ -178,11 +185,19 @@ a:visited {
 <body>
 
   <!-- ===== HEADER ===== -->
- <header class="main-header">
-  <h1>paneacult</h1>
-  <p class="tagline">my therapist says cinema</p>
-</header>
+<header class="main-header">
+  <div class="header-inner">
+    <div class="brand">paneacult</div>
 
+    <div class="divider"></div>
+
+    <div class="header-text">
+      <p class="tagline">my therapist says cinema</p>
+      <p class="author">by Patrizia Catania</p>
+    </div>
+  </div>
+  <p class="author">notes on cinema by Patrizia Catania</p>
+</header>
   <!-- ===== FILTRI ===== -->
 <div class="filtri">
   <button onclick="filtra('tutti')">Tutti</button>
