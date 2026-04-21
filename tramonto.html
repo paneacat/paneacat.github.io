@@ -3,63 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <p class="categoria">Cinema che resta</p>
-<h1>Sunset Boulevard</h1>
-<title>Sunset Boulevard</title>
+
+<title>Viale del tramonto - paneacult</title>
 
 <style>
 :root { --gold:#ffbf00; }
-body { margin:0; font-family:'Georgia', serif; background:#0f1720; color:#e6edf3; }
+
+body {
+  margin:0;
+  font-family:'Georgia', serif;
+  background:#0f1720;
+  color:#e6edf3;
+}
+
+.hero { height:320px; position:relative; }
+
+.hero img {
+  width:100%; height:100%; object-fit:cover;
+  filter:brightness(0.5);
+}
+
+.hero-content {
+  position:absolute;
+  bottom:20px;
+  left:20px;
+}
+
+.categoria { color:var(--gold); font-size:12px; }
+
 .container { max-width:800px; margin:auto; padding:20px; }
-h1 { color:var(--gold); }
-.meta { opacity:0.6; margin-bottom:20px; }
-img { width:100%; border-radius:12px; margin-bottom:20px; }
-p { line-height:1.8; margin-bottom:18px; font-size:17px; }
-.nav { margin-top:40px; display:flex; flex-direction:column; gap:15px; }
-.btn { text-align:center; padding:16px; border-radius:12px; background:#16202a; color:white; text-decoration:none; }
-.btn.gold { border:1px solid var(--gold); color:var(--gold); }
-footer { text-align:center; padding:20px; opacity:0.6; }
-  .categoria {
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 5px;
-  }
+
+p { line-height:1.8; margin-bottom:18px; }
+
+.stelle { color:var(--gold); margin-bottom:20px; }
 </style>
 </head>
 
 <body>
 
+<div class="hero">
+  <img src="img/tramonto.jpg">
+  <div class="hero-content">
+    <div class="categoria">Cinema che resta</div>
+    <h1>Viale del tramonto</h1>
+    <div>Billy Wilder (1950)</div>
+  </div>
+</div>
+
 <div class="container">
 
-<img src="img/viale-del-tramonto.jpg">
-
-<h1>Sunset Boulevard</h1>
-<p class="meta">Billy Wilder (1950)</p>
+<div class="stelle">★★★★★</div>
 
 <p>Secondo appuntamento della rubrica con Viale del Tramonto, uno dei ritratti più spietati e sinceri mai realizzati su Hollywood.</p>
 
-<p><strong>Joe Gillis</strong> (William Holden), uno sceneggiatore sull’orlo della bancarotta, si rifugia in una vecchia villa di Sunset Boulevard per sfuggire ai creditori.</p>
+<p><strong>Joe Gillis</strong> (<em>William Holden</em>), uno sceneggiatore sull’orlo della bancarotta, si rifugia in una vecchia villa di Sunset Boulevard per sfuggire ai suoi creditori.</p>
 
-<p>La casa appartiene a <strong>Norma Desmond</strong> (Gloria Swanson), ex diva del cinema muto, prigioniera del proprio passato.</p>
+<p>La casa, immersa in un silenzio sospeso, appartiene in realtà a <strong>Norma Desmond</strong> (<em>Gloria Swanson</em>), ex diva del cinema muto che vive prigioniera del proprio passato, aggrappata all’illusione di un ritorno impossibile.</p>
 
-<p>Il loro incontro segna l’inizio di una relazione ambigua fatta di dipendenza e illusioni.</p>
+<p>Il loro incontro segna l’inizio di una relazione ambigua, fatta di dipendenza reciproca e illusioni condivise.</p>
 
-<p>Un ritratto crudele di Hollywood e della sua capacità di creare e distruggere miti.</p>
+<p>Ma Viale del tramonto è molto più di una storia individuale: è il ritratto crudele di un’industria che crea miti e poi li abbandona, e di un cambiamento, l’avvento del sonoro, che non ha solo rivoluzionato il cinema, ma ha lasciato indietro chi non ha saputo sopravvivere alla trasformazione.</p>
+
+<p>Billy Wilder costruisce un film che si apre come un noir e si trasforma progressivamente in una tragedia.</p>
+
+<p>Norma Desmond diventa il simbolo di Hollywood stessa: incapace di accettare il tempo che passa, condannata a vivere nel riflesso della propria grandezza.</p>
+
+<p>Un’opera lucida e spietata, che racconta non solo la fine di un’attrice, ma la fine di un’illusione.</p>
 
 <p><strong>Patrizia Catania</strong><br><em>paneacult</em></p>
 
-<a href="index.html" class="btn gold">← Torna alla home</a>
-
-<div class="nav">
-  <a href="uncut.html" class="btn">← Uncut Gems</a>
-  <a class="btn" style="opacity:0.3;pointer-events:none;">Articolo successivo →</a>
 </div>
-
-</div>
-
-<footer>© 2026 paneacult</footer>
 
 </body>
 </html>
