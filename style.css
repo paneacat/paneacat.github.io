@@ -439,3 +439,7 @@ footer {
 .banner-link {
   margin: 30px auto 50px;
 }
+.newsletter h2 {
+  text-align: center;
+  color: var(--gold);
+}
