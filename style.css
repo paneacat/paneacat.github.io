@@ -332,3 +332,40 @@ footer {
     margin: 80px auto;
   }
 }
+.about-container {
+  max-width: 700px;
+  margin: 140px auto;
+  padding: 0 20px;
+  text-align: left;
+  line-height: 1.9;
+}
+
+.about-container p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.about-container p:first-child {
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  color: var(--text);
+}
+
+.about-container strong {
+  color: var(--gold);
+}
+
+.about-container a {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--gold);
+  font-size: 14px;
+}
+.banner-link h2 {
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.4;
+  max-width: 600px;
+  margin: 0 auto;
+}
