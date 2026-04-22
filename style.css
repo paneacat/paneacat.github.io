@@ -165,27 +165,37 @@ header {
 
 /* ===== FILTRI ===== */
 .filtri {
-  text-align: center;
-  margin: 40px auto 60px;
-}
+    padding: 0 20px;
+    margin: 30px auto;
+    text-align: left;
+  }
 
-.filtro {
-  background: rgba(255,255,255,0.05);
-  color: #d0d0d0;
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 8px 16px;
-  margin: 5px;
-  border-radius: 20px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+  /* sistema le righe */
+  .filtri div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 18px;
+  }
 
-.filtro:hover {
-  color: white;
-  border-color: var(--gold);
-}
+  /* titolo tipo "Categoria" */
+  .filtri span,
+  .filtri strong {
+    width: 100%;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 5px;
+  }
 
+  /* bottoni */
+  .filtro {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 16px;
+  }
+
+}
 .filtro.attivo {
   background: var(--gold);
   color: #0b1f26;
