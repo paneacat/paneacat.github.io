@@ -56,13 +56,12 @@ header {
   text-transform: uppercase;
 }
 
-/* 🔥 niente giallo fisso */
-.menu a.active {
-  color: #aaa;
-}
-
 .menu a:hover {
   color: var(--gold);
+}
+
+.menu a.active {
+  color: #aaa;
 }
 
 /* ===== CONTAINER ===== */
@@ -172,12 +171,14 @@ header {
   text-align: left;
 }
 
-.filtri div {
+.filtri > div {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
   margin-bottom: 18px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .filtri span,
@@ -190,8 +191,8 @@ header {
 
 .filtro {
   font-size: 12px;
-  padding: 6px 12px;
-  border-radius: 16px;
+  padding: 7px 14px;
+  border-radius: 20px;
 }
 
 .filtro.attivo {
@@ -327,6 +328,18 @@ footer {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+  .filtri > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filtri-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
   .home .card img {
     height: 240px;
