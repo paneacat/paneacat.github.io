@@ -413,8 +413,10 @@ footer {
 .social {
   display: flex;
   justify-content: center;
+  gap: 16px;
+  margin-top: 15px;
 }
 .hero,
   .hero * {
-    text-align: center !important;
+    text-align: center;
 }
