@@ -336,3 +336,6 @@ footer {
     aspect-ratio: 16 / 9;
   }
 }
+.hidden {
+  display: none;
+}
