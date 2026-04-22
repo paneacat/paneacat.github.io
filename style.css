@@ -402,6 +402,60 @@ footer {
 .newsletter p {
   margin-bottom: 20px;
 }
+.contact-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+/* titolo */
+.contact-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+/* intro */
+.contact-intro {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* linea elegante */
+.contact-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 30px auto;
+  opacity: 0.6;
+}
+
+/* link */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.contact-links a {
+  font-size: 16px;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  color: var(--gold);
+}
+
+/* email */
+.contact-email {
+  color: #aaa;
+  line-height: 1.6;
+}
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
 
