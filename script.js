@@ -51,6 +51,22 @@ const elements = document.querySelectorAll('.fade-in');
 function revealOnScroll() {
   const trigger = window.innerHeight * 0.9;
 
+  elements.forEach((el, index) => {
+    const top = el.getBoundingClientRect().top;
+
+    if (top < trigger) {
+      setTimeout(() => {
+        el.classList.add('visible');
+      }, index * 80); // 👈 ritmo tra le card
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+function revealOnScroll() {
+  const trigger = window.innerHeight * 0.9;
+
   elements.forEach(el => {
     const top = el.getBoundingClientRect().top;
 
