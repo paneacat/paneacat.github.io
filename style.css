@@ -390,3 +390,12 @@ footer {
     transform-origin: top center;
   }
 }
+.social a {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
