@@ -105,11 +105,6 @@ header {
   border-radius: 16px;
 }
 
-.home .card-info h3 {
-  font-size: 32px;
-  margin-top: 18px;
-}
-
 /* ===== ARCHIVIO ===== */
 .archivio .container {
   max-width: 1200px;
@@ -406,3 +401,12 @@ footer {
 .hero {
   text-align: center;
 }
+.archivio .card-info h3 {
+  font-size: 20px;
+  color: var(--text);
+  font-weight: 400;
+}
+  .archivio .card {
+  margin-bottom: 10px;
+  }
+  
