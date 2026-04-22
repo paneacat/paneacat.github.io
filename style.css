@@ -410,3 +410,17 @@ footer {
   display: flex;
   justify-content: center !important;
 }
+.hero h1 {
+  text-align: center !important;
+  font-weight: 400 !important;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.4;
+  font-family: 'Playfair Display', serif;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 18px; /* 👈 spazio tra le icone */
+  margin-top: 12px;
+}
