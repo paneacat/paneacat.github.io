@@ -239,11 +239,13 @@ header {
   margin: 120px auto;
   padding: 0 20px;
   line-height: 1.9;
+  text-align: center;
 }
 
 .about-container p {
   margin-bottom: 20px;
   color: #ccc;
+  text-align: center;
 }
 
 .about-container p:first-child {
