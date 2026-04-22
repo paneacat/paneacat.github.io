@@ -141,6 +141,21 @@ header {
   font-size: 14px;
   color: #bfbfbf;
 }
+.back-home {
+  margin-top: 40px;
+}
+
+.back-home a {
+  color: #bfbfbf;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-home a:hover {
+  color: var(--gold);
+}
+
 /* ===== BANNER ===== */
 .banner-link {
   text-align: center;
