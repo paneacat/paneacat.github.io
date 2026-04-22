@@ -17,13 +17,13 @@ body {
   background: var(--bg);
   color: var(--text);
 }
-.home .grid {
+.home-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 60px;
 }
 
-.home .card img {
+.home-grid .card img {
   width: 100%;
   height: 420px;
   object-fit: cover;
