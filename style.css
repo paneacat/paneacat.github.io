@@ -424,15 +424,18 @@ footer {
   margin-top: 12px;
 }
 .banner-link h2 {
-  font-size: 32px;
-  font-family: 'Playfair Display', serif;
-  line-height: 1.4;
-  max-width: 520px;
+  font-size: 26px;
+  line-height: 1.5;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
   font-weight: 400;
+  font-family: 'Playfair Display', serif;
 }
 .banner-link h2 span {
   display: block;
   margin-top: 6px;
+}
+.banner-link {
+  margin: 30px auto 50px;
 }
