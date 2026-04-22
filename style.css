@@ -287,15 +287,13 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 26px;
   color: var(--text);
-  margin-bottom: 10px;
+  margin-bottom: 4px; /* ridotto */
 }
 
-/* SOTTOTITOLO */
 .contact-sub {
   font-size: 15px;
   color: #aaa;
-  margin-bottom: 30px;
-}
+  margin-bottom: 25px; /* legger
 
 /* LINEA */
 .contact-divider {
