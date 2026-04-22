@@ -3,20 +3,19 @@ const cards = document.querySelectorAll('.card');
 
 let filtriAttivi = {
   categoria: "tutti",
-  genere: "tutti",
-  regista: "tutti"
+  genere: "tutti"
 };
 
 filtri.forEach(filtro => {
   filtro.addEventListener('click', () => {
 
-    const tipo = filtro.dataset.tipo;     // categoria / genere / regista
+    const tipo = filtro.dataset.tipo;
     const valore = filtro.dataset.valore;
 
     // aggiorna stato
     filtriAttivi[tipo] = valore;
 
-    // UI attivo (solo nel gruppo giusto)
+    // UI attivo (solo nel gruppo corretto)
     document.querySelectorAll(`.filtro[data-tipo="${tipo}"]`)
       .forEach(f => f.classList.remove('attivo'));
 
@@ -31,24 +30,19 @@ function aggiornaFiltri() {
 
     const categoria = card.dataset.categoria;
     const genere = card.dataset.genere;
-    const regista = card.dataset.regista;
 
     const matchCategoria =
       filtriAttivi.categoria === "tutti" ||
       categoria === filtriAttivi.categoria;
 
-   const matchGenere =
-  filtriAttivi.genere === "tutti" ||
-  genere.includes(filtriAttivi.genere);
+    const matchGenere =
+      filtriAttivi.genere === "tutti" ||
+      genere.includes(filtriAttivi.genere);
 
-    const matchRegista =
-      filtriAttivi.regista === "tutti" ||
-      regista.includes(filtriAttivi.regista);
-
-    if (matchCategoria && matchGenere && matchRegista) {
-      card.style.display = "block";
+    if (matchCategoria && matchGenere) {
+      card.style.display = "";
     } else {
-      card.style.display = "none";
+      card.style.display = "";
     }
   });
 }
