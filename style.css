@@ -405,19 +405,37 @@ footer {
     margin-top: 10px;
   }
 
-  .filtri {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+   .filtri {
+    padding: 0 20px;
     margin: 30px auto 40px;
-    padding: 0 15px;
   }
 
+  /* BLOCCO (Categoria / Genere) */
+  .filtri-group {
+    margin-bottom: 25px;
+  }
+
+  /* TITOLO */
+  .filtri-group h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+
+  /* CONTENITORE BOTTONI */
+  .filtri-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* BOTTONI */
   .filtro {
     font-size: 12px;
     padding: 6px 12px;
-    margin: 4px 4px 4px 0;
+    border-radius: 18px;
   }
+}
 
   .home .grid {
     gap: 40px;
