@@ -111,7 +111,20 @@ header {
   object-fit: cover;
   border-radius: 16px;
 }
-
+.archivio .container {
+  max-width: 1200px;
+}
+.archivio .grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.archivio .card img {
+  height: 260px;
+  object-fit: cover;
+}
+.archivio .card-info h3 {
+  font-size: 22px;
+}
 /* ===== CARD ===== */
 .card {
   display: block;
@@ -333,7 +346,9 @@ footer {
   .archivio .grid img {
     height: 180px;
   }
-
+ .archivio .grid {
+    grid-template-columns: 1fr;
+  }
   .card-info h3 {
     font-size: 22px;
   }
