@@ -203,3 +203,49 @@ footer {
   }
 
 }
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 25px 15px 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .menu {
+    gap: 15px;
+    margin-top: 5px;
+  }
+
+  .social {
+    margin: 10px 0;
+  }
+
+  .banner-link {
+    margin: 25px auto;
+  }
+
+  .banner-link h2 {
+    font-size: 20px;
+  }
+
+  .filtri {
+    margin: 20px 0;
+  }
+
+  .filtro {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .section {
+    margin: 30px auto;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+}
