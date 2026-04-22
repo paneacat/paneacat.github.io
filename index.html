@@ -37,9 +37,11 @@ header {
   padding: 30px 20px;
   position: relative;
 }
+
 .hero {
   margin-bottom: 30px;
 }
+
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 56px;
@@ -147,6 +149,7 @@ header {
   opacity: 1;
   pointer-events: all;
 }
+
 .menu {
   position: relative;
   z-index: 20;
@@ -186,12 +189,6 @@ header {
   line-height: 1.5;
   letter-spacing: 0.3px;
 }
-  .banner-link {
-    padding: 0 25px;
-    max-width: 320px;
-    margin: 40px auto;
-  }
-}
 
 /* ===== FILTRI ===== */
 
@@ -214,19 +211,6 @@ header {
   border-color: var(--gold);
 }
 
-  @media (max-width: 600px) {
-  .filtri {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .filtro {
-    font-size: 12px;
-    padding: 5px 10px;
-  }
-  }
 /* ===== GRID ===== */
 
 .section {
@@ -263,13 +247,7 @@ header {
 .card:hover img {
   transform: scale(1.03);
 }
-  
-@media (max-width: 600px) {
-  .card img {
-    height: auto;
-    aspect-ratio: 16 / 9;
-  }
-}
+
 /* ===== NEWSLETTER ===== */
 
 .newsletter {
@@ -291,13 +269,39 @@ footer {
   opacity: 0.5;
 }
 
+/* ===== MOBILE FIX ===== */
+
 @media (max-width: 600px) {
+
+  .banner-link {
+    padding: 0 25px;
+    max-width: 320px;
+    margin: 40px auto;
+  }
+
   .banner-link h2 {
     font-size: 22px;
     line-height: 1.4;
-    padding: 0 10px;
+  }
+
+  .filtri {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .filtro {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .card img {
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 }
+
 </style>
 </head>
 
