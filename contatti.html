@@ -1,114 +1,67 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Contatti — paneacult</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+<title>Contatti — paneacult</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-  <style>
-    .contact {
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    .contact h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
-
-    .contact p {
-      max-width: 500px;
-      margin: 0 auto 30px;
-      color: #bfbfbf;
-      line-height: 1.6;
-    }
-
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 30px;
-    }
-
-    .contact-links a {
-      color: #bfbfbf;
-      font-size: 22px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .contact-links a:hover {
-      color: var(--gold);
-    }
-
-    .email {
-      margin-top: 25px;
-      font-size: 16px;
-      color: #bfbfbf;
-    }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-      .contact h1 {
-        font-size: 32px;
-      }
-
-      .contact-links {
-        gap: 18px;
-      }
-    }
-  </style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="contact-page">
 
-  <!-- HEADER -->
-  <header>
-    <div class="hero">
-      <a href="index.html" class="logo">paneacult</a>
-    </div>
+<header>
+  <div class="hero">
+    <a href="index.html" class="logo">paneacult</a>
+  </div>
 
-    <nav class="menu">
-      <a href="archivio.html">Recensioni</a>
-      <a href="featured.html">Chi sono</a>
-      <a href="contatti.html" class="active">Contatti</a>
-    </nav>
-  </header>
+  <nav class="menu">
+    <a href="archivio.html">Recensioni</a>
+    <a href="featured.html">Chi sono</a>
+    <a href="contatti.html" class="active">Contatti</a>
+  </nav>
+</header>
 
-  <!-- CONTENUTO -->
-  <div class="container contact">
+<section class="contact-section">
+  <div class="contact-container">
 
     <h1>Contatti</h1>
 
     <p>
-      Se vuoi scrivermi, collaborare o semplicemente parlare di cinema,
-      questo è il posto giusto.
+      Il cinema è dialogo.<br>
+      Se vuoi iniziarne uno, scrivimi.
     </p>
 
-    <!-- SOCIAL -->
     <div class="contact-links">
-      <a href="https://www.instagram.com/paneacult_?igsh=anRrb3FoaDBwOTNx" target="_blank">IG paneacult</a>
-      <a href="https://www.instagram.com/paneacat_?igsh=MXQ3Z3liN2N5aDFibw==" target="_blank">IG personale</a>
+      <a href="https://www.instagram.com/paneacult_?igsh=anRrb3FoaDBwOTNx" target="_blank">
+        Instagram paneacult
+      </a>
+
+      <a href="https://www.instagram.com/paneacat_?igsh=MXQ3Z3liN2N5aDFibw==" target="_blank">
+        Instagram personale
+      </a>
     </div>
 
     <div class="email">
-      oppure scrivi a: <br>
+      oppure scrivi a<br>
       <strong>patrizia.catania22@gmail.com</strong>
     </div>
 
   </div>
-<script src="script.js"></script>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    2026 © paneacult
-  </footer>
+<div class="back-home">
+  <a href="index.html">← Home</a>
+</div>
+
+<footer>
+  2026 © paneacult
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
