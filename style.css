@@ -14,7 +14,18 @@ body {
   background: var(--bg);
   color: white;
 }
+a {
+  color: bfbfbf;
+  text-decoration: none;
+}
 
+a:visited {
+  color: bfbfbf;
+}
+
+a:hover {
+  color: var(--gold);
+  
 /* CONTAINER (CHIAVE DI TUTTO) */
 .container {
   width: 100%;
@@ -149,29 +160,4 @@ footer {
   .banner-link h2 {
     font-size: 22px;
   }
-}
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:visited {
-  color: white;
-}
-
-a:hover {
-  color: var(--gold);
-}
-.card,
-.card h3,
-.card p {
-  color: #bfbfbf;
-}
-
-.social a {
-color: #bfbfbf;
-}
-
-.social a:visited {
-color: #bfbfbf;
 }
