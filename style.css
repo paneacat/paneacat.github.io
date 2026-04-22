@@ -18,6 +18,17 @@ body {
   color: var(--text);
 }
 
+<p class="genere">
+  <span class="label">Genere:</span>
+  <span class="tag">dramma</span>
+  <span class="tag">thriller</span>
+  <span class="tag">commedia</span>
+  <span class="tag">giallo</span>
+  <span class="tag">biopic</span>
+  <span class="tag">musical</span>
+
+</p>
+
 /* ===== LINK (NO BLU/VIOLA) ===== */
 a,
 a:link,
