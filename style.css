@@ -395,6 +395,13 @@ footer {
   /* 🔥 questo è il trucco */
   filter: invert(1) hue-rotate(180deg);
 }
+.newsletter h2 {
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  margin-bottom: 20px;
+}
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
 
