@@ -401,9 +401,15 @@ footer {
 .contact-email {
   text-align: center;
 }
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 15px;
+
+.hero {
+  text-align: center !important;
 }
+
+.hero h1 {
+  text-align: center !important;
+  font-weight: 400 !important;
+  margin: 0 auto 40px !important;
+  max-width: 500px !important;
+}
+
