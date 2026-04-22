@@ -131,7 +131,16 @@ header {
   background: var(--gold);
   color: #0b1f26;
 }
+.watch {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
 
+.watch-title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #bfbfbf;
+}
 /* ===== BANNER ===== */
 .banner-link {
   text-align: center;
