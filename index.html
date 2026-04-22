@@ -473,34 +473,42 @@ header {
   pointer-events: all;
 }
 
-/* MENU MOBILE ANIMATO */
-@media (max-width: 700px) {
-
+@media (max-width: 600px) {
   .menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 75%;
-    background: #0b1620;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 80px 30px;
-    gap: 25px;
-
-    transform: translateX(100%);
-    transition: 0.4s ease;
-    z-index: 10;
-  }
-
-  .menu.active {
-    transform: translateX(0);
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .menu a {
-    font-size: 18px;
-    letter-spacing: 1px;
+    font-size: 12px;
   }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+/* hover sottile */
+.menu a:hover {
+  color: #ffbf00;
+}
+
+/* attivo */
+.menu a.active {
+  color: #ffbf00;
+}
 }
     .no-scroll {
   overflow: hidden;
@@ -520,10 +528,12 @@ header {
   </div>
 
   <!-- MENU -->
-  <nav class="menu" id="menu">  
-<a href="index.html" class="active">Chi sono</a>
-<a href="index.html" class="active">Contatti</a>
-<a href="index.html" class="active">Archivio</a>
+<nav class="menu">
+  <a href="index.html">Archivio</a>
+  <a href="#">Cinema che resta</a>
+  <a href="#">Contemporaneo</a>
+  <a href="#">Chi sono</a>
+</nav>
 
   </nav>
   <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
