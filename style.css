@@ -221,6 +221,43 @@ footer {
 .back-home {
   display: none;
 }
+/* HOVER CARD CINEMATICO */
+
+.card {
+  display: block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card img {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* effetto al passaggio */
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card:hover img {
+  transform: scale(1.04);
+  opacity: 0.9;
+}
+
+/* ombra morbida */
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+/* ANIMAZIONE FADE-IN */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @media (max-width: 600px) {
   .home-grid img {
