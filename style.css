@@ -224,6 +224,7 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin-top: 30px;
 }
 
 .review-container h1 {
@@ -237,23 +238,23 @@ a:hover {
 .meta {
   font-size: 14px;
   color: #aaa;
-  margin: 0;
-  line-height: 1.2;
+  margin-bottom: 4px;
 }
 
 .genere {
   font-size: 13px;
-  color: #888;
-  margin-bottom: 25px;
+  color: #777;
+  margin-bottom: 18px;
 }
 
 .review-text {
   line-height: 1.8;
   color: #d6d6d6;
+  max-width: 650px;
 }
 
 .review-text p {
-  margin-bottom: 18px;
+  margin-bottom: 20px; 
 }
 
 /* ===== FOOTER ===== */
@@ -482,5 +483,23 @@ footer {
 
 .watch a:hover {
   color: var(--gold);
+  border-color: var(--gold);
+}
+.watch {
+  margin: 10px 0 25px;
+  font-size: 13px;
+}
+
+.watch span {
+  color: #777;
+  margin-right: 6px;
+}
+
+.watch a {
+  color: var(--gold);
+  border-bottom: 1px solid rgba(255,191,0,0.4);
+}
+
+.watch a:hover {
   border-color: var(--gold);
 }
