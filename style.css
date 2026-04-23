@@ -146,7 +146,6 @@ a:hover {
   -webkit-tap-highlight-color: transparent;
   display: flex;
   flex-direction: column;
-  display: block;
   width: 100%;
 }
   .card img {
@@ -416,13 +415,6 @@ footer {
   margin: 0 auto;
   padding: 0 20px;
 }
-.card-info h3 {
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--gold);
-  margin-bottom: 2px;
-  letter-spacing: 0.2px;
-  }
 .home-grid {
   display: grid;
   grid-template-columns: 1fr;
