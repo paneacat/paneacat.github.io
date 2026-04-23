@@ -89,13 +89,6 @@ a:hover {
   padding: 0 20px;
 }
 
-/* ===== FILTRI ===== */
-.filtri-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
 /* BOTTONI */
 .filtri-buttons {
   display: flex;
@@ -121,6 +114,15 @@ a:hover {
   color: #aaa;
 
   transition: all 0.25s ease;
+}
+.filtri {
+  max-width: 720px;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 /* ===== GRID ===== */
