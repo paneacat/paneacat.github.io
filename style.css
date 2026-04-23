@@ -516,6 +516,5 @@ footer {
   color: var(--gold);
 }
 .back-home {
-  display: block;
-  margin-top: 40px !important;
+  margin-top: 40px
 }
