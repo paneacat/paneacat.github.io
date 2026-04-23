@@ -391,4 +391,10 @@ margin-bottom: 4px;
   .home-grid {
   grid-template-columns: 1fr !important;
   }
-  
+  .filtri-buttons:first-of-type .filtro {
+  opacity: 1;
+}
+
+.filtri-buttons:last-of-type .filtro {
+  opacity: 0.85;
+}
