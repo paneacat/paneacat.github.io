@@ -401,8 +401,20 @@ margin-bottom: 4px;
 .card:hover img {
  transform: scale(1.01);
 }
+/* SOLO ARCHIVIO */
+@media (min-width: 900px) {
+  .archivio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (min-width: 1200px) {
-  .grid {
+  .archivio-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* HOME SEMPRE VERTICALE */
+.home-grid {
+  grid-template-columns: 1fr !important;
 }
