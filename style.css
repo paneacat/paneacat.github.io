@@ -239,8 +239,8 @@ a:hover {
 }
 
 .review-container {
-  max-width: 700px;
-  margin: 20px auto;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 0 20px;
   width: 100%;
   height: 100%;
@@ -326,6 +326,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 40px;
 }
 
 .filtri-group {
@@ -352,7 +353,7 @@ footer {
 /* 4) HOME – testo leggermente più basso e centrato meglio */
 .card-info {
   padding-left: 6px;
-  margin-top: 18px;
+  margin-top: 10px;
   position: relative;
   z-index: 2;
 }
@@ -373,8 +374,12 @@ margin-bottom: 4px;
 }
 
 /* HOME SEMPRE VERTICALE */
-}.archivio-grid {
+.archivio-grid {
   grid-template-columns: 1fr;
+  gap: 40px;
+}
+.archivio-grid .card img {
+  height: 220px;
 }
 
 @media (min-width: 768px) {
