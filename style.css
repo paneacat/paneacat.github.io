@@ -515,3 +515,7 @@ footer {
 .back-home a:hover {
   color: var(--gold);
 }
+.back-home {
+  display: block;
+  margin-top: 25px;
+}
