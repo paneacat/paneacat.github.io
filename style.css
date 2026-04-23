@@ -124,7 +124,13 @@ a:hover {
   flex-direction: column;
   gap: 25px;
 }
-
+.filtri-group h4 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 8px;
+  padding-left: 2px; /* micro fix allineamento */
+}
 /* ===== GRID ===== */
 .grid {
   display: grid;
