@@ -517,3 +517,10 @@ color: var(--gold);
   line-height: 1.2 !important;
   color: #ccc !important;
 }
+.review-hero img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
