@@ -290,24 +290,30 @@ footer {
   max-width: 620px;
   margin: 120px auto;
   padding: 0 20px;
-  text-align: left;
+  text-align: center;
   line-height: 1.9;
   font-size: 17px;
 }
 }
+.about-container p {
+  margin-bottom: 14px;
+  color: #d6d6d6;
+}
+
+/* frase principale */
 .about-container p:first-child {
   color: var(--gold);
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  letter-spacing: 0.3px;
 }
 
-.about-container p:nth-child(2) {
-  color: #e6e6e6;
+/* nome */
+.about-container p:nth-child(3) {
+  color: #ffffff;
 }
 
-.about-container p {
-  margin-bottom: 16px;
-  margin-top: 140px;
+/* ultima frase leggermente più soft */
+.about-container p:last-child {
+  color: #aaa;
 }
 
 @keyframes fadeUp {
