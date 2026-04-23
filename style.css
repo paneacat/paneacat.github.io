@@ -376,7 +376,6 @@ margin-bottom: 4px;
 /* HOME SEMPRE VERTICALE */
 .archivio-grid {
   grid-template-columns: 1fr;
-  gap: 40px;
 }
 .archivio-grid .card img {
   height: 220px;
@@ -397,7 +396,6 @@ margin-bottom: 4px;
   grid-template-columns: 1fr !important;
   .filtri-buttons:first-of-type .filtro {
   opacity: 1;
-  gap: 28px;
 }
   }
 .filtri-buttons:last-of-type .filtro {
