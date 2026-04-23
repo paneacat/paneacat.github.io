@@ -385,3 +385,8 @@ margin-bottom: 4px;
   object-fit: cover;
   object-position: center;
 }
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
