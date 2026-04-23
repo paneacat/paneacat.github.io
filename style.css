@@ -287,27 +287,27 @@ footer {
 /* 1) CONTATTI + CHI SONO centrati di nuovo */
 .contact-container {
   .about-container {
-  max-width: 600px;
+  max-width: 620px;
   margin: 120px auto;
-  text-align: center;
+  padding: 0 20px;
+  text-align: left;
   line-height: 1.9;
   font-size: 17px;
-  color: #e6e6e6;
 }
 }
-.about-container p {
-  margin-bottom: 18px;
-}
-
 .about-container p:first-child {
-  font-size: 20px;
   color: var(--gold);
   font-family: 'Playfair Display', serif;
+  font-size: 20px;
 }
-.about-container {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s ease forwards;
+
+.about-container p:nth-child(2) {
+  color: #e6e6e6;
+}
+
+.about-container p {
+  margin-bottom: 16px;
+  margin-top: 140px;
 }
 
 @keyframes fadeUp {
