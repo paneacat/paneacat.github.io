@@ -377,7 +377,6 @@ margin-bottom: 4px;
 .archivio-grid {
   grid-template-columns: 1fr;
   gap: 40px;
-  margin-bottom: 80px;
 }
 .archivio-grid .card img {
   height: 220px;
