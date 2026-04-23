@@ -105,8 +105,9 @@ a:hover {
 .filtri-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center; /* 🔥 questo li centra */
+  gap: 10px;
+  justify-content: center;
+  max-width: 420px;
 }
 .filtro {
   font-size: 11px;
@@ -323,11 +324,15 @@ footer {
 /* 2) FILTRI (titoli Rubrica / Genere centrati) */
 .filtri {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .filtri-group {
   width: 100%;
   text-align: center;
+  max-width: 500px;
 }
 
 .filtri-group h4 {
