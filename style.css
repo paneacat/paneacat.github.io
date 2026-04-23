@@ -349,7 +349,8 @@ margin-bottom: 5px;
 .meta {
 color: #aaa;
 font-size: 14px;
-margin-bottom: 10px;
+margin-bottom: 6px;
+margin-top: -2px;
 }
 
 /* GENERE */
@@ -405,6 +406,7 @@ font-family: 'Playfair Display', serif;
 font-size: 28px;
 font-weight: 400;
 color: var(--gold);
+margin-bottom: 2px;
 }
 .watch-links a {
 display: inline-block;
