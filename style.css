@@ -293,22 +293,28 @@ footer {
 @media (max-width: 600px) {
   .logo { font-size: 36px; }
   .menu { gap: 16px; }
-  .menu a { font-size: 11px; }
-
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
+  .menu a { font-size: 11px;
   .card img {
     height: 240px;
   }
 }
 
-/* ===== DESKTOP CINEMA ===== */
+/* DEFAULT = HOME (verticale) */
+.grid {
+  display: grid;
+  gap: 40px;
+}
+
+/* SOLO ARCHIVIO */
 @media (min-width: 900px) {
-  .card img {
-    height: 220px;
+  .archivio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .archivio-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
  .card-info {
