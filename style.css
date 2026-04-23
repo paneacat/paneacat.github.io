@@ -140,7 +140,7 @@ a:hover {
 
 .card img {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   transition: transform 0.35s ease;
 }
