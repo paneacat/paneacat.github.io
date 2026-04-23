@@ -145,9 +145,9 @@ a:hover {
   transition: transform 0.35s ease;
 }
 
-.home-grid.card img {
-  height:260px
-    }
+.home-grid .card img {
+  height: clamp(200px, 28vw, 260px);
+}
   
 /* 🔥 FIX: non copre il titolo */
 .card:hover img {
@@ -390,11 +390,11 @@ margin-bottom: 4px;
 }
   .home-grid {
   grid-template-columns: 1fr !important;
-  }
   .filtri-buttons:first-of-type .filtro {
   opacity: 1;
+  gap: 28px;
 }
-
+  }
 .filtri-buttons:last-of-type .filtro {
   opacity: 0.85;
 }
