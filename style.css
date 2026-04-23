@@ -298,12 +298,6 @@ footer {
   }
 }
 
-/* DEFAULT = HOME (verticale) */
-.grid {
-  display: grid;
-  gap: 40px;
-}
-
 /* SOLO ARCHIVIO */
 @media (min-width: 900px) {
   .archivio-grid {
@@ -425,3 +419,7 @@ margin-bottom: 4px;
     grid-template-columns: repeat(3, 1fr);
   }
 }
+  .home-grid {
+  grid-template-columns: 1fr !important;
+  }
+  
