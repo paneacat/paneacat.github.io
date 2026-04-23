@@ -114,23 +114,18 @@ a:hover {
 .filtri-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 25px; /* 🔥 questo mancava */
+  gap: 8px;              /* 🔥 più stretti */
+  justify-content: flex-start; /* 🔥 allineati a sinistra */
 }
 
 .filtro {
-  padding: 6px 12px;
-  font-size: 12px;
+  padding: 5px 12px;     /* 🔥 leggermente più sottili */
+  font-size: 11px;
   border-radius: 999px;
   background: transparent;
   color: #aaa;
-  transition: all 0.25s ease;
   border: 1px solid rgba(255,255,255,0.25);
-  backdrop-filter: blur(4px);
-  min-width: 70px;
-  text-align: center;
+  transition: all 0.2s ease;
 }
 
 .filtro.attivo {
@@ -145,11 +140,11 @@ a:hover {
   background: rgba(255,191,0,0.1);
 }
 .filtri {
-  display: flex;
+   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin: 40px 0 40px; /* 🔥 più aria sopra e sotto */
+  align-items: flex-start; /* 🔥 non centrati */
+  gap: 14px;               /* 🔥 meno spazio tra le due righe */
+  margin: 30px 0 30px;
 }
 /* ===== CARD ===== */
 .card {
