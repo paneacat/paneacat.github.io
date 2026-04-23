@@ -157,6 +157,10 @@ padding: 20px 20px 5px;
   height: 260px;
 }
 
+  .card:hover {
+    transform: translateY(-4px);
+  }
+}
 /* ===== CONTACT ===== */
 .contact-container {
   text-align: center;
@@ -439,9 +443,7 @@ footer {
 }
 
 .card-info h3 {
-  color: var(--gold);
-  color: var(--gold);
-  transform: translateY(-4px);
+  color: var(--text);
   transition: color 0.25s ease;
 }
 
@@ -449,6 +451,12 @@ footer {
   font-size: 14px;
   color: var(--muted);
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .card-info h3 {
+    color: var(--gold);
+  }
+
   .card:hover {
     transform: translateY(-4px);
   }
