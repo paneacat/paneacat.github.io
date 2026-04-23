@@ -99,6 +99,7 @@ a:hover {
   display: grid;
   gap: 40px;
   margin-top: 20px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .filtri-buttons {
@@ -400,8 +401,20 @@ margin-bottom: 4px;
 .card:hover img {
  transform: scale(1.01);
 }
-/* SOLO ARCHIVIO */
-@media (min-width: 900px) {
+
+/* HOME SEMPRE VERTICALE */
+.home-grid {
+  grid-template-columns: 1fr 
+}
+.card-info,
+.card h3,
+.card p {
+  position: static !important;
+}.archivio-grid {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
   .archivio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -411,14 +424,4 @@ margin-bottom: 4px;
   .archivio-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-/* HOME SEMPRE VERTICALE */
-.home-grid {
-  grid-template-columns: 1fr !important;
-}
-.card-info,
-.card h3,
-.card p {
-  position: static !important;
 }
