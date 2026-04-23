@@ -109,8 +109,8 @@ a:hover {
   margin-top: 0;
 }
 .filtro {
-  font-size: 11px;
-  padding: 5px 10px;
+  padding: 6px 12px;
+  font-size: 12px;
   border-radius: 999px;
   background: transparent;
   color: #aaa;
@@ -330,9 +330,13 @@ footer {
 
 .filtri-group {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   flex-direction: column;
   align-items: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: none; /* 🔥 meno finto */
+  color: rgba(255,255,255,0.7);
 }
 
 .filtri-group h4 {
