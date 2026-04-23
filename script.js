@@ -1,44 +1,42 @@
-const filtri = document.querySelectorAll(".filtro");
-const cards = document.querySelectorAll(".card");
+document.addEventListener("DOMContentLoaded", () => {
 
-let categoriaAttiva = "tutti";
-let genereAttivo = "tutti";
+  const filtri = document.querySelectorAll(".filtro");
+  const cards = document.querySelectorAll(".card");
 
-filtri.forEach(btn => {
-  btn.addEventListener("click", () => {
+  let categoriaAttiva = "tutti";
+  let genereAttivo = "tutti";
 
-    const tipo = btn.dataset.tipo;
-    const valore = btn.dataset.valore;
+  filtri.forEach(btn => {
+    btn.addEventListener("click", () => {
 
-    // aggiorna stato
-    if (tipo === "categoria") categoriaAttiva = valore;
-    if (tipo === "genere") genereAttivo = valore;
+      const tipo = btn.dataset.tipo;
+      const valore = btn.dataset.valore;
 
-    // attivo UI (solo nel gruppo giusto)
-    document
-      .querySelectorAll(`.filtro[data-tipo="${tipo}"]`)
-      .forEach(b => b.classList.remove("attivo"));
+      if (tipo === "categoria") categoriaAttiva = valore;
+      if (tipo === "genere") genereAttivo = valore;
 
-    btn.classList.add("attivo");
+      document
+        .querySelectorAll(`.filtro[data-tipo="${tipo}"]`)
+        .forEach(b => b.classList.remove("attivo"));
 
-    // FILTRO COMBINATO
-    cards.forEach(card => {
+      btn.classList.add("attivo");
 
-      const matchCategoria =
-        categoriaAttiva === "tutti" ||
-        card.dataset.categoria === categoriaAttiva;
+      cards.forEach(card => {
 
-      const matchGenere =
-        genereAttivo === "tutti" ||
-        card.dataset.genere.includes(genereAttivo);
+        const matchCategoria =
+          categoriaAttiva === "tutti" ||
+          card.dataset.categoria === categoriaAttiva;
 
-      if (matchCategoria && matchGenere) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+        const matchGenere =
+          genereAttivo === "tutti" ||
+          card.dataset.genere.includes(genereAttivo);
+
+        card.style.display =
+          (matchCategoria && matchGenere) ? "block" : "none";
+
+      });
 
     });
-
   });
+
 });
