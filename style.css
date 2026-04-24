@@ -416,8 +416,8 @@ footer {
 /* ===== ABOUT PAGE ===== */
 
 .about {
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 80px auto;
   padding: 0 20px;
 }
 
@@ -463,6 +463,33 @@ footer {
   color: #fff;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* immagine */
+.about-hero img {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+}
+
+/* testo */
+.about-container {
+  text-align: left;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+/* incipit */
+.about-container p:first-child {
+  color: var(--gold);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
 
