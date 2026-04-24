@@ -816,6 +816,17 @@ footer {
 /* ===== DESKTOP ===== */
 @media (min-width: 900px) {
 
+  /* MENU più grande (desktop) */
+.menu a {
+  font-size: 13.5px;   /* prima era 12px */
+  letter-spacing: 1.8px;
+}
+
+/* FILTRI più grandi (desktop) */
+.filtro {
+  font-size: 12px;     /* prima ~10.5/12 */
+  padding: 10px 20px;
+}
   /* ARCHIVIO → griglia */
   .archivio-grid {
     grid-template-columns: repeat(3, 1fr);
