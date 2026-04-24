@@ -628,7 +628,8 @@ footer::before {
 /* FIRMA centrata */
 .firma-img {
   display: block;
-  margin: 30px auto 0;   /* 🔥 centro perfetto */
+  margin: 30px auto 0; /* 🔥 centro perfetto */
+  margin-top: 4px;
   opacity: 0.75;
   width: 220px;   
   transform: rotate(-1deg);
