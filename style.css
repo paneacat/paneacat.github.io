@@ -690,16 +690,13 @@ footer {
 }
 .hero {
   margin: 20px auto 30px;
-  padding: 0 20px;
+  padding: 0 24px;
 }
-
 .hero h1 {
   font-size: 18px;
-  line-height: 1.5;
-  max-width: 320px;
+  line-height: 1.6;
+  max-width: 95%;
   margin: 0 auto;
-  opacity: 0.9;
-  letter-spacing: 0.2px;
 }
 .home-grid {
   grid-template-columns: 1fr;
