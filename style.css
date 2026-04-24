@@ -837,6 +837,7 @@ footer {
   }
   .contact-container {
     font-size: 15px; /* 🔥 base più piccola */
+    margin: 60px auto 40px;
   }
 
   .contact-intro {
