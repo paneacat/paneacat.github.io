@@ -1,42 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
+const cards = document.querySelectorAll(".archivio-grid .card");
+const btn = document.getElementById("loadMoreBtn");
 
-  const filtri = document.querySelectorAll(".filtro");
-  const cards = document.querySelectorAll(".card");
+let visible = 6;
 
-  let categoriaAttiva = "tutti";
-  let genereAttivo = "tutti";
+// stato iniziale
+cards.forEach((card, index) => {
+  if (index >= visible) {
+    card.classList.add("hidden");
+    card.style.display = "none";
+  } else {
+    card.classList.add("show");
+  }
+});
 
-  filtri.forEach(btn => {
-    btn.addEventListener("click", () => {
+btn.addEventListener("click", () => {
+  let newVisible = visible + 6;
 
-      const tipo = btn.dataset.tipo;
-      const valore = btn.dataset.valore;
+  cards.forEach((card, index) => {
+    if (index >= visible && index < newVisible) {
+      card.style.display = "block";
 
-      if (tipo === "categoria") categoriaAttiva = valore;
-      if (tipo === "genere") genereAttivo = valore;
-
-      document
-        .querySelectorAll(`.filtro[data-tipo="${tipo}"]`)
-        .forEach(b => b.classList.remove("attivo"));
-
-      btn.classList.add("attivo");
-
-      cards.forEach(card => {
-
-        const matchCategoria =
-          categoriaAttiva === "tutti" ||
-          card.dataset.categoria === categoriaAttiva;
-
-        const matchGenere =
-          genereAttivo === "tutti" ||
-          card.dataset.genere.includes(genereAttivo);
-
-        card.style.display =
-          (matchCategoria && matchGenere) ? "block" : "none";
-
-      });
-
-    });
+      // piccolo delay per animazione smooth
+      setTimeout(() => {
+        card.classList.remove("hidden");
+        card.classList.add("show");
+      }, 50 * (index - visible));
+    }
   });
 
+  visible = newVisible;
+
+  if (visible >= cards.length) {
+    btn.style.display = "none";
+  }
 });
