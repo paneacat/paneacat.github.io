@@ -354,7 +354,12 @@ a:hover {
   color: var(--gold);
 }
 .contact-extra a:hover {
-  color: var(--gold);
+  content: "";
+  display: block;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 20px;
+  opacity: 0.6;
   }
 }
 /* ===== NEWSLETTER ===== */
