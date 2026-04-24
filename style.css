@@ -37,6 +37,7 @@ a:hover {
 .site-header {
   text-align: center;
   padding: 30px 20px 15px;
+  z-index: 10;
 }
 
 .logo {
