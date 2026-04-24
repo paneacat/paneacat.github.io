@@ -542,11 +542,11 @@ footer {
 /* FIRMA centrata */
 .firma-img {
   display: block;
-  margin: 0 auto;   /* 🔥 centro perfetto */
-  opacity: 0.85;
-  width: 200px;   
+  margin: 40px auto 0;   /* 🔥 centro perfetto */
+  opacity: 0.9;
+  width: 220px;   
   transform: rotate(-1deg);
-  filter: brightness(0) saturate(100%) invert(79%) sepia(88%) saturate(500%);
+  filter: brightness(0) invert(1);
   }
 
 .firma-manifesto p {
