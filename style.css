@@ -350,7 +350,20 @@ footer {
   font-size: 14px;
   letter-spacing: 2px;
 }
+.back-archivio {
+  margin-top: 20px;
+  text-align: left;
+}
 
+.back-archivio a {
+  font-size: 13px;
+  color: #888;
+  transition: 0.2s;
+}
+
+.back-archivio a:hover {
+  color: var(--gold);
+}
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
 
