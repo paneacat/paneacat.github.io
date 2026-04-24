@@ -540,10 +540,12 @@ footer {
 /* immagine */
 .about-hero img {
   width: 100%;
-  max-width: 420px;
+  max-width: 220px;
   display: block;
   filter: grayscale(100%); /* 🔥 qui */
     transition: 0.4s ease;
+  margin: 30px auto 10px;
+  border-radius: 12px;
 }
 .about-hero img:hover {
   filter: grayscale(0%);
@@ -705,6 +707,10 @@ footer {
   max-width: 95%;
   margin: 0 auto;
 }
+  .about-hero img {
+    max-width: 160px;
+    margin: 20px auto;
+  }
 .home-grid {
   grid-template-columns: 1fr;
   gap: 50px;
