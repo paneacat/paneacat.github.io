@@ -532,7 +532,6 @@ border-color: var(--gold);
 max-width: 1000px;
 margin: 80px auto;
 padding: 0 20px;
-display: flex;
 align-items: center; 
 gap: 60px;
 }
