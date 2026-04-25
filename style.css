@@ -180,15 +180,14 @@ line-height: 1.6;
 letter-spacing: 0.3px;
 font-weight: 300;
 }
-.hero::before {
-  pointer-events: none;
-}
 
-.hero::before {content: "";
+.hero::before 
+{content: "";
 position: absolute;
 width: 320px;
 height: 320px;
 border-radius: 50%;
+pointer-events: none;
 background: radial-gradient(
 circle,
 rgba(255,191,0,0.12) 0%,
