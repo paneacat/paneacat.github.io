@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== ELEMENTI =====
   const bottoniCategoria = document.querySelectorAll('[data-filter]');
   const bottoniGenere = document.querySelectorAll('[data-genere]');
-  const cards = document.querySelectorAll('.card');
+  const cards = Array.from(document.querySelectorAll('.card'));
   const empty = document.getElementById('emptyState');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
 
@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
 
-  // ===== CATEGORIE =====
+  let visibiliMax = 2; // 🔥 QUANTI FILM MOSTRI ALL’INIZIO
+
+  // ===== FILTRI CLICK =====
   bottoniCategoria.forEach(btn => {
     btn.addEventListener('click', () => {
 
@@ -20,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
       bottoniCategoria.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
+      visibiliMax = 2; // reset quando cambi filtro
       aggiornaFiltri();
     });
   });
 
-  // ===== GENERI =====
   bottoniGenere.forEach(btn => {
     btn.addEventListener('click', () => {
 
@@ -33,15 +35,26 @@ document.addEventListener('DOMContentLoaded', () => {
       bottoniGenere.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
+      visibiliMax = 2;
       aggiornaFiltri();
     });
   });
+
+  // ===== LOAD MORE =====
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      visibiliMax += 2; // 🔥 quanti ne aggiungi ogni click
+      aggiornaFiltri();
+    });
+  }
 
   // ===== FILTRO =====
   function aggiornaFiltri() {
 
     let visibili = 0;
+    let filtrati = [];
 
+    // 1. filtro base
     cards.forEach(card => {
 
       const categoria = card.dataset.categoria || "";
@@ -54,6 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
         filtroGenere === "tutti" || generi.includes(filtroGenere);
 
       if (matchCategoria && matchGenere) {
+        filtrati.push(card);
+      } else {
+        card.style.display = "none";
+      }
+
+    });
+
+    // 2. mostra solo fino a visibiliMax
+    filtrati.forEach((card, i) => {
+
+      if (i < visibiliMax) {
         card.style.display = "block";
         visibili++;
       } else {
@@ -64,31 +88,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== EMPTY STATE =====
     if (empty) {
-      if (visibili === 0) {
+      if (filtrati.length === 0) {
         empty.style.display = "block";
-
-        setTimeout(() => {
-          empty.classList.add("show");
-        }, 50);
-
+        empty.classList.add("show");
       } else {
         empty.classList.remove("show");
-
-        setTimeout(() => {
-          empty.style.display = "none";
-        }, 300);
+        empty.style.display = "none";
       }
     }
 
-    // ===== LOAD MORE (FIX UX) =====
+    // ===== LOAD MORE VISIBILITY =====
     if (loadMoreBtn) {
-      if (visibili === 0) {
-        loadMoreBtn.style.display = "none";
-      } else {
+      if (filtrati.length > visibiliMax) {
         loadMoreBtn.style.display = "inline-block";
+      } else {
+        loadMoreBtn.style.display = "none";
       }
     }
 
   }
+
+  // inizializza
+  aggiornaFiltri();
 
 });
