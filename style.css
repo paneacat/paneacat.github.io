@@ -145,7 +145,8 @@ position: absolute;
 height: 1px;
 width: 100%;
 background: var(--gold);
-bottom: -4pxleft: 0;
+bottom: -4px
+left: 0;
 opacity: 0.7;
 }
 .menu a:hover {
@@ -290,11 +291,12 @@ background: rgba(255,191,0,0.1);
 }
 
 /* ===== CARD ===== */
-..card {
+.card {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
 }
+
 .card img {
   width: 100%;
   height: 180px;
@@ -350,12 +352,6 @@ color: #ccc;
   left: 12px;
   z-index: 2;
   color: white;
-}
-
-.card-info,
-.rating {
-  position: relative;
-  z-index: 2;
 }
 
 .card-info p {
@@ -642,9 +638,6 @@ object-fit: cover;
 border-radius: 12px;
 display: block;
 transition: transform 0.3s ease;
-}
-.home .card-info {
-margin-top: 12px;
 }
 
 .home .card-info h3 {
