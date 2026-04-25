@@ -103,7 +103,15 @@ opacity: 0.8;
 color: var(--gold);
 opacity: 1;
 }
-
+.empty-state {
+  display: none;
+  text-align: center;
+  margin-top: 50px;
+  color: var(--gold);
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  opacity: 0.7;
+}
 .menu a.active::after {
 content: "";
 position: absolute;
