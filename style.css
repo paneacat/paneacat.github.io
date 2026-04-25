@@ -624,6 +624,10 @@ margin-bottom: 14px;
 color: #fff;
 }
 
+.about-container .line {
+  display: inline-block;
+  margin-top: 4px;
+}
 /* incipit */
 .about-container p:first-child {
 color: var(--gold);
@@ -643,9 +647,6 @@ max-width: 800px;
 align-items: start;
 }
 
-.about-container {
-  max-width: 520px;
-}
 .firma-manifesto {
 margin: 100px auto 0;
 max-width: 600px;
