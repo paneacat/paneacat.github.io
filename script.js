@@ -1,48 +1,47 @@
-const filtri = document.querySelectorAll('.filtro');
-const generi = document.querySelectorAll('.genere');
+const bottoniCategoria = document.querySelectorAll('[data-filter]');
+const bottoniGenere = document.querySelectorAll('[data-genere]');
 const cards = document.querySelectorAll('.card');
 
-let filtroAttivo = "tutti";
-let genereAttivo = "tutti";
+let filtroCategoria = "tutti";
+let filtroGenere = "tutti";
 
 // CATEGORIE
-filtri.forEach(btn => {
+bottoniCategoria.forEach(btn => {
   btn.addEventListener('click', () => {
+    filtroCategoria = btn.dataset.filter;
 
-    filtri.forEach(b => b.classList.remove('attivo'));
+    bottoniCategoria.forEach(b => b.classList.remove('attivo'));
     btn.classList.add('attivo');
 
-    filtroAttivo = btn.dataset.filter;
-
-    aggiorna();
+    aggiornaFiltri();
   });
 });
 
 // GENERI
-generi.forEach(btn => {
+bottoniGenere.forEach(btn => {
   btn.addEventListener('click', () => {
+    filtroGenere = btn.dataset.genere;
 
-    generi.forEach(b => b.classList.remove('attivo'));
+    bottoniGenere.forEach(b => b.classList.remove('attivo'));
     btn.classList.add('attivo');
 
-    genereAttivo = btn.dataset.genere;
-
-    aggiorna();
+    aggiornaFiltri();
   });
 });
 
-function aggiorna() {
+// LOGICA COMBINATA
+function aggiornaFiltri() {
   cards.forEach(card => {
     const categoria = card.dataset.categoria;
     const genere = card.dataset.genere;
 
-    const okCategoria =
-      filtroAttivo === "tutti" || categoria === filtroAttivo;
+    const matchCategoria =
+      filtroCategoria === "tutti" || categoria === filtroCategoria;
 
-    const okGenere =
-      genereAttivo === "tutti" || genere.includes(genereAttivo);
+    const matchGenere =
+      filtroGenere === "tutti" || genere.includes(filtroGenere);
 
-    if (okCategoria && okGenere) {
+    if (matchCategoria && matchGenere) {
       card.style.display = "block";
     } else {
       card.style.display = "none";
