@@ -77,6 +77,5 @@ cards.forEach(card => {
     empty.style.display = "none";
   }
     }
-  }
 
 });
