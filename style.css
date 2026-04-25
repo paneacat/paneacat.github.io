@@ -181,7 +181,10 @@ letter-spacing: 0.3px;
 font-weight: 300;
 }
 .hero::before {
-content: "";
+  pointer-events: none;
+}
+
+.hero::before {content: "";
 position: absolute;
 width: 320px;
 height: 320px;
@@ -196,6 +199,7 @@ left: 50%;
 transform: translate(-50%, -50%);
 z-index: 0;
 }
+
 /* ===== GRID ===== */
 .grid {
 display: grid;
@@ -900,9 +904,9 @@ border-radius: 10px;
 
 /* FILTRI */
 .filtro {
-padding: 4px 9px;
-font-size: 10.5px;
 border-radius: 999px;
+  padding: 8px 14px;
+    font-size: 12px;
 }
 
 .filtri-group {
