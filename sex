@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>paneacult</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="home">
+
+  <!-- HEADER -->
+ <header class="site-header">
+  <a href="index.html" class="logo">paneacult</a>
+
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="archivio.html"">Recensioni</a>
+    <a href="featured.html">Chi sono</a>
+    <a href="contatti.html">Contatti</a>
+  </nav>
+</header>
+
+  <!-- HERO -->
+  <div class="review-hero">
+    <img src="./img/sex.jpg" alt="On the basis of sex">
+  </div>
+
+  <!-- CONTENUTO -->
+  <div class="review-container">
+
+    <h1>On the basis of sex</h1>
+    <p class="meta">Mimi Leder (2018)</p>
+    <p class="genere">Genere: dramma, biopic</p>
+
+    <!-- WATCH -->
+    <p class="watch">
+  Dove guardarlo:
+  <a href="https://www.primevideo.com/detail?gti=amzn1.dv.gti.dab86517-c8f3-dbe6-595e-a18435b07429&tag=amazon-it-and-ro-21&token=491B3E20E8D6C755745FD7E34BCE779F25003CB2">Prime Video</a>
+    </p>
+    
+    <!-- TESTO -->
+    <div class="review-text">
+
+  <p>
+    Oggi omaggiamo una donna che non ha mai mollato, che ha lottato perché la voce di tantissime donne come lei fosse finalmente ascoltata, e perché la parità fosse riconosciuta come diritto e dovere costituzionale.
+  </p>
+
+  <p>
+    È il 1956, Ruth Bader Ginsburg (Felicity Jones) viene accettata ad Harvard, assieme ad altre 8 donne, per frequentare la facoltà di legge. Le cose, però, non vanno come spera. Dopo la laurea trovare lavoro in uno studio sembra impossibile, e il semplice fatto di essere donna diventa un ostacolo alla carriera di avvocato: le domande insistenti sulle sue motivazioni, i discriminatori e i continui rifiuti, costringono Ruth ad accettare a malincuore un posto di ripiego come insegnante.
+  </p>
+
+  <p>
+    La svolta arriverà solo quando, grazie al marito, la protagonista si troverà a dover difendere un uomo a cui non è stato riconosciuto il sussidio per assistere la madre. Motivo del rifiuto? Solo le donne hanno diritto agli aiuti, perché “accudire” spetta a loro.
+  </p>
+
+  <p>
+    Ruth darà il via ad una battaglia legale per dimostrare l’incostituzionalità della legge, utilizzando il caso come precedente per dimostrare l’assurdità della discriminazione.
+  </p>
+
+  <p>
+    La donna aprirà così la strada al cambiamento, diventando un’icona del femminismo.
+  </p>
+
+  <p>
+    Una pellicola interessante, che affronta tematiche ancora oggi fondamentali. La storia di <em>The Notorious RBG</em> è forte, commovente, pragmatica, sensazionale. Il film tenta di rappresentare questi sentimenti, a volte con troppa fatica, ma riesce nell’intento di ripercorrere i ragionamenti, le motivazioni e gli avvenimenti che hanno fatto di Ruth Bader Ginsburg la donna giusta, al momento giusto.
+  </p>
+
+</div>
+
+    <div class="review-end">
+
+  <div class="rating">★★★☆☆</div>
+<p class="firma-review">
+  <strong>Patrizia Catania</strong><br>
+  <em>paneacult</em>
+</p>
+
+    </div>
+
+  <div class="back-home">
+    <a href="archivio.html">← Torna alle recensioni</a>
+  </div>
+
+</div>
+    <!-- NEWSLETTER -->
+<div class="container">
+  <section class="newsletter">
+    <div class="newsletter-inner">
+      <h2>Resta con paneacult</h2>
+      <p>Ricevi le nuove recensioni nella tua inbox!</p>
+      <a href="#" class="newsletter-btn">Iscriviti</a>
+    </div>
+  </section>
+</div>
+    
+  <!-- FOOTER -->
+  <footer>
+    2026 © paneacult
+  </footer>
+
+</body>
+</html>
