@@ -657,8 +657,8 @@ font-size: 14px;
 
 .rating {
   position: absolute;
-  bottom: 50px;
-  left: 12px;
+  bottom: 45px;
+  left: 16px;
   z-index: 2;
   color: #ffbf00;
   font-size: 14px;
