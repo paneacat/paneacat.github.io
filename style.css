@@ -401,19 +401,43 @@ margin-top: 10px;
 font-size: 14px;
 color: #aaa;
 }
+
+
+.archivio-grid .card {
+  position: relative;
+  display: block;
+}
+
+/* IMMAGINE QUADRATA */
+.archivio-grid .card img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* TOGLI OVERLAY CINEMATICO */
+.archivio-grid .card::after {
+  display: none;
+}
+
+/* TESTO TORNA SOTTO */
+.archivio-grid .card-info {
+  position: static;
+  margin-top: 8px;
+}
+
+/* STELLINE SOPRA AL TESTO */
+.archivio-grid .rating {
+  position: static;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
 .archivio-grid .card img {
 width: 100%;
 aspect-ratio: 1 / 1;
 object-fit: cover;
 border-radius: 10px;
-}
-.archivio-grid .rating {
-margin-top: 4px;
-margin-bottom: 2px;
-}
-
-.archivio-grid .card-info {
-margin-top: 2px;
 }
 
 .contact-container::before {
