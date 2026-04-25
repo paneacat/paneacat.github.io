@@ -53,10 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
         filtroGenere === "tutti" || generi.includes(filtroGenere);
 
       if (matchCategoria && matchGenere) {
-        card.style.display = "block";
-        visibili++;
-      } else {
-        card.style.display = "none";
+  card.classList.remove("hide");
+  visibili++;
+} else {
+  card.classList.add("hide");
       }
 
     });
