@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // BOTTONI
-  const bottoniCategoria = document.querySelectorAll('.filtro-categoria');
-  const bottoniGenere = document.querySelectorAll('.filtro-genere');
+  // ===== ELEMENTI =====
+  const bottoniCategoria = document.querySelectorAll('[data-filter]');
+  const bottoniGenere = document.querySelectorAll('[data-genere]');
   const cards = document.querySelectorAll('.card');
+  const empty = document.getElementById('emptyState');
 
-  // STATI ATTIVI
+  // ===== STATI =====
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
 
@@ -15,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       filtroCategoria = btn.dataset.filter;
 
-      // reset stato attivo
       bottoniCategoria.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       filtroGenere = btn.dataset.genere;
 
-      // reset stato attivo
       bottoniGenere.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
@@ -37,41 +36,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== LOGICA FILTRO =====
+  // ===== FILTRO COMBINATO =====
   function aggiornaFiltri() {
 
-  let visibili = 0; // 👈 contatore
+    let visibili = 0;
 
-  cards.forEach(card => {
+    cards.forEach(card => {
 
-    const categoria = card.dataset.categoria;
-    const generi = card.dataset.genere.split(" ");
+      const categoria = card.dataset.categoria;
+      const generi = card.dataset.genere.split(" ");
 
-    const matchCategoria =
-      filtroCategoria === "tutti" || categoria === filtroCategoria;
+      const matchCategoria =
+        filtroCategoria === "tutti" || categoria === filtroCategoria;
 
-    const matchGenere =
-      filtroGenere === "tutti" || generi.includes(filtroGenere);
+      const matchGenere =
+        filtroGenere === "tutti" || generi.includes(filtroGenere);
 
-    if (matchCategoria && matchGenere) {
-      card.style.display = "block";
-      visibili++; // 👈 conta
-    } else {
-      card.style.display = "none";
+      if (matchCategoria && matchGenere) {
+        card.style.display = "block";
+        visibili++;
+      } else {
+        card.style.display = "none";
+      }
+
+    });
+
+    // ===== EMPTY STATE =====
+    if (empty) {
+      empty.style.display = visibili === 0 ? "block" : "none";
     }
 
-  });
-
-  const empty = document.getElementById("emptyState");
-
-  if (visibili === 0) {
-    empty.style.display = "block";
-  } else {
-    empty.style.display = "none";
   }
 
-  }
-  });
-
-  }
 });
