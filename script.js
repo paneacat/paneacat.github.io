@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
 
-  let visibiliMax = 2; // 🔥 QUANTI FILM MOSTRI ALL’INIZIO
+  let visibiliMax = 3; // 🔥 QUANTI FILM MOSTRI ALL’INIZIO
 
   // ===== FILTRI CLICK =====
   bottoniCategoria.forEach(btn => {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== LOAD MORE =====
   if (loadMoreBtn) {
     loadMoreBtn.addEventListener('click', () => {
-      visibiliMax += 2; // 🔥 quanti ne aggiungi ogni click
+      visibiliMax += 3; // 🔥 quanti ne aggiungi ogni click
       aggiornaFiltri();
     });
   }
