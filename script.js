@@ -1,4 +1,3 @@
-<script id="8v3k1m">
 const filtri = document.querySelectorAll('.filtro');
 const cards = document.querySelectorAll('.card');
 
@@ -23,4 +22,3 @@ filtri.forEach(btn => {
 
   });
 });
-</script>
