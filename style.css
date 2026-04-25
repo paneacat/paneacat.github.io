@@ -540,10 +540,9 @@ max-width: 500px;
 }
 
 .review-container {
-  max-width: 820px;
-  margin: 40px auto;
+  max-width: 900px; /* uguale alla barra */
+  margin: 0 auto;
   padding: 0 24px;
-  line-height: 1.7;
 }
 
 .review-container h1 {
@@ -551,7 +550,9 @@ font-family: 'Playfair Display', serif;
 font-size: 28px;
 color: var(--gold);
 }
-
+.genre-bar {
+  width: 100%;
+}
 .review-container p {
   margin-bottom: 18px;
 }
