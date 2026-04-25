@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
 
-  let visibiliMax = 3; // iniziali
-  const step = 3;      // quanti ne aggiungi
+  let visibiliMax = 4; // iniziali
+  const step = 2;      // quanti ne aggiungi
 
   // ===== NORMALIZZAZIONE =====
   const norm = (v) => (v || "").trim().toLowerCase();
