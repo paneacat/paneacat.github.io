@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const bottoniGenere = document.querySelectorAll('[data-genere]');
   const cards = document.querySelectorAll('.card');
   const empty = document.getElementById('emptyState');
-  const generi = (card.dataset.genere || "").split(" ");
   // ===== STATI =====
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach(card => {
 
       const categoria = card.dataset.categoria;
-      const generi = card.dataset.genere.split(" ");
+      const generi = (card.dataset.genere || "").split(" ");
 
       const matchCategoria =
         filtroCategoria === "tutti" || categoria === filtroCategoria;
