@@ -1,16 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  const bottoniCategoria = document.querySelectorAll('[data-filter]');
-  const bottoniGenere = document.querySelectorAll('[data-genere]');
+  // BOTTONI
+  const bottoniCategoria = document.querySelectorAll('.filtro-categoria');
+  const bottoniGenere = document.querySelectorAll('.filtro-genere');
   const cards = document.querySelectorAll('.card');
 
+  // STATI ATTIVI
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
 
+  // ===== CATEGORIE =====
   bottoniCategoria.forEach(btn => {
     btn.addEventListener('click', () => {
+
       filtroCategoria = btn.dataset.filter;
 
+      // reset stato attivo
       bottoniCategoria.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
@@ -18,10 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== GENERI =====
   bottoniGenere.forEach(btn => {
     btn.addEventListener('click', () => {
+
       filtroGenere = btn.dataset.genere;
 
+      // reset stato attivo
       bottoniGenere.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
@@ -29,8 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== LOGICA FILTRO =====
   function aggiornaFiltri() {
+
     cards.forEach(card => {
+
       const categoria = card.dataset.categoria;
       const genere = card.dataset.genere;
 
@@ -45,7 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         card.style.display = "none";
       }
+
     });
+
   }
 
 });
