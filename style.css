@@ -1212,12 +1212,11 @@ letter-spacing: 1.8px;
 }
   .about-container {
   margin: 0;
-  transform: translateY(25px);
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 100%;
-  transform: none; 
   max-width: 500px; /* leggero controllo, non stretto */
   }
   
