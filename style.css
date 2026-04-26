@@ -58,6 +58,7 @@ a {
 text-decoration: none;
 color: var(--text);
 }
+
 a:hover {
 color: var(--gold);
 }
@@ -291,6 +292,7 @@ border: 1px solid rgba(255,255,255,0.25);
 transition: all 0.2s ease;
 letter-spacing: 0.3px;
 }
+
 .filtro[data-genere="biopic"] {
   flex-basis: 100%; /* 🔥 va a capo */
   max-width: fit-content;
@@ -923,11 +925,16 @@ color: var(--gold);
 .watch a {
   display: inline-block;
   margin-left: 6px;
-  padding: 4px 10px;
-  border-radius: 12px;
+  padding: 4px 12px;
+  border-radius: 14px;
   background: rgba(255,191,0,0.15);
-  color: var(--gold);
+  color: var(--gold) !important;
   font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.watch a:hover {
+  background: rgba(255,191,0,0.25);
 }
 
 /* ===== MOBILE ===== */
