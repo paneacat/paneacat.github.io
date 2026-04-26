@@ -1213,7 +1213,7 @@ letter-spacing: 1.8px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-    transform: translateY(-10px);
+    margin-top: 20px;
     max-width: 500px; /* leggero controllo, non stretto */
   }
   .about-container p {
@@ -1221,10 +1221,13 @@ letter-spacing: 1.8px;
   }
 /* HOME → cinematica */
 .home-grid {
-grid-template-columns: 1fr;
+grid-template-columns: 260px 1fr;
 max-width: 900px;
 margin-bottom: 18px;
 margin: 0 auto;
+  display: grid;
+  align-items: center; /* 🔥 cambia da end → center */
+  gap: 40px;
 }
 
 .home .card img {
