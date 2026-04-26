@@ -946,8 +946,8 @@ gap: 10px;
 .menu a {
 font-size: 10px;
 letter-spacing: 0.8px;
-white-space: nowrap;
 }
+  
 .break-desktop {
   display: inline;
   }
@@ -1219,7 +1219,6 @@ align-items: center;
   
   .filtri-row.generi .filtro {
     flex: 0 0 auto;
-    white-space: nowrap;
   }
 
 }
