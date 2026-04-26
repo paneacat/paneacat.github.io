@@ -210,9 +210,8 @@ transform: translateY(-2px);
 .hero {
 position: relative;
 text-align: center;
-margin: 40px auto 30px;
+margin: 40px auto 60px;
 max-width: 600px;
-margin-bottom: 40px;
 z-index: 1;
 }
 
@@ -223,7 +222,6 @@ font-size: clamp(20px, 4vw, 26px);
 line-height: 1.6;
 letter-spacing: 0.3px;
 font-weight: 300;
-margin-bottom: 13px;
 }
 
 .hero::before 
