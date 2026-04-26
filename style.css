@@ -1208,19 +1208,21 @@ letter-spacing: 1.8px;
   transform: scale(1.05); /* leggero ingrandimento */
 }
   .about-container {
-    margin: 0;
-    min-height: 240px; /* 🔥 questo è il fix vero */
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-    margin-top: 40px; /* 🔥 aumenta questo */
+  min-height: 300px;
   transform: none; 
-    max-width: 500px; /* leggero controllo, non stretto */
+  max-width: 500px; /* leggero controllo, non stretto */
   }
+  
   .about-container p {
   margin-bottom: 12px;
   }
+  
 /* HOME → cinematica */
+  
 .home-grid {
 grid-template-columns: 260px 1fr;
 max-width: 900px;
