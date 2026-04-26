@@ -780,10 +780,6 @@ box-shadow:
   align-items: stretch;
 }
 
-.about-hero,
-.about-container {
-  height: 100%;
-}
 
 .about-container {
   display: flex;
@@ -1205,11 +1201,14 @@ letter-spacing: 1.8px;
 
   .about-hero {
   display: flex;
+    height: 100%;
   align-items: flex-end; /* 🔥 allinea la foto in basso */
   }
   
 .about-hero img {
   width: 220px;
+  height: 100%;
+  object-fit: cover;
   transform: scale(1.05); /* leggero ingrandimento */
 }
   .about-container {
@@ -1217,10 +1216,15 @@ letter-spacing: 1.8px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 300px;
+  height: 100%;
   transform: none; 
   max-width: 500px; /* leggero controllo, non stretto */
   }
+  
+.about-hero,
+.about-container {
+  height: 100%;
+}
   
   .about-container p {
   margin-bottom: 12px;
