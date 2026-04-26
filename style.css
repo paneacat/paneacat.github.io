@@ -1230,7 +1230,6 @@ letter-spacing: 1.8px;
 /* HOME → cinematica */
   
 .home-grid {
-    display: grid;
     grid-template-columns: 1fr;
     max-width: 750px;
     margin: 0 auto;
