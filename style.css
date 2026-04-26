@@ -1292,9 +1292,5 @@ align-items: center;
 /* ===== FIX HOME DEFINITIVO ===== */
 
 .home .home-grid {
-  display: grid;
   grid-template-columns: 1fr !important;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 30px;
 }
