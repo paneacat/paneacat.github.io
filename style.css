@@ -303,10 +303,8 @@ margin-top: 20px;
 
 .card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
-
 .card::after {
   display: none;
   content: "";
@@ -386,10 +384,13 @@ padding: 0 20px;
 
 .archivio-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 🔥 TRE IN FILA */
   gap: 24px;
-  max-width: 900px; /* 🔥 più stretto = più elegante */
-  margin: 20px auto 0; /* 🔥 centrato davvero */
-  grid-template-columns: repeat(2, 1fr);
+}
+
+.archivio-grid .card img {
+  aspect-ratio: 1 / 1; /* 🔥 quadrato */
+  border-radius: 10px;
 }
 
 .archivio-grid h3 {
@@ -407,13 +408,6 @@ color: #aaa;
 .archivio-grid .card {
   position: relative;
   display: block;
-}
-
-/* IMMAGINE QUADRATA */
-.archivio-grid .card img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 10px;
 }
 
 /* TOGLI OVERLAY CINEMATICO */
@@ -658,16 +652,18 @@ margin-bottom: 20px;
   margin-bottom: 20px;
 }
 .home-grid {
-  gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr; /* 🔥 UNA COLONNA */
+  gap: 30px;
+}
+
+.home .card img {
+  aspect-ratio: 16 / 9; /* 🎬 cinematico */
+  border-radius: 12px;
 }
 
 .home-grid .card img {
 border-radius: 6px
-}
-
-.home .card img {
-  border-radius: 12px;
-  transition: transform 0.3s ease;
 }
 
 .home .card-info h3 {
@@ -979,10 +975,7 @@ padding: 0 14px;
 }
 
 .home .card img {
-width: 100%;
-object-fit: cover;
-border-radius: 14px;
-  margin-bottom: 10px;
+  aspect-ratio: 16 / 9; /* ✅ */
 }
 
 .home .card-info {
@@ -1172,12 +1165,10 @@ margin: 0 auto 10px;
 }
 
 /* ===== TABLET ===== */
-@media (min-width: 600px) and (max-width: 899px) {
-
-.archivio-grid {
-grid-template-columns: repeat(2, 1fr);
-}
-
+@media (max-width: 899px) {
+  .archivio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ===== DESKTOP ===== */
