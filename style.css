@@ -1216,15 +1216,12 @@ align-items: center;
   flex-wrap: nowrap; /* 🔥 niente a capo */
   gap: 12px;
 }
-.filtri-row.generi {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    gap: 12px;
-  max-width: none;
-  }
 
+  .filtri-row.generi {
+    max-width: 900px;
+    margin: 0 auto;
+    justify-content: center;
+  }
   .filtri-row.generi .filtro {
     flex: 0 0 auto;
     white-space: nowrap;
