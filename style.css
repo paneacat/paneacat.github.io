@@ -739,19 +739,12 @@ margin: 30px auto;
 }
   
 .about-hero img {
-width: 100%;
-display: block;
-filter: grayscale(100%); 
-aspect-ratio: 1 / 1;  
-object-fit: cover;
-border-radius: 50%;
-transition: 0.3s ease;
-object-position: center top;
-    max-width: 180px;   /* prima era 260 → troppo */
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
   margin: 20px auto 10px;
-  box-shadow:
-  0 0 25px rgba(255,191,0,0.2),
-  0 0 60px rgba(255,191,0,0.08);
+  width: 180px !important;
+  height: 180px !important;
 }
   
 .about-hero img:hover {
