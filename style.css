@@ -382,13 +382,15 @@ color: #ccc;
   color: white;
   margin-top: 0;
   text-align: left;
+  padding-top: 4px;
 }
 
 .card-info p {
 color: #aaa;
 line-height: 1.2;
    margin-top: 0;
-  font-size: 13px;
+  opacity: 0.7;
+  font-size: 12px;
 }
 
 /* TITOLI FILM */
@@ -706,7 +708,7 @@ font-size: 14px;
 }
 
 .review-rating {
-  position: absolute;
+  position: static;
   bottom: 45px;
   left: 16px;
   z-index: 2;
