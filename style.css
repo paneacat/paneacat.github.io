@@ -1223,10 +1223,10 @@ align-items: center;
 }
 
 .filtri-row.generi {
-    flex-wrap: wrap;         /* 🔥 torna a capo */
+    display: grid;
+    grid-template-columns: repeat(6, auto); /* 🔥 numero colonne */
     justify-content: center;
-    max-width: 900px;
-    margin: 0 auto;
+    gap: 12px;
 }
   .filtri-row.generi::-webkit-scrollbar {
     display: none;                  /* Chrome */
