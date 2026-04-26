@@ -1200,10 +1200,14 @@ letter-spacing: 1.8px;
 
 .about-hero img {
   width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  transform: translateY(-15px);
+  height: 220px;      /* 🔥 fondamentale: deve essere uguale alla width */
+  object-fit: cover;  /* 🔥 evita deformazioni */
+  border-radius: 50%; /* 🔥 QUESTO la rende rotonda */
+  display: block;
+  margin: 0 auto;
+  box-shadow:
+  0 0 25px rgba(255,191,0,0.2),
+  0 0 60px rgba(255,191,0,0.08);
 }
   
   .about-container {
