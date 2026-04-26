@@ -955,6 +955,9 @@ gap: 10px;
 font-size: 10px;
 letter-spacing: 0.8px;
 }
+.home .section {
+  padding: 0 14px;
+}
   
 .break-desktop {
   display: inline;
@@ -975,12 +978,12 @@ margin: 0 auto;
  
 .home-grid {
 grid-template-columns: repeat(2, 1fr);
-gap: 13px;
+gap: 20px;
   padding: 0 14px;
 }
   
 .archivio-grid {
-  grid-template-columns: repeat(2, 1fr);
+grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 padding: 0 14px;
 }
