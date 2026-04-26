@@ -280,16 +280,17 @@ margin-top: 20px;
 
 .filtri-row.generi {
   max-width: 420px;
+  gap: 14px;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 /* bottoni */
 .filtro {
-  padding: 8px 16px;
   font-size: 12px;
   border-radius: 999px;
   background: transparent;
   color: #aaa;
+  padding: 10px 18px;
   border: 1px solid rgba(255,255,255,0.25);
   transition: all 0.2s ease;
   flex: 0 0 auto;
