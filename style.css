@@ -1203,8 +1203,14 @@ letter-spacing: 1.8px;
     gap: 30px;
     align-items: end;
   }
+
+  .about-hero {
+  display: flex;
+  align-items: flex-end; /* 🔥 allinea la foto in basso */
+  }
+  
 .about-hero img {
-  max-width: 240px; /* 🔥 prima era ~200-220 */
+  width: 220px;
   transform: scale(1.05); /* leggero ingrandimento */
 }
   .about-container {
