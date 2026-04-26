@@ -1181,7 +1181,9 @@ margin: 0 auto 10px;
 font-size: 13.5px;   
 letter-spacing: 1.8px;
 }
-
+.archivio-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
   .about-grid {
   gap: 30px;
   align-items: stretch;
