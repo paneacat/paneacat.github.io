@@ -371,10 +371,9 @@ color: #ccc;
 /* ===== CARD TEXT ===== */
 .card-info {
   position: absolute;
-  margin-bottom: 12px;
+  bottom: 12px;   /* 🔥 invece di margin-bottom */
   left: 12px;
   z-index: 2;
-  margin-top: 10px;
   color: white;
 }
 
@@ -402,11 +401,6 @@ margin: 0 auto;
 padding: 0 20px;
 }
 
-.home-grid {
-display: grid;
-grid-template-columns: 1fr;
-gap: 60px;
-}
 
 .archivio-grid {
 display: grid;
@@ -681,10 +675,7 @@ margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-.home-grid {
-  gap: 32px;
-  margin-top: 30px;
-}
+
 .home-grid .card img {
 border-radius: 6px
 }
