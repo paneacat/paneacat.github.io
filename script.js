@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ===== ELEMENTI =====
-  const bottoni = document.querySelectorAll('.filtro'); // 🔥 unico selettore
+  const bottoni = document.querySelectorAll('.filtro');
   const cards = Array.from(document.querySelectorAll('.card'));
   const empty = document.getElementById('emptyState');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
 
-  // ===== STATI =====
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
 
-  // ===== STEP DINAMICO =====
   function getStep() {
     return window.innerWidth >= 900 ? 6 : 4;
   }
@@ -18,25 +15,30 @@ document.addEventListener('DOMContentLoaded', () => {
   let step = getStep();
   let visibiliMax = step;
 
-  // ===== NORMALIZZAZIONE =====
   const norm = (v) => (v || "").trim().toLowerCase();
 
-  // ===== CLICK FILTRI =====
+  // ===== CLICK =====
   bottoni.forEach(btn => {
     btn.addEventListener('click', () => {
 
       const filtro = norm(btn.dataset.filter);
 
-      // 🔥 capisce se è categoria o genere
+      // capisce se è categoria o genere
       if (btn.closest('.top')) {
         filtroCategoria = filtro;
+
+        // reset attivi categoria
+        document.querySelectorAll('.top .filtro')
+          .forEach(b => b.classList.remove('attivo'));
+
       } else {
         filtroGenere = filtro;
+
+        // reset attivi genere
+        document.querySelectorAll('.bottom .filtro')
+          .forEach(b => b.classList.remove('attivo'));
       }
 
-      // attivo UI SOLO nella sua riga
-      const gruppo = btn.parentElement.querySelectorAll('.filtro');
-      gruppo.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
       // reset load more
@@ -83,12 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    // ===== MOSTRA PROGRESSIVA =====
+    // mostra progressiva
     filtrati.forEach((card, i) => {
       card.style.display = i < visibiliMax ? "block" : "none";
     });
 
-    // ===== EMPTY STATE =====
+    // empty state
     if (empty) {
       if (filtrati.length === 0) {
         empty.style.display = "block";
@@ -99,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // ===== LOAD MORE =====
+    // load more visibilità
     if (loadMoreBtn) {
       loadMoreBtn.style.display =
         filtrati.length > visibiliMax ? "inline-block" : "none";
