@@ -662,6 +662,7 @@ margin-bottom: 20px;
 .home-grid {
   gap: 40px;
 }
+
 .home-grid .card img {
 border-radius: 6px
 }
@@ -975,6 +976,7 @@ margin: 0 auto;
 .home-grid {
 grid-template-columns: repeat(2, 1fr);
 gap: 13px;
+  padding: 0 14px;
 }
   
 .archivio-grid {
