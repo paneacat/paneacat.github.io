@@ -1047,13 +1047,19 @@ grid-template-columns: 1fr;
 gap: 10px;
 }
 
-
 .about-container {
   max-width: 300px;
   margin: 10px auto 0;
   text-align: center;
 }
 
+  .about-hero img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  }
+  
 .about-container p {
   margin-bottom: 10px;
   font-size: 13px;
@@ -1072,16 +1078,19 @@ gap: 10px;
   width: 140px;
   margin-top: 12px;
 }
+  
 .contact-container {
 font-size: 15px; 
 max-width: 320px;
 margin: 60px auto 40px;
 text-align: center;
 }
+  
 .contact-intro {
 font-size: 18px;
 line-height: 1.4;
 }
+  
 .about-intro .line {
 display: inline-block;
 margin-top: 4px;
@@ -1102,19 +1111,22 @@ font-size: 14px;
 .contact-extra {
 font-size: 15px;
 }
+  
 .social {
 display: flex;
 justify-content: center;
 gap: 16px;
 margin-top: 16px;
 }
-
+  
 .contact-extra {
 text-align: center;
 }
+  
 .contact-container::before {
 margin: 0 auto 10px;
 }
+  
 /* ===== FILTRI SCROLL MOBILE ===== */
 .filtri {
   gap: 16px;
@@ -1126,13 +1138,10 @@ margin: 0 auto 10px;
   display: flex;
   flex-wrap: nowrap; /* 🔥 niente a capo */
   gap: 10px;
-
   overflow-x: auto;
   padding: 0 20px; /* margine visivo */
-
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-
   justify-content: flex-start; /* 🔥 importante */
 }
 
@@ -1193,17 +1202,12 @@ letter-spacing: 1.8px;
 .about-hero img {
   width: 200px;
   height: 200px;
-
   object-fit: cover;
   object-position: center 25%; /* 🔥 faccia centrata */
-
   border-radius: 50%;
-
   margin: 0; /* 🔥 allineata al testo */
-
   filter: grayscale(100%);
   transition: 0.3s ease;
-
   box-shadow:
     0 0 25px rgba(255,191,0,0.2),
     0 0 60px rgba(255,191,0,0.08);
