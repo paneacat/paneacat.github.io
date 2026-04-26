@@ -1211,11 +1211,16 @@ max-width: 520px;
 font-size: 12px;   
 padding: 10px 20px;
 }
-.filtri-row {
-    justify-content: flex-start; /* 🔥 allinea a sinistra */
+
+  .filtri {
+    align-items: flex-start; /* 🔥 niente più centratura totale */
+  }
+
+  .filtri-row {
+    justify-content: flex-start; /* 🔥 allineati a sinistra */
     max-width: 900px;
     width: 100%;
-}  
+  }
 .archivio-grid {
 grid-template-columns: repeat(3, 1fr);
 }
