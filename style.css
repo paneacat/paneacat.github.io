@@ -267,7 +267,6 @@ margin-top: 20px;
   gap: 10px;
   justify-content: flex-start;
   width: 100%;
-  max-width: 420px;
 }
 
 /* bottoni */
@@ -295,9 +294,9 @@ margin-top: 20px;
   background: rgba(255,191,0,0.1);
 }
 
-/* 🔥 Biopic sotto "Tutti" */
 .filtro[data-genere="biopic"] {
   flex-basis: 100%;
+  width: fit-content;
 }
 
 /* ===== CARD ===== */
@@ -1213,7 +1212,7 @@ align-items: center;
 
   .filtri-row {
     justify-content: center;
-    max-width: 900px;
+    max-width: 420px;
   }
 
 }
