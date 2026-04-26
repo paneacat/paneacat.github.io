@@ -11,8 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
 
-  let visibiliMax = 4; // iniziali
-  const step = 2;      // quanti ne aggiungi
+  // 🔥 STEP DINAMICO
+  function getStep() {
+    return window.innerWidth >= 900 ? 3 : 4;
+  }
+
+  let step = getStep();
+  let visibiliMax = step;
 
   // ===== NORMALIZZAZIONE =====
   const norm = (v) => (v || "").trim().toLowerCase();
@@ -26,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
       bottoniCategoria.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
-      visibiliMax = step; // reset coerente
+      step = getStep();
+      visibiliMax = step; // reset corretto
       aggiornaFiltri();
     });
   });
@@ -40,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       bottoniGenere.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
+      step = getStep();
       visibiliMax = step;
       aggiornaFiltri();
     });
@@ -66,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const generi = (card.dataset.genere || "")
         .split(" ")
         .map(g => g.trim().toLowerCase())
-        .filter(Boolean); // rimuove vuoti
+        .filter(Boolean);
 
       const matchCategoria =
         filtroCategoria === "tutti" || categoria === filtroCategoria;
@@ -82,9 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    // 2. MOSTRA PROGRESSIVO
+    // 2. MOSTRA SOLO FINO A visibiliMax 🔥
     filtrati.forEach((card, i) => {
-      card.classList.remove("hidden");
+      if (i < visibiliMax) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
     });
 
     // ===== EMPTY STATE =====
@@ -105,6 +116,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
   }
+
+  // ===== RESIZE (super importante) =====
+  window.addEventListener('resize', () => {
+    const newStep = getStep();
+
+    if (newStep !== step) {
+      step = newStep;
+      visibiliMax = step;
+      aggiornaFiltri();
+    }
+  });
 
   // ===== INIT =====
   aggiornaFiltri();
