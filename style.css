@@ -701,37 +701,17 @@ font-size: 14px;
 }
 
 .firma-review {
-  margin: 20px 0 30px;
-  text-align: left;
+  margin: 22px 0 28px;
 }
 
 .firma-review img {
-  width: 180px;
+  width: 200px; /* 👈 dimensione giusta (non enorme) */
+  max-width: 75%;
+  display: block;
+
   opacity: 0.9;
-  filter: brightness(0) invert(1);
-  transition: 0.3s ease;
-}
 
-.firma-review img:hover {
-  opacity: 1;
-  transform: translateY(-2px);
-}
-.firma-review .nome {
-  color: #fff;
-  font-weight: 500;
-}
-
-.firma-review .brand {
-  font-style: italic;
-  color: var(--gold);
-  opacity: 0.9;
-  letter-spacing: 0.5px;
-}
-
-.firma-review .brand::before {
-  content: "—";
-  margin-right: 6px;
-  opacity: 0.5;
+  filter: brightness(0) invert(1); /* 🔥 la rende bianca */
 }
 
 .back-archivio {
