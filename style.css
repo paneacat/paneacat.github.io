@@ -1201,7 +1201,8 @@ letter-spacing: 1.8px;
 
 .about-hero {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start; /* 🔥 cambia questo */
+  margin-top: -20px;
 }
 
 .about-hero img {
