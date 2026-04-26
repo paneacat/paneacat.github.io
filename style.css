@@ -1134,6 +1134,33 @@ text-align: center;
 .contact-container::before {
 margin: 0 auto 10px;
 }
+  .filtri {
+    gap: 16px;
+    margin: 25px auto 30px;
+  }
+
+  .filtri-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* CATEGORIE (più importanti) */
+  .filtri-row.top {
+    max-width: 320px;
+  }
+
+  /* GENERI */
+  .filtri-row.bottom {
+    max-width: 280px;
+  }
+
+  .filtro {
+    font-size: 11px;
+    padding: 7px 14px;
+  }
 }
 
 /* ===== TABLET ===== */
