@@ -768,6 +768,10 @@ box-shadow:
   margin: 60px auto 0;
 }
 
+.about-hero {
+  display: flex;
+  justify-content: center;
+}
 
 .about-container {
   display: flex;
@@ -1038,18 +1042,19 @@ font-size: 13px;
 font-size: 13px;
 padding: 8px 18px; 
 }
+  
 .logo {
 font-size: 36px;  
 margin-bottom: 12px;
 }
+  
 .about-grid {
 grid-template-columns: 1fr;
-gap: 10px;
+gap: 20px;
     display: flex;
     flex-direction: column;
     align-items: center; /* 🔥 questo la centra davvero */
     text-align: center;
-  }
 }
 
 .about-container {
@@ -1069,7 +1074,8 @@ gap: 10px;
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 40px;
+    margin-bottom: 20px;
+
   }
   
 .about-container p {
