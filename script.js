@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===== ELEMENTI =====
-  const bottoniCategoria = document.querySelectorAll('[data-filter]');
-  const bottoniGenere = document.querySelectorAll('[data-genere]');
+  const bottoni = document.querySelectorAll('.filtro'); // 🔥 unico selettore
   const cards = Array.from(document.querySelectorAll('.card'));
   const empty = document.getElementById('emptyState');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -11,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
 
-  // 🔥 STEP DINAMICO
+  // ===== STEP DINAMICO =====
   function getStep() {
-    return window.innerWidth >= 900 ? 3 : 4;
+    return window.innerWidth >= 900 ? 6 : 4;
   }
 
   let step = getStep();
@@ -22,32 +21,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== NORMALIZZAZIONE =====
   const norm = (v) => (v || "").trim().toLowerCase();
 
-  // ===== CLICK CATEGORIE =====
-  bottoniCategoria.forEach(btn => {
+  // ===== CLICK FILTRI =====
+  bottoni.forEach(btn => {
     btn.addEventListener('click', () => {
 
-      filtroCategoria = norm(btn.dataset.filter) || "tutti";
+      const filtro = norm(btn.dataset.filter);
 
-      bottoniCategoria.forEach(b => b.classList.remove('attivo'));
+      // 🔥 capisce se è categoria o genere
+      if (btn.closest('.top')) {
+        filtroCategoria = filtro;
+      } else {
+        filtroGenere = filtro;
+      }
+
+      // attivo UI SOLO nella sua riga
+      const gruppo = btn.parentElement.querySelectorAll('.filtro');
+      gruppo.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
-      step = getStep();
-      visibiliMax = step; // reset corretto
-      aggiornaFiltri();
-    });
-  });
-
-  // ===== CLICK GENERI =====
-  bottoniGenere.forEach(btn => {
-    btn.addEventListener('click', () => {
-
-      filtroGenere = norm(btn.dataset.genere) || "tutti";
-
-      bottoniGenere.forEach(b => b.classList.remove('attivo'));
-      btn.classList.add('attivo');
-
+      // reset load more
       step = getStep();
       visibiliMax = step;
+
       aggiornaFiltri();
     });
   });
@@ -65,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let filtrati = [];
 
-    // 1. FILTRO BASE
     cards.forEach(card => {
 
       const categoria = norm(card.dataset.categoria);
@@ -89,13 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    // 2. MOSTRA SOLO FINO A visibiliMax 🔥
+    // ===== MOSTRA PROGRESSIVA =====
     filtrati.forEach((card, i) => {
-      if (i < visibiliMax) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+      card.style.display = i < visibiliMax ? "block" : "none";
     });
 
     // ===== EMPTY STATE =====
@@ -114,10 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
       loadMoreBtn.style.display =
         filtrati.length > visibiliMax ? "inline-block" : "none";
     }
-
   }
 
-  // ===== RESIZE (super importante) =====
+  // ===== RESIZE =====
   window.addEventListener('resize', () => {
     const newStep = getStep();
 
