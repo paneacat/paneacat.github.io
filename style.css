@@ -283,7 +283,11 @@ margin-top: 20px;
   gap: 14px;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
-
+.filtri-grid {
+  display: grid;
+  justify-content: center;
+  gap: 12px 14px;
+}
 /* bottoni */
 .filtro {
   font-size: 12px;
@@ -1224,7 +1228,7 @@ align-items: center;
 
 .filtri-row.generi {
     display: grid;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(6, auto);
     justify-content: center;
     gap: 12px;
 }
