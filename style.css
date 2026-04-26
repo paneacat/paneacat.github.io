@@ -276,13 +276,22 @@ align-items: center;
   gap: 12px;
 }
 
+/* tutte le righe (default mobile) */
 .filtri-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
-  max-width: 500px;
+  justify-content: center;
 }
+
+/* 🔥 SOLO l’ultima riga (Biopic) */
+.filtri-row:last-child {
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 320px; /* stessa larghezza delle altre */
+  margin: 0 auto;   /* la centri come blocco */
+}
+
 .filtri-row.generi {
   max-width: 420px; /* 🔥 forza la seconda riga pulita */
 }
