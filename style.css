@@ -750,6 +750,9 @@ transition: 0.3s ease;
 object-position: center top;
     max-width: 180px;   /* prima era 260 → troppo */
   margin: 20px auto 10px;
+  box-shadow:
+  0 0 25px rgba(255,191,0,0.2),
+  0 0 60px rgba(255,191,0,0.08);
 }
   
 .about-hero img:hover {
