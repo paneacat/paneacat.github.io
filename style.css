@@ -1172,16 +1172,15 @@ letter-spacing: 1.8px;
 }
 
   .archivio-grid {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 800px; /* 🔥 restringe tutto */
-    margin: 0 auto;
-    gap: 20px;
-  }
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 800px; /* 🔥 blocca larghezza */
+  margin: 0 auto;
+  gap: 20px;
+}
 
-  .archivio-grid .card img {
-    aspect-ratio: 1 / 1; /* 🔥 quadrato */
-  }
-
+.archivio-grid .card img {
+  aspect-ratio: 1 / 1;
+}
   .archivio-grid .card-info h3 {
     font-size: 14px;
   }
@@ -1232,12 +1231,10 @@ letter-spacing: 1.8px;
 /* HOME → cinematica */
   
 .home-grid {
-  grid-template-columns: 1fr;
-margin-bottom: 18px;
-margin: 0 auto;
-  display: grid;
-  align-items: center; /* 🔥 cambia da end → center */
-  gap: 40px;
+  grid-template-columns: 1fr; /* 🔥 UNA SOLA COLONNA */
+  max-width: 700px;
+  margin: 0 auto;
+  gap: 30px;
 }
   .home .home-grid {
     grid-template-columns: 1fr;
