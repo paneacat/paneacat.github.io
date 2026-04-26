@@ -223,7 +223,7 @@ font-size: clamp(20px, 4vw, 26px);
 line-height: 1.6;
 letter-spacing: 0.3px;
 font-weight: 300;
-margin-bottom: 6px;
+margin-bottom: 13px;
 }
 
 .hero::before 
