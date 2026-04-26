@@ -981,15 +981,14 @@ margin: 0 auto;
 
  
 .home-grid {
-grid-template-columns: 1fr;
-padding: 0 16px;
-gap: 30px;
+grid-template-columns: repeat(2, 1fr);
+gap: 13px;
 }
   
 .archivio-grid {
+  grid-template-columns: repeat(2, 1fr);
+gap: 20px;
 padding: 0 14px;
-gap: 18px;
-grid-template-columns: repeat(3, 1fr);
 }
   
 .home .card {
@@ -1042,11 +1041,6 @@ margin-bottom: 4px;
 .archivio-grid .rating {
 font-size: 11px;
 letter-spacing: 1px;
-}
-/* ARCHIVIO → griglia */
-.archivio-grid {
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
 }
 
 .archivio-grid .card img {
