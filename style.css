@@ -1212,15 +1212,16 @@ font-size: 12px;
 padding: 10px 20px;
 }
 
-  .filtri {
-    align-items: flex-start; /* 🔥 niente più centratura totale */
+.filtri {
+    align-items: flex-start;
   }
 
   .filtri-row {
-    justify-content: flex-start; /* 🔥 allineati a sinistra */
-    max-width: 900px;
+    justify-content: flex-start;
     width: 100%;
+    max-width: 900px;
   }
+  
 .archivio-grid {
 grid-template-columns: repeat(3, 1fr);
 }
