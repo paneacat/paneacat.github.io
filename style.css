@@ -1221,6 +1221,7 @@ aspect-ratio: 16 / 9;
 
 .card-info h3 {
 font-size: 26px;
+color: var(--gold);
 }
 
 .card-info p {
