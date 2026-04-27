@@ -1334,3 +1334,11 @@ align-items: center;
 .home .home-grid {
   grid-template-columns: 1fr !important;
 }
+.subtitle {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #aaa;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
