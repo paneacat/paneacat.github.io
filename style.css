@@ -1201,17 +1201,14 @@ margin: 0 auto 10px;
   font-size: 11px;
   padding: 7px 14px;
 }
-
 .subtitle {
-  font-size: 0.9rem !important;
-  line-height: 1.4;
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 260px;
+text-align: left;
+margin-left: 0;
+white-space: normal;   /* 🔥 cambia questo */
+overflow: visible;     /* 🔥 */
+text-overflow: unset;  /* 🔥 */
 }
-
+  
 /* ===== TABLET ===== */
 @media (min-width: 600px) and (max-width: 899px) {
 
