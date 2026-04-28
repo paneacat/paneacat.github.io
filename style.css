@@ -1249,8 +1249,8 @@ color: var(--gold);
 .review-hero img {
   width: 100%;
   aspect-ratio: 16 / 9;
+  object-position: center 30%;
   object-fit: cover;
-  object-position: center;
   display: block;
 
   border-radius: 16px; /* 🔥 forza coerenza */
