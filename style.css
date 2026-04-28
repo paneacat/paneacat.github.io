@@ -964,7 +964,7 @@ color: var(--gold);
   content: none !important;
 }
 
-.title-subtitle {
+.logo-subtitle {
   text-align: center;
   font-size: 12px;
   letter-spacing: 2px;
@@ -1277,7 +1277,7 @@ color: var(--gold);
     padding: 0 16px;
   }
 
-.title-subtitle {
+.logo-subtitle {
   font-size: 10px;
   letter-spacing: 1.5px;
   margin-top: -6px;
