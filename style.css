@@ -963,7 +963,16 @@ color: var(--gold);
 .review-hero::after {
   content: none !important;
 }
-
+.logo-subtitle {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: -10px; /* 🔥 avvicina al logo */
+  margin-bottom: 18px;
+  opacity: 0.8;
+}
 /* ===== MOBILE ===== */
 @media (max-width: 599px) {
 
@@ -1265,6 +1274,11 @@ color: var(--gold);
   .review-container {
     margin-top: 20px;
     padding: 0 16px;
+  }
+  .logo-subtitle {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  margin-top: -6px;
   }
 }
 
