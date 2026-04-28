@@ -1216,8 +1216,12 @@ text-overflow: unset;  /* 🔥 */
 .review-hero {
   position: relative;
 }
-
+  
 .review-hero img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
   filter: contrast(1.05) brightness(0.95);
 }
   
