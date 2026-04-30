@@ -1,7 +1,7 @@
 {
   "name": "paneacult",
   "short_name": "paneacult",
-  "start_url": "/",
+  "start_url": "/paneacult/",
   "display": "standalone",
   "background_color": "#0b1f26",
   "theme_color": "#0b1f26",
