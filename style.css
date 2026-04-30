@@ -75,7 +75,7 @@ button {
   gap: 16px;
   overflow-x: auto;
   padding: 0 20px;
-  margin-top: 6px;
+  margin-top: 13px;
   scroll-snap-type: x mandatory;
 }
 
