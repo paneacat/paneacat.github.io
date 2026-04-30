@@ -1610,8 +1610,9 @@ padding-top: 15px;
   }
 
   .slide-card img {
-    height: 200px; /* 🔥 controlli l’altezza */
+    height: 200px;
     aspect-ratio: auto; /* evita schiacciamenti strani */
   }
-
+slider {
+padding-left: 40px;
 }
