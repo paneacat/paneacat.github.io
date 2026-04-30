@@ -78,6 +78,8 @@ button {
   overflow-x: auto;
   padding: 0 20px;
   margin-top: 13px;
+  padding-left: 20px;
+  padding-right: 20px;
   scroll-snap-type: x mandatory;
   width: 100%;
 }
@@ -128,10 +130,6 @@ button {
 .all-inner {
   text-align: center;
   color: var(--gold);
-}
-
-.slide-card:first-child {
-  margin-left: 4px;
 }
 
 .slide-card:last-child {
