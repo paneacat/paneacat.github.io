@@ -76,10 +76,9 @@ button {
   display: flex;
   gap: 16px;
   overflow-x: auto;
-
   padding-left: 20px;   /* 👈 QUESTO è quello che ti serve */
   padding-right: 20px;
-scroll-padding-left: 20px;
+  scroll-padding-left: 20px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
@@ -95,7 +94,7 @@ scroll-padding-left: 20px;
   }
 
 .slide-card img {
-  width: 100%;
+  flex: 0 0 480px;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 14px;
@@ -124,8 +123,8 @@ scroll-padding-left: 20px;
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 12px;
   height: 180px;
-  flex: 0 0 480px;
-}
+  flex: 0 0 480px; /* 👈 UGUALE alle altre */
+  }
 
 .all-inner {
   text-align: center;
