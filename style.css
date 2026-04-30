@@ -1699,9 +1699,9 @@ padding-top: 15px;
   .filtri-row.generi .filtro {
     flex: 0 0 auto;
 }
-.slide-card {
-  flex: 0 0 80%;
-}
+  .slide-card {
+  flex: 0 0 32%;
+  }
 }
 
 
