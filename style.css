@@ -164,6 +164,9 @@ button {
   position: relative;
 }
 
+.slider-wrapper:hover .slider-btn {
+  opacity: 1;
+}
 /* frecce */
 .slider-btn {
   position: absolute;
@@ -178,7 +181,7 @@ button {
 
   background: rgba(11,31,38,0.8);
   color: var(--gold);
-
+  opacity: 0.6;
   font-size: 20px;
   cursor: pointer;
 
@@ -197,11 +200,11 @@ button {
 
 /* posizioni */
 .slider-btn.prev {
-  left: 8px;
+  left: -20px;
 }
 
 .slider-btn.next {
-  right: 8px;
+  right: -20px;
 }
 /* ===== BASE ===== */
 body {
@@ -1702,11 +1705,13 @@ padding-top: 15px;
     flex: 0 0 auto;
 }
   .slide-card {
-  flex: 0 0 340px;
+  flex: 0 0 420px;
   }
+  
   .slider-wrapper {
   position: relative;
   }
+  
   .slider-btn {
   position: absolute;
   top: 50%;
@@ -1728,13 +1733,22 @@ padding-top: 15px;
   z-index: 5;
   font-size: 22px;
   }
-  .slider-btn.prev { left: 10px; }
+  
+.slider-btn.prev { left: 10px; }
 .slider-btn.next { right: 10px; }
   
   .slider-btn:hover {
   background: var(--gold);
   color: #0b1f26;
   display: none;
+  }
+  
+  .slider {
+    gap: 24px;
+  }
+  
+  .slide-card img {
+    height: 280px;
   }
 }
 
