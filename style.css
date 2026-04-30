@@ -249,3 +249,97 @@ footer {
   font-size: 11px;
   color: #777;
 }
+
+
+/* =========================
+   STEP 2 — REFINEMENT UI
+========================= */
+
+/* ===== RESPIRO GENERALE ===== */
+.section {
+  margin: 60px 0; /* prima era 40 → più elegante */
+}
+
+/* ===== HERO PIÙ LEGGIBILE ===== */
+.hero {
+  margin: 50px auto 40px;
+}
+
+.hero h1 {
+  line-height: 1.7; /* più aria */
+}
+
+/* ===== CONTAINER PIÙ STABILE ===== */
+.container,
+.home-cinema {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== CARD — MICRO INTERAZIONE ===== */
+.card img {
+  transition: transform 0.35s ease;
+}
+
+.card:hover img {
+  transform: scale(1.04); /* più morbido */
+}
+
+/* titolo più leggibile */
+.card-info h3 {
+  letter-spacing: 0.3px;
+}
+
+/* testo più arioso */
+.card-info p {
+  opacity: 0.85;
+}
+
+/* ===== SLIDER — FEEL PIÙ “APP” ===== */
+.slider {
+  scroll-behavior: smooth;
+  padding-bottom: 4px;
+}
+
+/* piccolo effetto interazione */
+.slide-card {
+  transition: transform 0.25s ease;
+}
+
+.slide-card:active {
+  transform: scale(0.97);
+}
+
+/* ===== FILTRI — PIÙ PREMIUM ===== */
+.filtro {
+  transition: all 0.2s ease;
+}
+
+.filtro:hover {
+  transform: translateY(-1px);
+}
+
+/* ===== MENU — PIÙ PRECISO ===== */
+.menu a {
+  transition: all 0.2s ease;
+}
+
+/* ===== SPAZIATURE TESTI ===== */
+.subtitle {
+  margin-bottom: 18px;
+}
+
+.series {
+  margin-bottom: 20px;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter {
+  margin: 120px auto 100px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  opacity: 0.8;
+}
