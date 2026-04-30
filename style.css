@@ -1603,9 +1603,6 @@ padding-top: 15px;
   grid-template-columns: 1fr !important;
 }
 
-  .slider {
-    justify-content: center;
-  }
 
   .slide-card {
     flex: 0 0 320px; /* 🔥 larghezza fissa elegante */
