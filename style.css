@@ -51,6 +51,11 @@ button {
   margin-top: 40px;
 }
 
+.home-intro {
+  padding: 20px;
+  margin-top: 10px; /* 👈 prima era più lontano */
+}
+
 .home-intro h2 {
   font-family: 'Playfair Display', serif;
   font-size: 22px;
@@ -70,6 +75,7 @@ button {
   gap: 16px;
   overflow-x: auto;
   padding: 0 20px;
+  margin-top: 6px;
   scroll-snap-type: x mandatory;
 }
 
@@ -346,6 +352,7 @@ text-align: center;
 margin: 40px auto 60px;
 max-width: 600px;
 z-index: 1;
+margin-bottom: 30px;
 }
 
 .hero h1 {
