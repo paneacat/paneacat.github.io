@@ -68,7 +68,10 @@ button {
   color: var(--gold);
   margin-top: 6px;
 }
-
+.home-cinema {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 /* 🎞️ SLIDER */
 .slider {
   display: flex;
@@ -77,6 +80,8 @@ button {
   padding: 0 20px;
   margin-top: 13px;
   scroll-snap-type: x mandatory;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .slider::-webkit-scrollbar {
@@ -1608,8 +1613,8 @@ padding-top: 15px;
 
 
   .slide-card {
-    flex: 0 0 320px; /* 🔥 larghezza fissa elegante */
     max-width: 320px;
+    flex: 0 0 280px;
   }
 
   .slide-card img {
@@ -1618,4 +1623,6 @@ padding-top: 15px;
   }
 slider {
 padding-left: 40px;
+justify-content: flex-start;
+padding: 0 20px;
 }
