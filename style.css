@@ -1523,11 +1523,12 @@ color: var(--gold);
   scroll-snap-align: start;
 
 }
-  
-  .slide-card.all {
+    .slide-card.all {
     flex: 0 0 85%;
 }
-
+  .slider-btn {
+    display: none;
+  }
 
 /* ===== FIX GENERALI ===== */
 
