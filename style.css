@@ -126,6 +126,7 @@ button {
   align-items: center;
   border-radius: 14px;
   justify-content: center; 
+  scroll-snap-align: start;
 }
 
 .all-inner {
@@ -1677,7 +1678,7 @@ padding-top: 15px;
     flex: 0 0 auto;
 }
   .slide-card {
-  flex: 0 0 420px;
+  flex: 0 0 80%;
   }
   
   .slider-wrapper {
