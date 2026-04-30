@@ -119,7 +119,6 @@ button {
 
 /* CTA FINALE */
 .slide-card.all {
-  flex: 0 0 80%;
   aspect-ratio: 16 / 9;
   display: flex;
   border: 1px solid rgba(255,255,255,0.2);
@@ -127,6 +126,7 @@ button {
   border-radius: 14px;
   justify-content: center; 
   scroll-snap-align: start;
+  flex: 0 0 inherit;
 }
 
 .all-inner {
@@ -1479,7 +1479,7 @@ color: var(--gold);
  }
   
 .slide-card {
-    flex: 0 0 85%;
+  flex: 0 0 80%;
 }
   
 /* immagini proporzionate e pulite */
@@ -1492,7 +1492,7 @@ color: var(--gold);
 }
 
 /* card nello slider (stile Netflix) */
-    .slide-card.all {
+ .slide-card.all {
     flex: 0 0 85%;
 }
   .slider-btn {
@@ -1680,7 +1680,7 @@ padding-top: 15px;
     flex: 0 0 auto;
 }
   .slide-card {
-  flex: 0 0 80%;
+ flex: 0 0 420px;
   }
   
   .slider-wrapper {
