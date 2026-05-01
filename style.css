@@ -132,7 +132,12 @@ button {
   height: 280px;
   overflow: hidden;
   }
-  
+
+.slide-card img,
+.slide-card.all {
+  height: 280px;
+}
+
 .all-inner {
   text-align: center;
   color: var(--gold);
