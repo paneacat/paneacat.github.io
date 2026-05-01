@@ -226,6 +226,7 @@ scroll-snap-align: center;
   transform: none;
 }
 
+@media (hover: none) {
   .slide-card:hover,
   .slide-card-cta:hover {
     transform: none;
