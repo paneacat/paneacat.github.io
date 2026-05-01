@@ -172,7 +172,32 @@ if (window.innerWidth >= 900) {
       aggiornaFiltri();
     }
   });
+const slider = document.querySelector('.slider');
+const cards = document.querySelectorAll('.slide-card, .slide-card-cta');
 
+function updateActive() {
+  if (!slider) return;
+
+  const center = slider.scrollLeft + slider.clientWidth / 2;
+
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    const cardCenter = rect.left + rect.width / 2;
+
+    const offset = Math.abs(center - (cardCenter + slider.scrollLeft));
+
+    const isActive = offset < rect.width / 2;
+
+    card.classList.toggle('is-active', isActive);
+  });
+}
+
+if (window.innerWidth >= 900) {
+  slider.addEventListener('scroll', updateActive);
+
+  // 🔥 QUESTO È CRUCIALE
+  setTimeout(updateActive, 100);
+}
   // ===== INIT =====
   aggiornaFiltri();
 
