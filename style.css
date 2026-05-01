@@ -1610,13 +1610,19 @@ padding-top: 15px;
     flex: 0 0 auto;
 }
   .slide-card {
-  flex: 0 0 75%;
+  flex: 0 0 48%;
 }
   .slider {
-  padding-left: 0 !important;
-  scroll-padding-left: 0 !important;
+  padding-left: 20px;
+  scroll-padding-left: 20px;
 }
 .slider-wrapper {
   overflow: hidden;
 }
+.slide-card-cta {
+  flex: 0 0 48%;
+  }
+  .slide-card img {
+  border-radius: 16px;
+  }
 }
