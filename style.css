@@ -558,6 +558,7 @@ color: #ccc;
   margin: 0;
   margin-top: 0; /* 🔥 niente stacco */
   line-height: 1.2;
+  color: var(--gold);
 }
 
 /* ===== LAYOUT ===== */
