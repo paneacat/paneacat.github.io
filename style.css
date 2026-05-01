@@ -1482,7 +1482,7 @@ color: var(--gold);
   scroll-snap-align: start;
   scroll-snap-type: x mandatory;
   display: flex;
-  gap: 6px;
+  gap: 16px;
   overflow-x: auto;
   scroll-padding-left: 6px; 
  }
