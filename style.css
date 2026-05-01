@@ -1598,5 +1598,12 @@ padding-top: 15px;
 }
   .slide-card {
   flex: 0 0 75%;
-  }
+}
+  .slider {
+  padding-left: 0 !important;
+  scroll-padding-left: 0 !important;
+}
+.slider-wrapper {
+  overflow: hidden;
+}
 }
