@@ -1596,11 +1596,4 @@ padding-top: 15px;
   transform: scale(1);
   z-index: 2;
 }
-  .slider-wrapper {
-  overflow: visible; /* 🔥 non hidden */
-  }
-  
-  body {
-  background: red !important;
-  }
 }
