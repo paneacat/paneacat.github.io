@@ -1195,7 +1195,7 @@ color: var(--gold);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
-  margin-top: -10px; /* avvicina al titolo */
+  margin-top: -8px; /* avvicina al titolo */
   margin-bottom: 18px;
   opacity: 0.8;
 }
@@ -1499,6 +1499,7 @@ letter-spacing: 1.8px;
   .about-hero {
   display: flex;
   justify-content: flex-start; /* 👈 SINISTRA */
+   height: 100%;
   }
   
 .about-hero img {
@@ -1519,10 +1520,6 @@ letter-spacing: 1.8px;
   filter: grayscale(0%);
 }
   
-.about-hero,
-.about-container {
-  height: 100%;
-}
   
   .about-container p {
   margin-bottom: 12px;
