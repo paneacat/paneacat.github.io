@@ -83,8 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===== EFFETTO CINEMA DESKTOP =====
-  if (window.innerWidth >= 900 && slider) {
+  let cinemaInitialized = false;
+
 function initCinema() {
+
+  if (cinemaInitialized) return; // 👈 blocca duplicazioni
+  cinemaInitialized = true;
 
   const slider = document.querySelector('.slider');
   if (!slider) return;
@@ -110,10 +114,12 @@ function initCinema() {
 
 }
 
+// init iniziale
 if (window.innerWidth >= 900) {
   initCinema();
 }
 
+// resize safe
 window.addEventListener('resize', () => {
   if (window.innerWidth >= 900) {
     initCinema();
