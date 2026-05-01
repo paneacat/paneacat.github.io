@@ -1371,17 +1371,39 @@ color: var(--gold);
   }
 
   .slider {
-    padding-left: 16px;
-    padding-right: 16px;
-    scroll-padding-left: 16px;
+  scroll-padding-left: 16px;
+  scroll-padding-right: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  gap: 16px;
   }
   
    .slide-card-cta:active {
     transform: scale(0.97);
   }
   
+  .slide-card {
+  flex: 0 0 80%;
+}
+
+.slide-card-cta {
+  flex: 0 0 80%;
+}
+
+  .slide-card:hover,
+  .slide-card-cta:hover {
+    transform: none;
+    box-shadow: none;
+  }
+.slide-card-cta:hover .cta-overlay {
+    background: rgba(11,31,38,0.55);
+}
   
-  
+.slide-card-cta .cta-overlay {
+  font-size: 20px;
+  padding: 0 10px;
+}
+  }
   /* evita layout “schiacciato” */
 .container,
 .section {
