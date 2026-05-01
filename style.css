@@ -1447,20 +1447,6 @@ body {
 }
 }
 
-/* ===== TABLET ===== */
-@media (min-width: 600px) and (max-width: 899px) {
-
-  .subtitle {
-    text-align: left;
-    max-width: 420px;
-    font-size: 1rem;
-  }
-  
-  .archivio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* ===== DESKTOP ===== */
 @media (min-width: 900px) {
 
