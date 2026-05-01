@@ -139,10 +139,6 @@ function updateArrow() {
     }
   });
 
-  // ===== INIT =====
-  aggiornaFiltri();
-
-});
 const slider = document.querySelector('.slider');
 const cards = document.querySelectorAll('.slide-card, .slide-card-cta');
 
@@ -161,3 +157,8 @@ function updateActive() {
 
 slider.addEventListener('scroll', updateActive);
 window.addEventListener('load', updateActive);
+
+// ===== INIT =====
+  aggiornaFiltri();
+
+});
