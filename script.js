@@ -5,19 +5,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const empty = document.getElementById('emptyState');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
 
+  const slider = document.querySelector(".slider");
+  const next = document.querySelector(".slider-btn.next");
+  const prev = document.querySelector(".slider-btn.prev");
+
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
 
   function getStep() {
     return window.innerWidth >= 900 ? 3 : 4;
   }
-  
+
   let step = getStep();
   let visibiliMax = step;
 
   const norm = (v) => (v || "").trim().toLowerCase();
 
-  // ===== CLICK =====
+  // ===== CLICK FILTRI =====
   bottoni.forEach(btn => {
     btn.addEventListener('click', () => {
 
@@ -25,13 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (btn.closest('.top')) {
         filtroCategoria = filtro;
-
         document.querySelectorAll('.top .filtro')
           .forEach(b => b.classList.remove('attivo'));
-
       } else {
         filtroGenere = filtro;
-
         document.querySelectorAll('.bottom .filtro')
           .forEach(b => b.classList.remove('attivo'));
       }
@@ -53,33 +54,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== SLIDER (FIX PULITO) =====
-  const slider = document.querySelector(".slider");
+  // ===== SLIDER BUTTONS =====
+  if (slider && next && prev) {
 
-document.querySelector(".slider-btn.next").onclick = () => {
-  slider.scrollBy({ left: 300, behavior: "smooth" });
-};
+    next.onclick = () => {
+      slider.scrollBy({ left: 300, behavior: "smooth" });
+    };
 
-document.querySelector(".slider-btn.prev").onclick = () => {
-  slider.scrollBy({ left: -300, behavior: "smooth" });
-};
-function updateArrow() {
-    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    prev.onclick = () => {
+      slider.scrollBy({ left: -300, behavior: "smooth" });
+    };
 
-    if (slider.scrollLeft >= maxScroll - 5) {
-      next.style.opacity = "0";
-      next.style.pointerEvents = "none";
-    } else {
-      next.style.opacity = "0.6";
-      next.style.pointerEvents = "auto";
+    function updateArrow() {
+      const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+      if (slider.scrollLeft >= maxScroll - 5) {
+        next.style.opacity = "0";
+        next.style.pointerEvents = "none";
+      } else {
+        next.style.opacity = "0.6";
+        next.style.pointerEvents = "auto";
+      }
     }
+
+    slider.addEventListener('scroll', updateArrow);
+    window.addEventListener('resize', updateArrow);
+    updateArrow();
   }
 
-  slider.addEventListener('scroll', updateArrow);
-  window.addEventListener('resize', updateArrow);
+  // ===== EFFETTO CINEMA DESKTOP =====
+  if (window.innerWidth >= 900 && slider) {
 
-  updateArrow(); // 👈 importantissimo all’avvio
-}
+    const slideCards = document.querySelectorAll('.slide-card, .slide-card-cta');
+
+    function updateActive() {
+      const center = slider.scrollLeft + slider.clientWidth / 2;
+
+      slideCards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
+
+        const isActive =
+          Math.abs(center - (cardCenter + slider.scrollLeft)) < rect.width / 2;
+
+        card.classList.toggle('is-active', isActive);
+      });
+    }
+
+    slider.addEventListener('scroll', updateActive);
+    window.addEventListener('load', updateActive);
+  }
+
   // ===== FILTRO =====
   function aggiornaFiltri() {
 
@@ -138,30 +163,8 @@ function updateArrow() {
       aggiornaFiltri();
     }
   });
-if (window.innerWidth >= 900) {
 
-  const slider = document.querySelector('.slider');
-  const cards = document.querySelectorAll('.slide-card, .slide-card-cta');
-
-  function updateActive() {
-    const center = slider.scrollLeft + slider.clientWidth / 2;
-
-    cards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      const cardCenter = rect.left + rect.width / 2;
-
-      const isActive = Math.abs(center - (cardCenter + slider.scrollLeft)) < rect.width / 2;
-
-      card.classList.toggle('is-active', isActive);
-    });
-  }
-
-  slider.addEventListener('scroll', updateActive);
-  window.addEventListener('load', updateActive);
-
-}
-
-// ===== INIT =====
+  // ===== INIT =====
   aggiornaFiltri();
 
 });
