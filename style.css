@@ -71,30 +71,52 @@ button {
   margin-right: auto;
   }
 
-.hero-sub {
-  margin-top: 16px;
-  font-size: 13px;
-  color: #aaa;
-  line-height: 1.6;
-  margin: 16px auto 0;
-  max-width: 420px;
+.hero {
   text-align: center;
+  margin: 60px auto 70px; /* più respiro sopra e sotto */
+  padding: 0 20px;
 }
 
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* titolo */
+.hero h1 {
+  font-size: clamp(20px, 4vw, 28px);
+  line-height: 1.5;
+  font-weight: 300;
+  max-width: 520px;
+}
+
+/* sottotesto */
+.hero-sub {
+  margin-top: 18px;
+  max-width: 420px;
+  font-size: 14px;
+  color: #9aa3a8;
+  line-height: 1.6;
+}
+
+/* bottone */
 .hero-cta {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 22px;
-  border-radius: 24px;
+  margin-top: 26px;
+  padding: 11px 26px;
+  border-radius: 999px;
+
   background: var(--gold);
   color: #0b1f26;
+
   font-size: 13px;
-  transition: 0.2s ease;
-  margin: 20px auto 0;
+  letter-spacing: 0.5px;
+
+  transition: all 0.2s ease;
 }
 
 .hero-cta:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   background: #ffd54a;
 }
 
@@ -419,23 +441,6 @@ transform: translateY(-2px);
   content: "Genere — ";
   color: #555;
 }
-.hero {
-position: relative;
-text-align: center;
-margin: 40px auto 60px;
-max-width: 600px;
-z-index: 1;
-margin-bottom: 30px;
-}
-
-.hero h1 {
-position: relative;
-z-index: 2;
-font-size: clamp(20px, 4vw, 26px);
-line-height: 1.6;
-letter-spacing: 0.3px;
-font-weight: 300;
-}
 
 .hero::before 
 {content: "";
@@ -454,11 +459,7 @@ left: 50%;
 transform: translate(-50%, -50%);
 z-index: 0;
 }
-.hero .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.
 /* ===== GRID ===== */
 .grid {
 display: grid;
