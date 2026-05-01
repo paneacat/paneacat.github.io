@@ -172,13 +172,21 @@ button {
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
+
 .slide-card-cta {
-  flex: 0 0 45%;
-  scroll-snap-align: start;
   position: relative;
+  flex: 0 0 75%;
 }
 
-.cta-overlay {
+.slide-card-cta img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* overlay */
+.slide-card-cta .cta-overlay {
   position: absolute;
   inset: 0;
 
@@ -186,18 +194,19 @@ button {
   align-items: center;
   justify-content: center;
 
-  background: rgba(11,31,38,0.6);
+  background: rgba(11,31,38,0.55);
   border-radius: 14px;
 
   color: var(--gold);
   font-size: 18px;
-  text-align: center;
+  font-weight: 500;
+
+  transition: 0.25s ease;
 }
 
-.slide-card-cta img {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 14px;
+/* hover desktop */
+.slide-card-cta:hover .cta-overlay {
+  background: rgba(11,31,38,0.75);
 }
 
 /* TESTO CARD */
@@ -1444,13 +1453,13 @@ color: var(--gold);
 .slider .slide-card {
     flex: 0 0 92%;  /* 👈 più grandi (prima 75%) */
 }
-  .slider .slide-card-cta {
+ .slide-card-cta {
     flex: 0 0 92%;
   }
-  
-.slide-card-cta {
-  flex: 0 0 88%;
-}   
+
+  .slide-card-cta .cta-overlay span {
+    font-size: 16px;
+  }  
   .slider-btn {
     display: none;
   }
