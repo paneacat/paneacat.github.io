@@ -156,6 +156,14 @@ button {
   overflow: hidden;
 }
 
+.slide-card-all img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* overlay */
 .cta-overlay {
   position: absolute;
   inset: 0;
@@ -164,25 +172,18 @@ button {
   align-items: center;
   justify-content: center;
 
-  background: rgba(11,31,38,0.6);
+  background: rgba(11,31,38,0.55);
   color: var(--gold);
 
   font-size: 18px;
   font-weight: 500;
 
-  z-index: 5;
+  z-index: 10;
 }
 
 .cta-overlay span {
   border-bottom: 1px solid var(--gold);
   padding-bottom: 4px;
-}
-
-.slide-card-all img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .all-inner {
