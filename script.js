@@ -84,26 +84,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== EFFETTO CINEMA DESKTOP =====
   if (window.innerWidth >= 900 && slider) {
+function initCinema() {
 
-    const slideCards = document.querySelectorAll('.slide-card, .slide-card-cta');
+  const slider = document.querySelector('.slider');
+  if (!slider) return;
 
-    function updateActive() {
-      const center = slider.scrollLeft + slider.clientWidth / 2;
+  const cards = document.querySelectorAll('.slide-card, .slide-card-cta');
 
-      slideCards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const cardCenter = rect.left + rect.width / 2;
+  function updateActive() {
+    const center = slider.scrollLeft + slider.clientWidth / 2;
 
-        const isActive =
-          Math.abs(center - (cardCenter + slider.scrollLeft)) < rect.width / 2;
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.left + rect.width / 2;
 
-        card.classList.toggle('is-active', isActive);
-      });
-    }
+      const isActive =
+        Math.abs(center - (cardCenter + slider.scrollLeft)) < rect.width / 2;
 
-    slider.addEventListener('scroll', updateActive);
-    window.addEventListener('load', updateActive);
+      card.classList.toggle('is-active', isActive);
+    });
   }
+
+  slider.addEventListener('scroll', updateActive);
+  window.addEventListener('load', updateActive);
+
+}
+
+if (window.innerWidth >= 900) {
+  initCinema();
+}
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 900) {
+    initCinema();
+  }
+});
 
   // ===== FILTRO =====
   function aggiornaFiltri() {
