@@ -129,6 +129,8 @@ button {
   border-radius: 14px;
   background: rgba(255,255,255,0.02);
   transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
   }
   
 .all-inner {
@@ -187,6 +189,28 @@ button {
   transform: translateX(4px);
 }
 
+.slide-card.all .overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(11, 31, 38, 0.6); /* tuo blu */
+  backdrop-filter: blur(2px);
+
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.slide-card.all span {
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 4px;
+}
 /* ===== BASE ===== */
 body {
 font-family: 'Inter', sans-serif;
@@ -1751,6 +1775,10 @@ padding-top: 15px;
   .slide-card.all:hover {
   background: rgba(255,255,255,0.06);
   border-color: var(--gold);
+  }
+  .slide-card.all:hover .overlay {
+  background: rgba(11, 31, 38, 0.8);
+  transform: scale(1.02);
   }
 }
 
