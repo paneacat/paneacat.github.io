@@ -207,14 +207,11 @@ scroll-snap-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: rgba(11,31,38,0.55);
+  background: rgba(11,31,38,0.75);
   border-radius: 14px;
-
   color: var(--gold);
   font-size: 18px;
   font-weight: 500;
-
   text-align: center;
   transition: 0.25s ease;
 }
@@ -1596,23 +1593,23 @@ padding-top: 15px;
 
 .slider {
   justify-content: flex-start;
-   padding-left: 0;
    scroll-padding-left: 0;
   margin-left: -20px;
+  padding: 0 40px;
 }
-  
-.slide-card,
-  .slide-card-cta {
-    flex: 0 0 42%;
-    opacity: 0.5;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-  }
 
   .slide-card.is-active,
   .slide-card-cta.is-active {
     flex: 0 0 52%;
     opacity: 1;
     transform: scale(1.03);
+  }
+  .slide-card,
+  .slide-card-cta {
+    transform: scale(0.85);
+    opacity: 0.4;
+    transition: all 0.4s ease;
+    flex: 0 0 60%;
   }
   
   .slide-card:hover,
