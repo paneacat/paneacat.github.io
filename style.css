@@ -102,17 +102,18 @@ button {
 
 /* bottone */
 .hero-cta {
-  margin-top: 26px;
-  padding: 11px 26px;
-  border-radius: 999px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
 
+.hero-cta a {
+  padding: 12px 26px;
+  border-radius: 30px;
   background: var(--gold);
   color: #0b1f26;
-
-  font-size: 13px;
-  letter-spacing: 0.5px;
-
-  transition: all 0.2s ease;
+  font-size: 14px;
+  transition: 0.2s ease;
 }
 
 .hero-cta:hover {
@@ -1548,7 +1549,20 @@ letter-spacing: 1.8px;
      aspect-ratio: 24/9;
     object-fit: cover;
   }
+.hero {
+    max-width: 800px;
+    margin: 60px auto 80px;
+  }
 
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.7;
+  }
+
+  .hero-kicker {
+    font-size: 14px;
+  }
+  
 .card-info h3 {
 font-size: 26px;
 color: var(--gold);
