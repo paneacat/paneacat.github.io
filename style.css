@@ -140,7 +140,7 @@ button {
 }
 
 /* CTA FINALE */
-.slide-card.all {
+.slide-card-cta {
   flex: 0 0 75%; /* 🔥 UGUALE alle altre */
   aspect-ratio: 16 / 9; /* 🔥 stessa altezza */
   
@@ -161,24 +161,6 @@ button {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 12px;
-}
-
-/* overlay */
-.cta-overlay {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(11,31,38,0.55);
-  color: var(--gold);
-
-  font-size: 18px;
-  font-weight: 500;
-
-  z-index: 10;
 }
 
 .cta-overlay span {
@@ -1438,8 +1420,8 @@ color: var(--gold);
   }
   
 /* immagini proporzionate e pulite */
-.slide-card-all {
-  flex: 0 0 80%;
+.slide-card-cta {
+  flex: 0 0 75%;
   aspect-ratio: 16 / 9;
 }
   
