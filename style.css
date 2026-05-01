@@ -1229,6 +1229,7 @@ color: var(--gold);
   .about-container {
     text-align: center; /* 🔥 centra testo */
     align-items: center;
+    max-width: 300px;
   }
 
   .about-container p {
