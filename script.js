@@ -54,19 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===== SLIDER (FIX PULITO) =====
-  const slider = document.querySelector('.slider');
-  const next = document.querySelector('.slider-btn.next');
+  const slider = document.querySelector(".slider");
 
-  if (slider && next) {
-    next.addEventListener('click', () => {
-      const card = slider.querySelector('.slide-card');
+document.querySelector(".slider-btn.next").onclick = () => {
+  slider.scrollBy({ left: 300, behavior: "smooth" });
+};
 
-      slider.scrollBy({
-        left: card.offsetWidth + 16,
-        behavior: 'smooth'
-      });
-    });
-  }
+document.querySelector(".slider-btn.prev").onclick = () => {
+  slider.scrollBy({ left: -300, behavior: "smooth" });
+};
 function updateArrow() {
     const maxScroll = slider.scrollWidth - slider.clientWidth;
 
