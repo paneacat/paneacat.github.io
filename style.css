@@ -111,11 +111,11 @@ button {
 
 .hero-cta a {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 12.5px;
+  border-radius: 20px;
   background: var(--gold);
   color: #0b1f26;
-  font-size: 14px;
   font-weight: 500;
   text-decoration: none;
 }
