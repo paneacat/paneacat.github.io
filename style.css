@@ -197,16 +197,11 @@ button {
   align-items: center;
   justify-content: center;
 
-  background: rgba(11, 31, 38, 0.6); /* tuo blu */
-  backdrop-filter: blur(2px);
-
+  background: rgba(11,31,38,0.6);
   color: var(--gold);
+
   font-size: 18px;
-  font-weight: 500;
-
-  transition: all 0.3s ease;
 }
-
 /* ===== BASE ===== */
 body {
 font-family: 'Inter', sans-serif;
@@ -228,7 +223,7 @@ color: var(--gold);
 /* ===== HEADER ===== */
 
 .site-header {
-position: relative;
+osition: relative;
 z-index: 10;
 padding-bottom: 15px;
 }
