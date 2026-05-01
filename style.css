@@ -189,19 +189,22 @@ button {
 .slide-card-cta .cta-overlay {
   position: absolute;
   inset: 0;
-
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: rgba(11,31,38,0.55);
   border-radius: 14px;
-
   color: var(--gold);
   font-size: 18px;
   font-weight: 500;
-
   transition: 0.25s ease;
+}
+
+.slide-card-cta .cta-overlay span {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 /* hover desktop */
