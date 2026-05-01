@@ -125,21 +125,28 @@ button {
   background: #ffd54a;
 }
 
-.home-section-title {
-  margin-top: 45px;
-  margin-bottom: 6px;
+.section-label {
+  margin-top: 50px;
+  margin-bottom: 10px;
 
-  padding-left: 23px;  /* 👈 spazio solo a sinistra */
-  font-size: 13px;
-  letter-spacing: 0.5px;
+  padding-left: 20px;
 
-  color: #aaa;
-  text-align: left;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: var(--gold);
+  opacity: 0.7;
 }
 
-.home-section-title em {
-  font-style: italic;
-  color: var(--gold);
+.section-label::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  margin-top: 6px;
+  opacity: 0.5;
 }
 
 /* 🎞️ SLIDER */
