@@ -1575,7 +1575,6 @@ padding-top: 15px;
   .slide-card:hover,
   .slide-card-cta:hover {
     transform: scale(1.04);
-    opacity: 1;
   }
 
   .slide-card-cta:hover .cta-overlay {
