@@ -1613,6 +1613,10 @@ padding-top: 15px;
   .filtri-row.generi .filtro {
     flex: 0 0 auto;
 }
+  .slider {
+  align-items: flex-start;
+  padding-left: 20px;
+  }
   
 .slider-btn {
   position: absolute;
@@ -1653,7 +1657,10 @@ padding-top: 15px;
   justify-content: center; 
   scroll-snap-align: start;
 }
-
+.slide-card,
+.slide-card-cta {
+  flex: 0 0 40%;
+}
 .slide-card-cta:hover {
   background: rgba(255,255,255,0.06);
   border-color: var(--gold);
