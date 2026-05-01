@@ -152,31 +152,32 @@ button {
 /* 🎞️ SLIDER */
 .slider {
   display: flex;
-  gap: 16px;
+  gap: 20px;
+
   overflow-x: auto;
-  padding-left: 8px;   /* 👈 QUESTO è quello che ti serve */
-  padding-right: 8px;
-  margin-top: 25px;
   scroll-snap-type: x mandatory;
-  scroll-padding-left: 20px;
+
+  padding: 0 20px; /* respiro laterale */
+  scroll-padding: 20px;
+
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  position: relative;
-  align-items: flex-start;
+
+  align-items: stretch;
 }
 
 .slider::-webkit-scrollbar {
   display: none;
 }
+
 .slide-card {
-  flex: 0 0 75%;
+  flex: 0 0 32%;
+  scroll-snap-align: start;
 }
-.slide-card-all {
-  flex: 0 0 75%;
-}
+
 .slide-card-cta {
-  position: relative;
-  flex: 0 0 75%;
+  flex: 0 0 40%;
+  scroll-snap-align: start;
 }
 
 .slide-card-cta img {
@@ -245,7 +246,7 @@ button {
 }
 
 .slider-wrapper {
-  position: relative;
+  overflow: hidden;
 }
 
 .slide-card img {
