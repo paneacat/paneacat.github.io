@@ -1588,16 +1588,20 @@ padding-top: 15px;
   margin-left: -20px;
 }
   
-.slide-card {
-  flex: 0 0 42%;
-  opacity: 0.6;
-}
+.slide-card,
+  .slide-card-cta {
+    flex: 0 0 42%;
+    opacity: 0.5;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
 
-.slide-card-cta {
-  flex: 0 0 42%;
-  overflow: hidden;
-}
-
+  .slide-card.is-active,
+  .slide-card-cta.is-active {
+    flex: 0 0 52%;
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  
   .slide-card:hover,
   .slide-card-cta:hover {
     transform: scale(1.04);
