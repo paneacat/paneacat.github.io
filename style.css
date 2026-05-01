@@ -174,11 +174,6 @@ button {
 }
 
 /* TESTO */
-.cta-overlay span {
-  border-bottom: 1px solid var(--gold);
-  padding-bottom: 4px;
-}
-
 .all-inner {
   text-align: center;
   color: var(--gold);
