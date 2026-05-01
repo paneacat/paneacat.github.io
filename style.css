@@ -173,6 +173,7 @@ button {
 .slide-card {
   flex: 0 0 32%;
   scroll-snap-align: start;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .slide-card-cta {
@@ -234,6 +235,10 @@ button {
 .slide-card:hover {
   transform: scale(1);
   opacity: 1;
+}
+
+.slide-card:hover {
+  transform: scale(1.04);
 }
 
 /* posizioni */
@@ -1249,6 +1254,9 @@ color: var(--gold);
   gap: 20px;
 }
 
+
+
+
 /* ===== MOBILE ===== */
 @media (max-width: 599px) {
 
@@ -1411,32 +1419,6 @@ color: var(--gold);
 
   .filtro {
     flex: 0 0 auto; /* 🔥 fondamentale */
-  }
-
-  .slider {
-  padding-left: 6px;
-  padding-right: 6px;
-  scroll-snap-align: start;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-padding-left: 6px; 
- }
-
- .slide-card-cta .cta-overlay span {
-    font-size: 16px;
-  }
-  
-/* immagini proporzionate e pulite */
-.slide-card-cta {
-  flex: 0 0 75%;
-  aspect-ratio: 16 / 9;
-}
-
-/* card nello slider (stile Netflix) */
-  .slider-btn {
-    display: none;
   }
 
 /* evita layout “schiacciato” */
@@ -1614,58 +1596,7 @@ padding-top: 15px;
   .filtri-row.generi .filtro {
     flex: 0 0 auto;
 }
-  .slider {
-  align-items: flex-start;
-  padding-left: 0;
-  scroll-padding-left: 0;
-  justify-content: flex-start;
-  }
-  
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  opacity: 1; /* FIX */
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(11,31,38,0.8);
-  color: var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 5;
-  font-size: 22px;
-}
-
-.slider-btn.next {
-  right: 10px;
-}
-
-.slider-btn:hover {
-  background: var(--gold);
-  color: #0b1f26;
-}
-
-/* CTA */
-.slide-card-cta {
+  .slide-card {
   flex: 0 0 75%;
-  aspect-ratio: 16 / 9;
-  display: flex;
-  border: 1px solid rgba(255,255,255,0.2);
-  align-items: center;
-  border-radius: 14px;
-  justify-content: center; 
-  scroll-snap-align: start;
-}
-.slide-card,
-.slide-card-cta {
-  flex: 0 0 40%;
-}
-.slide-card-cta:hover {
-  background: rgba(255,255,255,0.06);
-  border-color: var(--gold);
-}
+  }
 }
