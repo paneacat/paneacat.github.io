@@ -85,8 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===== EFFETTO CINEMA DESKTOP =====
-  function updateActive() {
-    const center = slider.scrollLeft + slider.clientWidth / 2;
+function updateActive() {
+  if (!slider) return;
+
+  const center = slider.scrollLeft + slider.clientWidth / 2;
 
     slideCards.forEach(card => {
       const rect = card.getBoundingClientRect();
@@ -135,7 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
     filtrati.forEach((card, i) => {
       card.style.display = i < visibiliMax ? "block" : "none";
     });
-
+if (!slider || slideCards.length === 0) return;
+    
     if (empty) {
       if (filtrati.length === 0) {
         empty.style.display = "block";
