@@ -93,6 +93,9 @@ button {
 .slide-card {
   flex: 0 0 75%;
 }
+.slide-card-all {
+  flex: 0 0 75%;
+}
 .slide-card-cta {
   position: relative;
   flex: 0 0 75%;
