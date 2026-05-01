@@ -1,25 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ===== ELEMENTI =====
   const bottoni = document.querySelectorAll('.filtro');
   const cards = Array.from(document.querySelectorAll('.card'));
   const empty = document.getElementById('emptyState');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
 
-  // ===== FILTRI =====
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
-
-  const norm = (v) => (v || "").trim().toLowerCase();
 
   function getStep() {
     return window.innerWidth >= 900 ? 3 : 4;
   }
-
+  
   let step = getStep();
   let visibiliMax = step;
 
-  // ===== CLICK FILTRI =====
+  const norm = (v) => (v || "").trim().toLowerCase();
+
+  // ===== CLICK =====
   bottoni.forEach(btn => {
     btn.addEventListener('click', () => {
 
@@ -55,37 +53,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== SLIDER (freccia destra) =====
+  // ===== SLIDER (FIX PULITO) =====
   const slider = document.querySelector('.slider');
   const next = document.querySelector('.slider-btn.next');
 
   if (slider && next) {
-
     next.addEventListener('click', () => {
       const card = slider.querySelector('.slide-card');
 
       slider.scrollBy({
-        left: card.offsetWidth + 16, // gap tra card
+        left: card.offsetWidth + 16,
         behavior: 'smooth'
       });
     });
-
-    // nasconde freccia quando sei alla fine
-    slider.addEventListener('scroll', () => {
-      const maxScroll = slider.scrollWidth - slider.clientWidth;
-
-      if (slider.scrollLeft >= maxScroll - 10) {
-        next.style.opacity = "0";
-        next.style.pointerEvents = "none";
-      } else {
-        next.style.opacity = "0.6";
-        next.style.pointerEvents = "auto";
-      }
-    });
-
   }
 
-  // ===== FILTRO LOGICA =====
+  // ===== FILTRO =====
   function aggiornaFiltri() {
 
     let filtrati = [];
@@ -117,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.display = i < visibiliMax ? "block" : "none";
     });
 
-    // empty state
     if (empty) {
       if (filtrati.length === 0) {
         empty.style.display = "block";
@@ -128,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // load more
     if (loadMoreBtn) {
       loadMoreBtn.style.display =
         filtrati.length > visibiliMax ? "inline-block" : "none";
