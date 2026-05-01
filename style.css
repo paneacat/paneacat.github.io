@@ -207,10 +207,6 @@ button {
   transition: all 0.3s ease;
 }
 
-.slide-card.all span {
-  border-bottom: 1px solid var(--gold);
-  padding-bottom: 4px;
-}
 /* ===== BASE ===== */
 body {
 font-family: 'Inter', sans-serif;
