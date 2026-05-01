@@ -129,7 +129,7 @@ button {
   background: rgba(255,255,255,0.02);
   transition: all 0.25s ease;
   position: relative;
-  height: 180px;
+  height: 280px;
   overflow: hidden;
   }
   
@@ -1509,6 +1509,7 @@ color: var(--gold);
 /* immagini proporzionate e pulite */
 .slide-card.all {
     flex: 0 0 70%;
+  height: 200px;
 }
   
 .slide-card img {
