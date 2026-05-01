@@ -1414,13 +1414,6 @@ color: var(--gold);
   flex: 0 0 75%;
   aspect-ratio: 16 / 9;
 }
-  
-.slide-card img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 12px;
-}
 
 /* card nello slider (stile Netflix) */
   .slider-btn {
