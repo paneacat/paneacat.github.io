@@ -1492,6 +1492,9 @@ color: var(--gold);
 }
   
 /* immagini proporzionate e pulite */
+.slide-card.all {
+    flex: 0 0 70%;
+}
   
 .slide-card img {
   width: 100%;
