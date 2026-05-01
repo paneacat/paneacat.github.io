@@ -1570,10 +1570,15 @@ padding-top: 15px;
     flex: 0 0 auto;
 }
 
+ .slider {
+  justify-content: flex-start;
+ }
+  
   .slide-card:hover,
   .slide-card-cta:hover {
     transform: scale(1.04);
   }
+  
 .slider::before,
   .slider::after {
     content: "";
