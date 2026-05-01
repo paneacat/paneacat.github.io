@@ -1615,7 +1615,9 @@ padding-top: 15px;
 }
   .slider {
   align-items: flex-start;
-  padding-left: 20px;
+  padding-left: 0;
+  scroll-padding-left: 0;
+  justify-content: flex-start;
   }
   
 .slider-btn {
