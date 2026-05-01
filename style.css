@@ -1570,59 +1570,62 @@ padding-top: 15px;
     flex: 0 0 auto;
 }
 
- .slider {
-  justify-content: flex-start;
- }
-  
-  .slide-card:hover,
-  .slide-card-cta:hover {
-    transform: scale(1.04);
-  }
-  
-.slider::before,
-  .slider::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-  width: 40px;
-    pointer-events: none;
-    z-index: 2;
-  }
+/* ===== CINEMA DESKTOP ===== */
 
-  .slider::before {
-    left: 0;
-    background: linear-gradient(90deg, var(--bg), transparent);
-  }
-
-  .slider::after {
-    right: 0;
-    background: linear-gradient(270deg, var(--bg), transparent);
-  }
-  
-  .slide-card-cta:hover .cta-overlay {
-    background: rgba(11,31,38,0.75);
-  }
-
-  .slide-card,
-  .slide-card-cta {
-    flex: 0 0 80%;
-
-    scroll-snap-align: center;
-
-    opacity: 0.35;
-    transform: scale(0.85);
-    transition: all 0.4s ease;
-  }
-
-  .slide-card.is-active,
-  .slide-card-cta.is-active {
-    opacity: 1;
-    transform: scale(1);
-    z-index: 2;
-  }
-  .slider-wrapper {
+.slider-wrapper {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  }
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+/* fade laterale più soft */
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg), transparent);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--bg), transparent);
+}
+
+/* CARD */
+.slide-card,
+.slide-card-cta {
+  flex: 0 0 60%;
+  scroll-snap-align: center;
+
+  opacity: 0.4;
+  transform: scale(0.85);
+  transition: all 0.4s ease;
+}
+
+/* CARD ATTIVA */
+.slide-card.is-active,
+.slide-card-cta.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
 }
