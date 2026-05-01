@@ -33,7 +33,6 @@ button {
   cursor: pointer;
 }
 
-
 /* ===== VAR ===== */
 :root {
 --bg: #0b1f26;
@@ -1571,26 +1570,6 @@ padding-top: 15px;
     flex: 0 0 auto;
 }
 
-.slider {
-  justify-content: flex-start;
-   scroll-padding-left: 0;
-  margin-left: -20px;
-  padding: 0 40px;
-}
-
-  .slide-card.is-active,
-  .slide-card-cta.is-active {
-    flex: 0 0 52%;
-    opacity: 1;
-    transform: scale(1.03);
-  }
-  .slide-card,
-  .slide-card-cta {
-    transform: scale(0.85);
-    opacity: 0.4;
-    transition: all 0.4s ease;
-  }
-  
   .slide-card:hover,
   .slide-card-cta:hover {
     transform: scale(1.04);
@@ -1618,5 +1597,27 @@ padding-top: 15px;
   
   .slide-card-cta:hover .cta-overlay {
     background: rgba(11,31,38,0.75);
+  }
+  .slider {
+    padding-left: calc((100vw - 900px) / 2);
+    padding-right: calc((100vw - 900px) / 2);
+  }
+
+  .slide-card,
+  .slide-card-cta {
+    flex: 0 0 55% !important; /* 👈 questa è la chiave */
+
+    scroll-snap-align: center;
+
+    opacity: 0.35;
+    transform: scale(0.85);
+    transition: all 0.4s ease;
+  }
+
+  .slide-card.is-active,
+  .slide-card-cta.is-active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
   }
 }
