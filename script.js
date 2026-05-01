@@ -79,6 +79,16 @@ next.addEventListener('click', () => {
 prev.addEventListener('click', () => {
   slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 });
+
+  function scrollSlider() {
+  const slider = document.getElementById("slider");
+  const card = slider.querySelector(".slide-card");
+
+  slider.scrollBy({
+    left: card.offsetWidth + 16, // 16 = gap
+    behavior: "smooth"
+  });
+  }
   // ===== FILTRO =====
   function aggiornaFiltri() {
 
