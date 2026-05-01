@@ -155,7 +155,6 @@ button {
   padding-left: 16px !important;
   padding-right: 16px !important;
   scroll-padding-left: 16px !important;
-  padding: 0 20px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
@@ -222,6 +221,7 @@ button {
 
 .slide-card-cta .cta-overlay span {
   width: 100%;
+  display: block;
   text-align: center;
   transform: none !important;
   transform: translateX(-6px); /* 👈 micro correzione ottica */
@@ -1370,6 +1370,12 @@ color: var(--gold);
     flex: 0 0 auto; /* 🔥 fondamentale */
   }
 
+  .slider {
+    padding-left: 16px;
+    padding-right: 16px;
+    scroll-padding-left: 16px;
+  }
+  
    .slide-card-cta:active {
     transform: scale(0.97);
   }
