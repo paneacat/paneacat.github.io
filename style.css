@@ -1583,6 +1583,9 @@ padding-top: 15px;
 
 .slider {
   justify-content: flex-start;
+   padding-left: 0;
+   scroll-padding-left: 0;
+  margin-left: -20px;
 }
   
 .slide-card {
