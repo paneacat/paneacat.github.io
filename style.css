@@ -151,8 +151,8 @@ button {
   overflow-x: auto;
   scroll-snap-type: x mandatory;  
   scroll-behavior: smooth;
-  padding-left: max(40px, calc(50vw - 250px));
-  padding-right: max(40px, calc(50vw - 250px));
+  padding-left: max(20px, calc(50vw - 140px));
+  padding-right: max(20px, calc(50vw - 140px));
 }
 .slider-wrapper {
   width: 100vw;
