@@ -175,7 +175,7 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
-
+font-family: 'Inter', sans-serif;
   padding: 12px;
 background: linear-gradient(
     to top,
@@ -1680,4 +1680,7 @@ scroll-padding-right: 40px;
   transform: scale(1.05);
   z-index: 2;
 }
+}
+body {
+background: #0f2a33;
 }
