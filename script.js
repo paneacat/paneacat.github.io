@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rect = card.getBoundingClientRect();
         const cardCenter = rect.left + rect.width / 2;
 
-        const isActive = Math.abs(center - cardCenter) < rect.width / 2;
+    const isActive = Math.abs(center - cardCenter) < rect.width;
 
         card.classList.toggle('is-active', isActive);
       });
