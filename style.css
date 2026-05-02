@@ -1568,11 +1568,14 @@ padding-top: 15px;
     scroll-snap-type: x mandatory;
   min-width: 700px !important;
   }
-
+.slide-card {
+  flex: 0 0 420px;
+}
   /* 👇 QUESTO È IL FIX VERO */
   .slider::before,
   .slider::after {
     content: "";
+    display: block;
     flex: 0 0 calc(50% - 210px);
   }
 
