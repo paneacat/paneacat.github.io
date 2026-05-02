@@ -158,6 +158,7 @@ button {
   scroll-behavior: smooth;
   padding-left: 60px;
   padding-right: 60px;
+  padding-top: 20px;
   overflow-x: auto;
   overflow-y: visible;
 }
@@ -170,7 +171,8 @@ button {
   margin-top: 30px;
 }
 
-.slider {
+.slider,
+.slider-wrapper {
   overflow: visible;
 }
 
@@ -243,7 +245,7 @@ background: linear-gradient(
   overflow: hidden;
   border-radius: 14px;
   opacity: 0.4;
-  transform: scale(0.9);
+  transform-origin: center bottom;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 .cta-overlay {
