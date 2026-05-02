@@ -166,6 +166,7 @@ button {
 .slider-wrapper {
   overflow: visible;
 }
+}
 .slider::-webkit-scrollbar {
   display: none;
 }
@@ -176,17 +177,14 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
-
   padding: 12px;
-
   background: linear-gradient(
     to top,
     rgba(0,0,0,0.8),
     rgba(0,0,0,0)
   );
-
   color: white;
-  }
+}
 
 .slide-info h3 {
   font-size: 16px;
@@ -261,6 +259,7 @@ button {
 .slide-card.is-active,
 .slide-card-cta.is-active {
   border-radius: 14px;
+}
 }
 /* ===== BASE ===== */
 body {
