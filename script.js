@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===== ELEMENTI =====
@@ -115,34 +114,34 @@ document.addEventListener('DOMContentLoaded', () => {
   aggiornaFiltri();
 
   // ===== 🎬 CINEMA SLIDER =====
-
   function initCinema() {
-  const slider = document.querySelector('.slider');
-  const cards = document.querySelectorAll('.slide-card, .slide-card-cta');
+    const slider = document.querySelector('.slider');
+    const slideCards = document.querySelectorAll('.slide-card, .slide-card-cta');
 
-  if (!slider || cards.length === 0) return;
+    if (!slider || slideCards.length === 0) return;
 
-  function updateActive() {
-    const sliderRect = slider.getBoundingClientRect();
-    const center = sliderRect.left + sliderRect.width / 2;
+    function updateActive() {
+      const sliderRect = slider.getBoundingClientRect();
+      const center = sliderRect.left + sliderRect.width / 2;
 
-    cards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      const cardCenter = rect.left + rect.width / 2;
+      slideCards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
 
-      const isActive = Math.abs(center - cardCenter) < rect.width / 2;
+        const isActive = Math.abs(center - cardCenter) < rect.width / 2;
 
-      card.classList.toggle('is-active', isActive);
-    });
+        card.classList.toggle('is-active', isActive);
+      });
+    }
+
+    slider.addEventListener('scroll', updateActive);
+
+    // attiva subito
+    setTimeout(updateActive, 100);
   }
 
-  slider.addEventListener('scroll', updateActive);
-
-  // attiva subito
-  setTimeout(updateActive, 100);
+  if (window.innerWidth >= 900) {
+    initCinema();
   }
 
-if (window.innerWidth >= 900) {
-  initCinema();
-}
-}
+}); 
