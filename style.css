@@ -197,6 +197,7 @@ button {
   transform: none;
   transform-origin: center bottom;
   overflow: hidden;
+  border-radius: 14px;
 }
 }
 .cta-overlay {
@@ -218,11 +219,13 @@ button {
 /* IMMAGINI */
 .slide-card img,
 .slide-card-cta img {
-  width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
   border-radius: 14px;
   transition: transform 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 }
 .slide-card-cta .cta-overlay {
@@ -240,7 +243,10 @@ button {
 .slide-card:hover img {
   transform: scale(1.08);
 }
-
+.slide-card.is-active,
+.slide-card-cta.is-active {
+  border-radius: 14px;
+}
 /* ===== BASE ===== */
 body {
 font-family: 'Inter', sans-serif;
