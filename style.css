@@ -166,7 +166,6 @@ button {
 .slider-wrapper {
   overflow: visible;
 }
-}
 .slider::-webkit-scrollbar {
   display: none;
 }
@@ -206,12 +205,13 @@ background: linear-gradient(
   min-width: 420px;
   position: relative;
   scroll-snap-align: center;
-  opacity: 0.4s ease;
-  transform: none;
+
+  opacity: 1; /* 🔥 */
   transform-origin: center bottom;
   overflow: hidden;
   border-radius: 14px;
-}
+
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 .cta-overlay {
   position: absolute;
@@ -223,10 +223,8 @@ background: linear-gradient(
 
   color: #fcc10e;
   font-weight: 600;
-  font-size: 18px;
 
-  z-index: 2; /* 🔥 fondamentale */
-  opacity: 1; /* 👈 rendila visibile */
+  z-index: 3;
 }
 /* IMMAGINI */
 .slide-card img,
@@ -241,7 +239,7 @@ background: linear-gradient(
   z-index: 1;
   display: block;
 }
-}
+
 .slide-card-cta .cta-overlay {
   font-size: 20px;
   font-weight: 600;
@@ -261,7 +259,7 @@ background: linear-gradient(
 .slide-card-cta.is-active {
   border-radius: 14px;
 }
-}
+
 /* ===== BASE ===== */
 body {
 font-family: 'Inter', sans-serif;
