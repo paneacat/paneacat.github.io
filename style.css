@@ -217,9 +217,9 @@ button {
 /* ===== BASE ===== */
 body {
 font-family: 'Inter', sans-serif;
-background: var(--bg);
 color: var(--text);
 padding-top: 13px;
+  background: red !important;
 }
 
 /* ===== LINK ===== */
