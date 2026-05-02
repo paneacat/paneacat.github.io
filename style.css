@@ -1564,18 +1564,17 @@ padding-top: 15px;
 }
 
 .slider {
-  display: flex;
-  gap: 24px;
+    display: flex;
+    gap: 24px;
 
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 
-  width: 100vw; /* 🔥 rompe il container */
-  margin-left: calc(50% - 50vw);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
 
-  padding-left: calc(50vw - 200px);
-  padding-right: calc(50vw - 200px);
-}
+    padding: 0 0; /* ❌ togli padding laterali */
+  }
 
 .slider::-webkit-scrollbar {
   display: none;
@@ -1585,8 +1584,8 @@ padding-top: 15px;
 .slide-card-cta {
   display: block;
 
-  flex: 0 0 400px;
-  min-width: 400px;
+  flex: 0 0 420px;
+  min-width: 420px;
 
   scroll-snap-align: center;
 
