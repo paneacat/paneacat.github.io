@@ -1559,25 +1559,34 @@ padding-top: 15px;
 }
 
 /* ===== CINEMA DESKTOP ===== */
-.slider-area {
-  position: relative;
-}
 
-.slider {
-  display: flex;
-  gap: 24px;
+.slider-wrapper {
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    overflow: visible !important;
+  }
 
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
+  .slider {
+    display: flex !important;
+    gap: 24px;
+
+    overflow-x: scroll !important; /* 👈 forza lo scroll */
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    border: 2px solid red; /* 👈 DEBUG VISIVO */
+  }
 
   .slide-card,
   .slide-card-cta {
-    flex: 0 0 420px;
-    min-width: 420px;
+    flex: 0 0 500px !important;
+    min-width: 500px !important;
 
-    scroll-snap-align: center;
+    background: rgba(255,0,0,0.1); /* 👈 DEBUG */
   }
+  
   
 .slider::-webkit-scrollbar {
   display: none;
@@ -1626,8 +1635,4 @@ padding-top: 15px;
   background: var(--gold);
   color: #0b1f26;
 }
-  .slider-wrapper {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  }
 }
