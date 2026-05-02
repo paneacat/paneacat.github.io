@@ -121,8 +121,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!slider || slideCards.length === 0) return;
 
-    function updateActive() {
-      const center = slider.scrollLeft + slider.clientWidth / 2;
+     function updateActive() {
+  if (!slider) return;
+
+  const sliderRect = slider.getBoundingClientRect();
+  const center = sliderRect.left + sliderRect.width / 2;
+
+  slideCards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    const cardCenter = rect.left + rect.width / 2;
+
+    const offset = Math.abs(center - cardCenter);
+
+    const isActive = offset < rect.width / 2;
+
+    card.classList.toggle('is-active', isActive);
+  });
+     }
 
       slideCards.forEach(card => {
         const rect = card.getBoundingClientRect();
@@ -149,3 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+setTimeout(() => {
+  const firstCard = slideCards[0];
+  if (firstCard) {
+    firstCard.scrollIntoView({
+      behavior: "smooth",
+      inline: "center"
+    });
+  }
+}, 200);
