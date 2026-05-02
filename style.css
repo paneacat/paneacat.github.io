@@ -1600,3 +1600,10 @@ padding-right: calc(50vw - 180px);;
   margin-left: calc(50% - 50vw);
   }
 }
+.slider::before,
+.slider::after,
+.slider-wrapper::before,
+.slider-wrapper::after {
+  display: none !important;
+  background: none !important;
+}
