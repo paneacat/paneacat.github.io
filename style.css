@@ -1572,6 +1572,8 @@ padding-top: 15px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  padding-left: calc(50vw - 210px);
+  padding-right: calc(50vw - 210px);
 }
 
 /* SPAZI FINTI AI LATI (LA CHIAVE) */
