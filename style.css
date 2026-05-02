@@ -187,7 +187,6 @@ button {
 
   color: white;
   }
-}
 
 .slide-info h3 {
   font-size: 16px;
@@ -226,10 +225,9 @@ button {
   color: #fcc10e;
   font-weight: 600;
   font-size: 18px;
-  backdrop-filter: blur(2px);
-  background: rgba(0,0,0,0.3);
-  opacity: 0;
-  transition: all 0.3s ease;
+
+  z-index: 2; /* 🔥 fondamentale */
+  opacity: 1; /* 👈 rendila visibile */
 }
 /* IMMAGINI */
 .slide-card img,
@@ -240,6 +238,8 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
   display: block;
 }
 }
