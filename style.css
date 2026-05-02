@@ -1688,3 +1688,18 @@ scroll-padding-right: 40px;
 body {
 background: #0f2a33;
 }
+@media (max-width: 768px) {
+
+  .slider {
+    min-width: 0 !important;
+    padding: 0 16px !important;
+    gap: 16px !important;
+  }
+
+  .slide-card,
+  .slide-card-cta {
+    flex: 0 0 85% !important;
+    min-width: 0 !important;
+  }
+
+}
