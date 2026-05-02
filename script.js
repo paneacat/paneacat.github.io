@@ -120,36 +120,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!slider || slideCards.length === 0) return;
 
-   function updateActive() {
-  const sliderRect = slider.getBoundingClientRect();
-  const center = sliderRect.left + sliderRect.width / 2;
+    function updateActive() {
+      const sliderRect = slider.getBoundingClientRect();
+      const center = sliderRect.left + sliderRect.width / 2;
 
-  let closest = null;
-  let minOffset = Infinity;
+      let closest = null;
+      let minOffset = Infinity;
 
-  slideCards.forEach(card => {
-    const rect = card.getBoundingClientRect();
-    const cardCenter = rect.left + rect.width / 2;
+      slideCards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
 
-    const offset = Math.abs(center - cardCenter);
+        const offset = Math.abs(center - cardCenter);
 
-    if (offset < minOffset) {
-      minOffset = offset;
-      closest = card;
+        if (offset < minOffset) {
+          minOffset = offset;
+          closest = card;
+        }
+      });
+
+      slideCards.forEach(card => {
+        card.classList.remove('is-active');
+      });
+
+      if (closest) {
+        closest.classList.add('is-active');
+      }
     }
-  });
 
-  slideCards.forEach(card => {
-    card.classList.remove('is-active');
-  });
+    // 👇 SCROLL + SNAP
+    let scrollTimeout;
 
-  if (closest) {
-    closest.classList.add('is-active');
-  }
-   }
+    slider.addEventListener('scroll', () => {
+      updateActive();
 
-    
-    slider.addEventListener('scroll', updateActive);
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        snapToClosest();
+      }, 120);
+    });
+
+    function snapToClosest() {
+      const sliderRect = slider.getBoundingClientRect();
+      const center = sliderRect.left + sliderRect.width / 2;
+
+      let closest = null;
+      let minOffset = Infinity;
+
+      slideCards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
+
+        const offset = Math.abs(center - cardCenter);
+
+        if (offset < minOffset) {
+          minOffset = offset;
+          closest = card;
+        }
+      });
+
+      if (closest) {
+        closest.scrollIntoView({
+          behavior: "smooth",
+          inline: "center"
+        });
+      }
+    }
 
     // attiva subito
     setTimeout(updateActive, 100);
@@ -159,4 +195,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initCinema();
   }
 
-}); 
+});
