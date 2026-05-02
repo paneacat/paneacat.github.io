@@ -117,47 +117,78 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== 🎬 CINEMA SLIDER =====
 
   function initCinema() {
-    const slider = document.querySelector('.slider');
-    const slideCards = document.querySelectorAll('.slide-card, .slide-card-cta');
+  const slider = document.querySelector('.slider');
+  const cards = document.querySelectorAll('.slide-card, .slide-card-cta');
+  const next = document.querySelector('.slider-btn.next');
+  const prev = document.querySelector('.slider-btn.prev');
 
-    if (!slider || slideCards.length === 0) return;
+  if (!slider || cards.length === 0) return;
 
-    function updateActive() {
-      const sliderRect = slider.getBoundingClientRect();
-      const center = sliderRect.left + sliderRect.width / 2;
+  function updateActive() {
+    const center = slider.getBoundingClientRect().left + slider.clientWidth / 2;
 
-      slideCards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const cardCenter = rect.left + rect.width / 2;
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.left + rect.width / 2;
 
-        const offset = Math.abs(center - cardCenter);
-        const isActive = offset < rect.width / 2;
+      const isActive = Math.abs(center - cardCenter) < rect.width / 2;
+      card.classList.toggle('is-active', isActive);
+    });
+  }
 
-        card.classList.toggle('is-active', isActive);
+  // ===== SNAP "MAGNETICO"
+  function snapToClosest() {
+    let closest = null;
+    let minOffset = Infinity;
+
+    const center = slider.scrollLeft + slider.clientWidth / 2;
+
+    cards.forEach(card => {
+      const offsetLeft = card.offsetLeft + card.offsetWidth / 2;
+      const offset = Math.abs(center - offsetLeft);
+
+      if (offset < minOffset) {
+        minOffset = offset;
+        closest = card;
+      }
+    });
+
+    if (closest) {
+      closest.scrollIntoView({
+        behavior: "smooth",
+        inline: "center"
       });
     }
-
-    // scroll → aggiorna attivo
-    slider.addEventListener('scroll', updateActive);
-
-    // attiva subito
-    setTimeout(updateActive, 100);
-
-    // centra la prima card
-    setTimeout(() => {
-      const firstCard = slideCards[0];
-      if (firstCard) {
-        firstCard.scrollIntoView({
-          behavior: "smooth",
-          inline: "center"
-        });
-      }
-    }, 200);
   }
 
-  // attiva solo desktop
-  if (window.innerWidth >= 900) {
-    initCinema();
+  // ===== EVENTI =====
+  slider.addEventListener('scroll', updateActive);
+
+  let scrollTimeout;
+  slider.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(snapToClosest, 120);
+  });
+
+  // ===== FRECCE =====
+  if (next && prev) {
+    next.onclick = () => {
+      slider.scrollBy({ left: 400, behavior: 'smooth' });
+    };
+
+    prev.onclick = () => {
+      slider.scrollBy({ left: -400, behavior: 'smooth' });
+    };
   }
 
-});
+  // init
+  setTimeout(() => {
+    cards[0]?.scrollIntoView({ behavior: "smooth", inline: "center" });
+    updateActive();
+  }, 150);
+}
+
+if (window.innerWidth >= 900) {
+  initCinema();
+}
+}
