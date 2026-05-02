@@ -120,20 +120,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!slider || slideCards.length === 0) return;
 
-    function updateActive() {
-      const sliderRect = slider.getBoundingClientRect();
-      const center = sliderRect.left + sliderRect.width / 2;
+   function updateActive() {
+  const sliderRect = slider.getBoundingClientRect();
+  const center = sliderRect.left + sliderRect.width / 2;
 
-      slideCards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const cardCenter = rect.left + rect.width / 2;
+  let closest = null;
+  let minOffset = Infinity;
 
-    const isActive = Math.abs(center - cardCenter) < rect.width;
+  slideCards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    const cardCenter = rect.left + rect.width / 2;
 
-        card.classList.toggle('is-active', isActive);
-      });
+    const offset = Math.abs(center - cardCenter);
+
+    if (offset < minOffset) {
+      minOffset = offset;
+      closest = card;
     }
+  });
 
+  slideCards.forEach(card => {
+    card.classList.remove('is-active');
+  });
+
+  if (closest) {
+    closest.classList.add('is-active');
+  }
+   }
+
+    
     slider.addEventListener('scroll', updateActive);
 
     // attiva subito
