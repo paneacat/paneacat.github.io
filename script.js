@@ -114,8 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   aggiornaFiltri();
 
   // ===== 🎬 CINEMA SLIDER (SEPARATO E PULITO) =====
-
-  function initCinema() {
+function initCinema() {
   const slider = document.querySelector('.slider');
   const slideCards = document.querySelectorAll('.slide-card, .slide-card-cta');
 
@@ -136,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // scroll listener
+  // scroll
   slider.addEventListener('scroll', updateActive);
 
   // attiva subito
@@ -153,15 +152,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, 200);
 }
-// init solo desktop
-if (window.innerWidth >= 900) {
-  initCinema();
-}setTimeout(() => {
-  const firstCard = slideCards[0];
-  if (firstCard) {
-    firstCard.scrollIntoView({
-      behavior: "smooth",
-      inline: "center"
-    });
-  }
-}, 200);
