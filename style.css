@@ -206,8 +206,6 @@ button {
   color: #fcc10e;
   font-weight: 600;
   font-size: 18px;
-
-  background: rgba(11, 31, 38, 0.5);
   backdrop-filter: blur(2px);
 
   opacity: 0;
@@ -244,7 +242,7 @@ body {
 font-family: 'Inter', sans-serif;
 color: var(--text);
 padding-top: 13px;
-  background: #0f2a33;
+background: #0f2a33;
 }
 
 /* ===== LINK ===== */
