@@ -116,55 +116,47 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== 🎬 CINEMA SLIDER (SEPARATO E PULITO) =====
 
   function initCinema() {
-    const slider = document.querySelector('.slider');
-    const slideCards = document.querySelectorAll('.slide-card, .slide-card-cta');
+  const slider = document.querySelector('.slider');
+  const slideCards = document.querySelectorAll('.slide-card, .slide-card-cta');
 
-    if (!slider || slideCards.length === 0) return;
+  if (!slider || slideCards.length === 0) return;
 
-     function updateActive() {
-  if (!slider) return;
+  function updateActive() {
+    const sliderRect = slider.getBoundingClientRect();
+    const center = sliderRect.left + sliderRect.width / 2;
 
-  const sliderRect = slider.getBoundingClientRect();
-  const center = sliderRect.left + sliderRect.width / 2;
+    slideCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.left + rect.width / 2;
 
-  slideCards.forEach(card => {
-    const rect = card.getBoundingClientRect();
-    const cardCenter = rect.left + rect.width / 2;
+      const offset = Math.abs(center - cardCenter);
+      const isActive = offset < rect.width / 2;
 
-    const offset = Math.abs(center - cardCenter);
+      card.classList.toggle('is-active', isActive);
+    });
+  }
 
-    const isActive = offset < rect.width / 2;
+  // scroll listener
+  slider.addEventListener('scroll', updateActive);
 
-    card.classList.toggle('is-active', isActive);
-  });
-     }
+  // attiva subito
+  setTimeout(updateActive, 100);
 
-      slideCards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const cardCenter = rect.left + rect.width / 2;
-
-        const offset = Math.abs(center - (cardCenter + slider.scrollLeft));
-        const isActive = offset < rect.width / 2;
-
-        card.classList.toggle('is-active', isActive);
+  // centra prima card
+  setTimeout(() => {
+    const firstCard = slideCards[0];
+    if (firstCard) {
+      firstCard.scrollIntoView({
+        behavior: "smooth",
+        inline: "center"
       });
     }
-
-    slider.addEventListener('scroll', updateActive);
-
-    // attiva subito
-    setTimeout(updateActive, 100);
-
-    // centra inizialmente
-    slider.scrollLeft = slider.clientWidth / 2;
-  }
-
-  if (window.innerWidth >= 900) {
-    initCinema();
-  }
-
-});
-setTimeout(() => {
+  }, 200);
+}
+// init solo desktop
+if (window.innerWidth >= 900) {
+  initCinema();
+}setTimeout(() => {
   const firstCard = slideCards[0];
   if (firstCard) {
     firstCard.scrollIntoView({
