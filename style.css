@@ -1561,77 +1561,62 @@ padding-top: 15px;
 }
 
 /* ===== CINEMA DESKTOP ===== */
-
 .slider-wrapper {
-    width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important;
-    overflow: visible !important;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
   }
 
   .slider {
-    display: flex !important;
-    gap: 24px;
+    display: flex;
+    gap: 28px;
 
-    overflow-x: scroll !important; /* 👈 forza lo scroll */
-    overflow-y: hidden;
-
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 
-    border: 2px solid red; /* 👈 DEBUG VISIVO */
+    padding: 0 calc(50vw - 210px); /* 👈 centratura cinema */
+  }
+
+  .slider::-webkit-scrollbar {
+    display: none;
   }
 
   .slide-card,
   .slide-card-cta {
-    flex: 0 0 500px !important;
-    min-width: 500px !important;
+    flex: 0 0 420px;
+    min-width: 420px;
 
-    background: rgba(255,0,0,0.1); /* 👈 DEBUG */
+    scroll-snap-align: center;
+
+    opacity: 0.4;
+    transform: scale(0.85);
+    transition: all 0.4s ease;
   }
-  
-  
-.slider::-webkit-scrollbar {
-  display: none;
-}
 
-.slide-card.is-active,
-.slide-card-cta.is-active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* ===== FRECCE ===== */
-
-.slider-btn {
+  .slide-card.is-active,
+  .slide-card-cta.is-active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+  }
+.slider::before,
+.slider::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 44px;
-  height: 44px;
-
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.2);
-
-  background: rgba(11,31,38,0.85);
-  color: var(--gold);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 5;
-
-  transition: 0.2s;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 2;
 }
-  
-.slider-btn.prev { left: 20px; }
-.slider-btn.next { right: 20px; }
 
-.slider-btn:hover {
-  background: var(--gold);
-  color: #0b1f26;
+.slider::before {
+  left: 0;
+  background: linear-gradient(90deg, #0b1f26, transparent);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(270deg, #0b1f26, transparent);
 }
 }
