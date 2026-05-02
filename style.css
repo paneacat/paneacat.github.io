@@ -1591,22 +1591,18 @@ padding-top: 15px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   min-width: 700px !important;
+  padding-left: calc(50vw - 210px);
+  padding-right: calc(50vw - 210px);
   }
+  
 .slide-card {
   flex: 0 0 420px;
-}
-  /* 👇 QUESTO È IL FIX VERO */
-  .slider::before,
-.slider::after {
-  content: "";
-  flex: 0 0 80px; /* 👈 spazio molto più elegante */
 }
 
   .slide-card,
 .slide-card-cta {
   flex: 0 0 380px;
   min-width: 420px;
-
   opacity: 0.3;
   transform: scale(0.8);
   transition: all 0.4s ease;
