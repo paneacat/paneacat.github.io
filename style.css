@@ -1567,13 +1567,19 @@ padding-top: 15px;
   }
 
   .slider {
-    display: flex;
-    gap: 24px;
-   padding-left: 40px;
-  padding-right: 40px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+/* SPAZI FINTI AI LATI (LA CHIAVE) */
+.slider::before,
+.slider::after {
+  content: "";
+  flex: 0 0 calc(50% - 200px);
+}
 
   .slide-card,
   .slide-card-cta {
