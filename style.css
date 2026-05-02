@@ -191,11 +191,9 @@ button {
   min-width: 420px;
   position: relative;
   scroll-snap-align: center;
-  opacity: 0.3;
-  transform: scale(0.8);
   transition: 
-    transform 0.4s ease,
     opacity 0.4s ease;
+  transform: none;
 }
 .cta-overlay {
   position: absolute;
@@ -222,6 +220,7 @@ button {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 14px;
+  transition: transform 0.4s ease;
 }
 .slide-card-cta .cta-overlay {
   font-size: 20px;
@@ -234,6 +233,9 @@ button {
   }
 .slide-card-cta:hover img {
   transform: scale(1.05);
+}
+.slide-card:hover img {
+  transform: scale(1.08);
 }
 }
 
