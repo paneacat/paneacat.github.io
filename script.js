@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!slider || cards.length === 0) return;
 
   function updateActive() {
-    const center = slider.getBoundingClientRect().left + slider.clientWidth / 2;
+  const center = slider.getBoundingClientRect().left + slider.offsetWidth / 2;
 
     cards.forEach(card => {
       const rect = card.getBoundingClientRect();
