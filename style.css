@@ -1585,4 +1585,8 @@ padding-top: 15px;
     min-width: 420px;
     scroll-snap-align: center;
   }
+  .slider-wrapper {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  }
 }
