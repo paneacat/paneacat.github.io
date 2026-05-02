@@ -1553,8 +1553,11 @@ padding-top: 15px;
     gap: 32px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 0 40px;
+    padding-left: 40px;
+  padding-right: 40px;
   position: relative;
+  scroll-padding-left: 40px;
+scroll-padding-right: 40px;
   scroll-behavior: smooth;
   }
 
