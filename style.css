@@ -1566,6 +1566,7 @@ padding-top: 15px;
     gap: 24px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+  min-width: 700px !important;
   }
 
   /* 👇 QUESTO È IL FIX VERO */
