@@ -122,14 +122,13 @@ button {
 
 .section-label {
   margin-top: 50px;
-  margin-bottom: 10px;
 
   padding-left: 20px;
 
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-
+  margin-bottom: 20px;
   color: var(--gold);
   opacity: 0.7;
 }
@@ -161,6 +160,7 @@ button {
   margin-left: calc(50% - 50vw);
   position: relative;
   overflow: visible;
+  margin-top: 20px;
 }
 .slider,
 .slider-wrapper {
