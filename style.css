@@ -1688,18 +1688,33 @@ scroll-padding-right: 40px;
 body {
 background: #0f2a33;
 }
+
+/* ===== FORCE MOBILE SLIDER RESET ===== */
 @media (max-width: 768px) {
 
+  .slider-wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
   .slider {
-    min-width: 0 !important;
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+
     padding: 0 16px !important;
     gap: 16px !important;
+
+    min-width: 0 !important;
   }
 
   .slide-card,
   .slide-card-cta {
     flex: 0 0 85% !important;
-    min-width: 0 !important;
+    min-width: 85% !important;
+
+    scroll-snap-align: center !important;
   }
 
 }
