@@ -1414,13 +1414,8 @@ color: var(--gold);
   font-size: 20px;
   padding: 0 10px;
 }
-  .slide-card,
-  .slide-card-cta {
-    flex: 0 0 85%;
-    opacity: 1;
-    transform: none;
-  }
-  }
+  
+
   /* evita layout “schiacciato” */
 .container,
 .section {
@@ -1612,11 +1607,26 @@ padding-top: 15px;
   }
 
   .slide-card,
-  .slide-card-cta {
-    flex: 0 0 420px;
-    min-width: 420px;
-    scroll-snap-align: center;
-  }
+.slide-card-cta {
+  flex: 0 0 420px;
+  min-width: 420px;
+
+  opacity: 0.3;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+}
+
+.slide-card.is-active,
+.slide-card-cta.is-active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.slide-card.is-near {
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+  
   .slider-wrapper {
   width: 100vw;
   margin-left: calc(50% - 50vw);
