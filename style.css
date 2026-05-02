@@ -1381,45 +1381,35 @@ color: var(--gold);
     flex: 0 0 auto; /* 🔥 fondamentale */
   }
 
-  .slider {
-  scroll-padding-left: 16px;
-  scroll-padding-right: 16px;
+/* ===== MOBILE SLIDER CLEAN ===== */
+
+.slider {
+  display: flex;
+  gap: 16px;
+
   padding-left: 16px;
   padding-right: 16px;
-  gap: 16px;
-  }
 
-  .slide-card:active,
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 16px;
+  scroll-padding-right: 16px;
+}
+
+.slide-card,
+.slide-card-cta {
+  flex: 0 0 85%;   /* 👈 leggermente meno → UX migliore */
+  min-width: 85%;
+
+  scroll-snap-align: center;
+
+  opacity: 1;
+  transform: none;
+}
+
+/* feedback touch */
+.slide-card:active,
 .slide-card-cta:active {
   transform: scale(0.97);
-  
-  
-  .slide-card {
-  flex: 0 0 88%;
-  min-width: 88%;
-  opacity: 1;
-  transform: none;
-}
-
-.slide-card-cta {
-flex: 0 0 88%;
-  min-width: 88%;
-  opacity: 1;
-  transform: none;
-}
-  
-.slide-card:hover,
-  .slide-card-cta:hover {
-    transform: none;
-  }
-  
-.slide-card-cta:hover .cta-overlay {
-    background: rgba(11,31,38,0.55);
-}
-  
-.slide-card-cta .cta-overlay {
-  font-size: 20px;
-  padding: 0 10px;
 }
   
 
