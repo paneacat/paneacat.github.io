@@ -151,15 +151,19 @@ button {
   overflow-x: auto;
   scroll-snap-type: x mandatory;  
   scroll-behavior: smooth;
-  padding-left: max(20px, calc(50vw - 140px));
-  padding-right: max(20px, calc(50vw - 140px));
+  padding-left: 60px;
+  padding-right: 60px;
 }
+  
 .slider-wrapper {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   position: relative;
 }
-
+.slider,
+.slider-wrapper {
+  overflow: visible;
+}
 .slider::-webkit-scrollbar {
   display: none;
 }
@@ -186,7 +190,6 @@ button {
   flex: 0 0 420px;
   min-width: 420px;
   position: relative;
-  overflow: hidden;
   scroll-snap-align: center;
   opacity: 0.3;
   transform: scale(0.8);
