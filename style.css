@@ -1579,9 +1579,9 @@ scroll-padding-right: 40px;
   /* 👇 HOVER = PROTAGONISTA */
   .slide-card:hover {
     opacity: 1;
-    transform: scale(1.05);
     z-index: 2;
     filter: brightness(1);
+    transform: none;
   }
 
   /* 👇 VICINE AL MOUSE */
@@ -1594,7 +1594,7 @@ scroll-padding-right: 40px;
 }
 
 .slide-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
   /* 👇 card attiva di default */
 .slide-card:first-child {
