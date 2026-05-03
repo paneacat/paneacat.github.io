@@ -82,6 +82,7 @@ button {
   text-align: center;
   color: white;
   margin-bottom: var(--space-md);
+  margin-bottom: 13px;
   font-size: 22px;
   line-height: 1.25;
   max-width: 380px; /* 🔥 aumenta */
