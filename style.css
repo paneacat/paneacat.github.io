@@ -39,6 +39,12 @@ button {
 --gold: #ffbf00;
 --text: #eaeaea;
 --muted: #aaa;
+--space-xs: 6px;
+  --space-sm: 10px;
+  --space-md: 16px;
+  --space-lg: 28px;
+  --space-xl: 48px;
+  --space-xxl: 72px;
 }  
 
 .home-intro {
@@ -68,8 +74,8 @@ button {
 
 .hero {
   text-align: center;
+  margin: var(--space-xl) auto var(--space-xl);
   padding: 0 20px;
-  margin: 20px auto 30px;
 }
 
 .hero h1 {
@@ -77,6 +83,7 @@ button {
   color: white;
   font-size: 20px;
   line-height: 1.2;
+  margin-bottom: var(--space-md);
 }
 
 .hero p {
@@ -92,20 +99,21 @@ button {
 
 /* sottotesto */
 .hero-sub {
-  margin-top: 18px;
   max-width: 420px;
   font-size: 14px;
   color: #9aa3a8;
   line-height: 1.6;
   text-align: center;
+  margin-top: var(--space-sm);
 }
 
 /* bottone */
 .hero-cta {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
+  margin-top: var(--space-md);
 }
+
 .hero p {
   text-align: center;
 }
