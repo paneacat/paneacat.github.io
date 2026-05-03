@@ -1462,7 +1462,10 @@ color: var(--gold);
   margin: 0 auto;
   max-width: 300px; /* 🔥 chiave */
     }
-  
+
+.hero-sub {
+  font-size: 8px;
+}
   /* evita layout “schiacciato” */
 .container,
 .section {
