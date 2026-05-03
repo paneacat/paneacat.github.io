@@ -1456,7 +1456,6 @@ color: var(--gold);
   font-weight: 600;
   font-size: 22px;   /* 👈 ridotto */
   line-height: 1.25; /* 👈 più compatto */
-  max-width: 320px;  /* 👈 forza le 2 righe */
   margin: 0 auto;
   }
   
