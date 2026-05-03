@@ -152,7 +152,6 @@ button {
 
 /* ===== SLIDER BASE ===== */
 .slider-wrapper {
-  overflow: hidden;
   position: relative;
 }
 
@@ -180,7 +179,6 @@ button {
 
 .slide-card {
   border-radius: 14px;
-  overflow: hidden;
   display: block;
 }
 
@@ -1532,12 +1530,6 @@ padding-top: 15px;
 
   .slide-card {
     transition: transform 0.4s ease, opacity 0.4s ease;
-  }
-
-  /* tutte spente */
-  .slider:hover .slide-card {
-    opacity: 0.4;
-    transform: scale(0.9);
   }
 
   /* attiva */
