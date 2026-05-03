@@ -1561,13 +1561,11 @@ padding-top: 15px;
     transition: transform 0.4s ease, opacity 0.4s ease;
   }
 
-  /* stato base */
   .slider:hover .slide-card {
     opacity: 0.4;
     transform: scale(0.9);
   }
 
-  /* card attiva */
   .slide-card:hover,
   .slide-card-cta:hover {
     opacity: 1;
@@ -1575,13 +1573,8 @@ padding-top: 15px;
     z-index: 2;
   }
 
-  /* zoom immagine */
   .slide-card:hover img,
   .slide-card-cta:hover img {
     transform: scale(1.08);
   }
-}
-    
-body {
-background: #0f2a33;
 }
