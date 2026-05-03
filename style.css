@@ -180,6 +180,7 @@ button {
 .slide-card {
   border-radius: 14px;
   display: block;
+  aspect-ratio: 16 / 9; /* 🎬 cinematico */
 }
 
 .slide-card img {
@@ -187,6 +188,7 @@ button {
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  display: block;
 }
 
 .slide-info {
