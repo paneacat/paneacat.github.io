@@ -81,10 +81,11 @@ button {
 .hero h1 {
   text-align: center;
   color: white;
-  font-size: 20px;
-  line-height: 1.2;
-  max-width: 320px;
   margin-bottom: var(--space-md);
+  font-size: 22px;
+  line-height: 1.25;
+  max-width: 380px; /* 🔥 aumenta */
+  margin: 0 auto;
 }
 
 .hero p {
