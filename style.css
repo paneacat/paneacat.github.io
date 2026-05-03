@@ -1569,7 +1569,10 @@ letter-spacing: 1.8px;
   }
 
   .hero h1 {
-    font-size: 28px;
+  font-size: 28px;
+  line-height: 1.2;
+  max-width: 420px; /* 🔥 QUESTO È IL SEGRETO */
+  margin: 0 auto;
   }
 
   .hero-kicker {
