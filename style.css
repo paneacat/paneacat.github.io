@@ -155,7 +155,7 @@ button {
 
 .slider-wrapper {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .slider {
@@ -166,6 +166,8 @@ button {
   scroll-behavior: smooth;
   scroll-padding: 0 40px;
   padding: 0 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -235,7 +237,6 @@ button {
 /* card attiva (hover desktop) */
 .slide-item:hover {
   opacity: 1;
-  transform: scale(1.05);
   z-index: 2;
 }
 
