@@ -83,6 +83,7 @@ button {
   color: white;
   font-size: 20px;
   line-height: 1.2;
+  max-width: 320px;
   margin-bottom: var(--space-md);
 }
 
