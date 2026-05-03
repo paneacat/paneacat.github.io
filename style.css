@@ -1430,7 +1430,6 @@ color: var(--gold);
   .slide-item {
     flex: 0 0 78%; /* 👈 più elegante */
     scroll-snap-align: center;
-
     opacity: 1;
     transform: none;
   }
@@ -1454,10 +1453,10 @@ color: var(--gold);
   }
 
   .hero h1 {
-    font-weight: 600.
+  font-weight: 600;
   font-size: 22px;   /* 👈 ridotto */
   line-height: 1.25; /* 👈 più compatto */
-  max-width: 280px;  /* 👈 forza le 2 righe */
+  max-width: 320px;  /* 👈 forza le 2 righe */
   margin: 0 auto;
   }
   
